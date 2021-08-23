@@ -5,8 +5,8 @@ module carry_look_ahead_16bit_tb;
     reg Ci;
     wire [15:0] S;
     wire Co;
-    wire [3:0] PG;
-    wire [3:0] GG;
+    wire PG;
+    wire GG;
 
     wire [15:0] G;
     wire [15:0] P;

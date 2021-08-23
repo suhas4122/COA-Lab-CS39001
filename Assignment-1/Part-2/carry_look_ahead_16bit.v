@@ -1,13 +1,14 @@
-module carry_look_ahead_16bit(A, B, Ci, S, Co, PG, GG);
+module carry_look_ahead_16bit(A, B, Ci, S, Co, PG1, GG1);
 
     input [15:0] A;
     input [15:0] B;
     input Ci;
     output [15:0] S;
     output Co;
-
-    output [3:0] GG;
-    output [3:0] PG;
+    output PG1;
+    output GG1;
+    wire [3:0] GG;
+    wire [3:0] PG;
     wire [3:1] C;
     wire Ci;
     wire [3:0] Cdummy;
@@ -24,5 +25,7 @@ module carry_look_ahead_16bit(A, B, Ci, S, Co, PG, GG);
     assign PG_int = PG[3] & PG[2] & PG[1] & PG[0];
     assign GG_int = GG[3] | (PG[3] & GG[2]) | (PG[3] & PG[2] & GG[1]) | (PG[3] & PG[2] & PG[1] & GG[0]);
     assign Co = GG_int | (PG_int & Ci);
+    assign PG1 = PG_int;
+    assign GG1 = GG_int;
 
 endmodule
