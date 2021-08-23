@@ -1,4 +1,4 @@
-module carry_look_ahead_adder_4bit (
+module carry_look_ahead_4bit (
     i_term1,
     i_term2,
     i_carry,

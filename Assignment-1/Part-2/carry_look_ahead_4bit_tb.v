@@ -1,13 +1,13 @@
 `timescale  1ns/1ps
 
-module carry_look_ahead_adder_4bit_tb;
+module carry_look_ahead_4bit_tb;
     
     reg [3:0] r_ADD1 = 4'b0000, r_ADD2 = 4'b0000;
     reg r_CARRY = 1'b0;
     wire [3:0] w_SUM;
     wire w_CARRY;
 
-    carry_look_ahead_adder_4bit carry_look_ahead(.i_term1(r_ADD1), .i_term2(r_ADD2), .i_carry(r_CARRY), .o_sum(w_SUM), .o_carry(w_CARRY));
+    carry_look_ahead_4bit carry_look_ahead(.i_term1(r_ADD1), .i_term2(r_ADD2), .i_carry(r_CARRY), .o_sum(w_SUM), .o_carry(w_CARRY));
 
     initial begin
         $monitor("i_term1 = %b, i_term2 = %b, i_carry = %b, o_sum = %b, o_carry = %b", r_ADD1, r_ADD2, r_CARRY, w_SUM, w_CARRY);
