@@ -1,4 +1,4 @@
-module tb_CLA16;
+module carry_look_ahead_16bit_tb;
 
     reg [15:0] A;
     reg [15:0] B;
@@ -12,7 +12,7 @@ module tb_CLA16;
     wire [15:0] P;
     wire [15:1] C;
 
-    CLA16 u1(A, B, Ci, S, Co, PG, GG);
+    carry_look_ahead_16bit carry_look_ahead(A, B, Ci, S, Co, PG, GG);
 
     initial begin
         $monitor("i_term1 = %b, i_term2 = %b, i_carry = %b, o_sum = %b, o_carry = %b PG = %b, GG = %b", A, B, Ci, S, Co, PG, GG);
