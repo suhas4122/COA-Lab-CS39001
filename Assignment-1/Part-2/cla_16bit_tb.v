@@ -5,18 +5,17 @@ module tb_CLA16;
     reg Ci;
     wire [15:0] S;
     wire Co;
-    wire PG;
-    wire GG;
+    wire [3:0] PG;
+    wire [3:0] GG;
 
     wire [15:0] G;
     wire [15:0] P;
     wire [15:1] C;
 
-    //CLA4 u0(A, B, Ci, S, PG, GG);
     CLA16 u1(A, B, Ci, S, Co, PG, GG);
 
     initial begin
-        $monitor("i_term1 = %b, i_term2 = %b, i_carry = %b, o_sum = %b, o_carry = %b", A, B, Ci, S, Co);
+        $monitor("i_term1 = %b, i_term2 = %b, i_carry = %b, o_sum = %b, o_carry = %b PG = %b, GG = %b", A, B, Ci, S, Co, PG, GG);
         A = 16'b0100101001001010;
         B = 16'b0101101101011011;
         Ci = 1'b0;
