@@ -1,0 +1,101 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 1 -n
+3 -fastpaths -xml carry_look_ahead_4bit.twx carry_look_ahead_4bit.ncd -o
+carry_look_ahead_4bit.twr carry_look_ahead_4bit.pcf
+
+Design file:              carry_look_ahead_4bit.ncd
+Physical constraint file: carry_look_ahead_4bit.pcf
+Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |Co             |    8.220|
+A<0>           |GG             |    7.302|
+A<0>           |PG             |    7.459|
+A<0>           |S<0>           |    7.405|
+A<0>           |S<1>           |    7.167|
+A<0>           |S<2>           |    7.509|
+A<0>           |S<3>           |    7.699|
+A<1>           |Co             |    8.487|
+A<1>           |GG             |    7.569|
+A<1>           |PG             |    7.727|
+A<1>           |S<1>           |    7.237|
+A<1>           |S<2>           |    7.577|
+A<1>           |S<3>           |    7.767|
+A<2>           |Co             |    7.900|
+A<2>           |GG             |    6.982|
+A<2>           |PG             |    7.040|
+A<2>           |S<2>           |    6.986|
+A<2>           |S<3>           |    7.207|
+A<3>           |Co             |    7.806|
+A<3>           |GG             |    6.888|
+A<3>           |PG             |    6.679|
+A<3>           |S<3>           |    7.313|
+B<0>           |Co             |    8.338|
+B<0>           |GG             |    7.420|
+B<0>           |PG             |    7.577|
+B<0>           |S<0>           |    7.162|
+B<0>           |S<1>           |    7.282|
+B<0>           |S<2>           |    7.622|
+B<0>           |S<3>           |    7.812|
+B<1>           |Co             |    7.896|
+B<1>           |GG             |    6.978|
+B<1>           |PG             |    7.103|
+B<1>           |S<1>           |    6.802|
+B<1>           |S<2>           |    7.176|
+B<1>           |S<3>           |    7.366|
+B<2>           |Co             |    7.774|
+B<2>           |GG             |    6.856|
+B<2>           |PG             |    6.768|
+B<2>           |S<2>           |    6.883|
+B<2>           |S<3>           |    7.106|
+B<3>           |Co             |    7.599|
+B<3>           |GG             |    6.331|
+B<3>           |PG             |    6.868|
+B<3>           |S<3>           |    7.252|
+Ci             |Co             |    7.039|
+Ci             |S<0>           |    6.964|
+Ci             |S<1>           |    6.785|
+Ci             |S<2>           |    7.127|
+Ci             |S<3>           |    7.317|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Aug 26 15:22:44 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 753 MB
+
+
+

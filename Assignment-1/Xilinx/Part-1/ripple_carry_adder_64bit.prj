@@ -1,0 +1,5 @@
+verilog work "../../Part-1/full_adder.v"
+verilog work "../../Part-1/ripple_carry_adder_8bit.v"
+verilog work "../../Part-1/ripple_carry_adder_16bit.v"
+verilog work "../../Part-1/ripple_carry_adder_32bit.v"
+verilog work "../../Part-1/ripple_carry_adder_64bit.v"

@@ -1,9 +1,0 @@
-xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_8bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_8bit.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 rca_8bit.ngc rca_8bit.ngd  
-map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o rca_8bit_map.ncd rca_8bit.ngd rca_8bit.pcf 
-par -w -intstyle ise -ol high -mt off rca_8bit_map.ncd rca_8bit.ncd rca_8bit.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml rca_8bit.twx rca_8bit.ncd -o rca_8bit.twr rca_8bit.pcf 
-netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim rca_8bit.ngc rca_8bit_synthesis.v 
-xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_8bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_8bit.syr" 
-netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim rca_8bit.ngc rca_8bit_synthesis.v 
-xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_8bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_8bit.syr" 
