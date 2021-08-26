@@ -10,7 +10,7 @@ module carry_look_ahead_4bit_tb;
     carry_look_ahead_4bit carry_look_ahead(A, B, Ci, S, Co, PG, GG);
 
     initial begin
-        $monitor("i_term1 = %b, i_term2 = %b, i_carry = %b, o_sum = %b, o_carry = %b, PG = %b, GG = %b", A, B, Ci, S, Co, PG, GG);
+        $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b, PG = %b, GG = %b", A, B, Ci, S, Co, PG, GG);
         #10
         A = 4'b0100;
         B = 4'b0101;

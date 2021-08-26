@@ -281,67 +281,67 @@ Timing constraint: Default path analysis
   Total number of paths / destination ports: 321 / 17
 -------------------------------------------------------------------------
 Delay:               11.236ns (Levels of Logic = 36)
-  Source:            i_term2<0> (PAD)
-  Destination:       o_carry (PAD)
+  Source:            B<0> (PAD)
+  Destination:       Co (PAD)
 
-  Data Path: i_term2<0> to o_carry
+  Data Path: B<0> to Co
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.722  i_term2_0_IBUF (i_term2_0_IBUF)
-     begin scope: 'ripple_carry_adder1:i_term2<0>'
-     begin scope: 'ripple_carry_adder1/full_adder1:i_bit2'
-     LUT3:I0->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder1:o_carry'
-     begin scope: 'ripple_carry_adder1/full_adder2:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder2:o_carry'
-     begin scope: 'ripple_carry_adder1/full_adder3:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder3:o_carry'
-     begin scope: 'ripple_carry_adder1/full_adder4:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder4:o_carry'
-     begin scope: 'ripple_carry_adder1/full_adder5:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder5:o_carry'
-     begin scope: 'ripple_carry_adder1/full_adder6:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder6:o_carry'
-     begin scope: 'ripple_carry_adder1/full_adder7:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder7:o_carry'
-     begin scope: 'ripple_carry_adder1/full_adder8:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder1/full_adder8:o_carry'
-     end scope: 'ripple_carry_adder1:o_carry'
-     begin scope: 'ripple_carry_adder2:i_carry'
-     begin scope: 'ripple_carry_adder2/full_adder1:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder1:o_carry'
-     begin scope: 'ripple_carry_adder2/full_adder2:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder2:o_carry'
-     begin scope: 'ripple_carry_adder2/full_adder3:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder3:o_carry'
-     begin scope: 'ripple_carry_adder2/full_adder4:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder4:o_carry'
-     begin scope: 'ripple_carry_adder2/full_adder5:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder5:o_carry'
-     begin scope: 'ripple_carry_adder2/full_adder6:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder6:o_carry'
-     begin scope: 'ripple_carry_adder2/full_adder7:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder7:o_carry'
-     begin scope: 'ripple_carry_adder2/full_adder8:i_carry'
-     LUT3:I1->O            1   0.124   0.399  o_carry1 (o_carry)
-     end scope: 'ripple_carry_adder2/full_adder8:o_carry'
-     end scope: 'ripple_carry_adder2:o_carry'
-     OBUF:I->O                 0.000          o_carry_OBUF (o_carry)
+     IBUF:I->O             2   0.001   0.722  B_0_IBUF (B_0_IBUF)
+     begin scope: 'ripple_carry_adder1:B<0>'
+     begin scope: 'ripple_carry_adder1/full_adder1:B'
+     LUT3:I0->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder1:Co'
+     begin scope: 'ripple_carry_adder1/full_adder2:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder2:Co'
+     begin scope: 'ripple_carry_adder1/full_adder3:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder3:Co'
+     begin scope: 'ripple_carry_adder1/full_adder4:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder4:Co'
+     begin scope: 'ripple_carry_adder1/full_adder5:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder5:Co'
+     begin scope: 'ripple_carry_adder1/full_adder6:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder6:Co'
+     begin scope: 'ripple_carry_adder1/full_adder7:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder7:Co'
+     begin scope: 'ripple_carry_adder1/full_adder8:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder1/full_adder8:Co'
+     end scope: 'ripple_carry_adder1:Co'
+     begin scope: 'ripple_carry_adder2:Ci'
+     begin scope: 'ripple_carry_adder2/full_adder1:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder1:Co'
+     begin scope: 'ripple_carry_adder2/full_adder2:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder2:Co'
+     begin scope: 'ripple_carry_adder2/full_adder3:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder3:Co'
+     begin scope: 'ripple_carry_adder2/full_adder4:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder4:Co'
+     begin scope: 'ripple_carry_adder2/full_adder5:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder5:Co'
+     begin scope: 'ripple_carry_adder2/full_adder6:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder6:Co'
+     begin scope: 'ripple_carry_adder2/full_adder7:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder7:Co'
+     begin scope: 'ripple_carry_adder2/full_adder8:Ci'
+     LUT3:I1->O            1   0.124   0.399  Co1 (Co)
+     end scope: 'ripple_carry_adder2/full_adder8:Co'
+     end scope: 'ripple_carry_adder2:Co'
+     OBUF:I->O                 0.000          Co_OBUF (Co)
     ----------------------------------------
     Total                     11.236ns (1.985ns logic, 9.251ns route)
                                        (17.7% logic, 82.3% route)

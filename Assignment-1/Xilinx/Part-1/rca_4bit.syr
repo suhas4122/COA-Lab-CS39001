@@ -269,27 +269,27 @@ Timing constraint: Default path analysis
   Total number of paths / destination ports: 33 / 5
 -------------------------------------------------------------------------
 Delay:               3.244ns (Levels of Logic = 10)
-  Source:            i_term2<0> (PAD)
-  Destination:       o_carry (PAD)
+  Source:            B<0> (PAD)
+  Destination:       Co (PAD)
 
-  Data Path: i_term2<0> to o_carry
+  Data Path: B<0> to Co
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.722  i_term2_0_IBUF (i_term2_0_IBUF)
-     begin scope: 'full_adder1:i_bit2'
-     LUT3:I0->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'full_adder1:o_carry'
-     begin scope: 'full_adder2:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'full_adder2:o_carry'
-     begin scope: 'full_adder3:i_carry'
-     LUT3:I1->O            2   0.124   0.542  o_carry1 (o_carry)
-     end scope: 'full_adder3:o_carry'
-     begin scope: 'full_adder4:i_carry'
-     LUT3:I1->O            1   0.124   0.399  o_carry1 (o_carry)
-     end scope: 'full_adder4:o_carry'
-     OBUF:I->O                 0.000          o_carry_OBUF (o_carry)
+     IBUF:I->O             2   0.001   0.722  B_0_IBUF (B_0_IBUF)
+     begin scope: 'full_adder1:B'
+     LUT3:I0->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'full_adder1:Co'
+     begin scope: 'full_adder2:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'full_adder2:Co'
+     begin scope: 'full_adder3:Ci'
+     LUT3:I1->O            2   0.124   0.542  Co1 (Co)
+     end scope: 'full_adder3:Co'
+     begin scope: 'full_adder4:Ci'
+     LUT3:I1->O            1   0.124   0.399  Co1 (Co)
+     end scope: 'full_adder4:Co'
+     OBUF:I->O                 0.000          Co_OBUF (Co)
     ----------------------------------------
     Total                      3.244ns (0.497ns logic, 2.747ns route)
                                        (15.3% logic, 84.7% route)

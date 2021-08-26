@@ -2,27 +2,27 @@
 
 module half_adder_tb;
  
-    reg r_BIT1 = 0;
-    reg r_BIT2 = 0;
-    wire w_SUM;
-    wire w_CARRY;
+    reg A = 0;
+    reg B = 0;
+    wire S;
+    wire Co;
     
-    half_adder half_adder_inst(.i_bit1(r_BIT1), .i_bit2(r_BIT2), .o_sum(w_SUM), .o_carry(w_CARRY));
+    half_adder half_adder_inst(A, B, S, Co);
     
     initial begin
-        $monitor("i_bit1 = %b, i_bit2 = %b, o_sum = %b, o_carry = %b", r_BIT1, r_BIT2, w_SUM, w_CARRY);
+        $monitor("A = %b, B = %b, S = %b, Co = %b", A, B, S, Co);
         #10
-        r_BIT1 = 1'b0;
-        r_BIT2 = 1'b0;
+        A = 1'b0;
+        B = 1'b0;
         #10;
-        r_BIT1 = 1'b0;
-        r_BIT2 = 1'b1;
+        A = 1'b0;
+        B = 1'b1;
         #10;
-        r_BIT1 = 1'b1;
-        r_BIT2 = 1'b0;
+        A = 1'b1;
+        B = 1'b0;
         #10;
-        r_BIT1 = 1'b1;
-        r_BIT2 = 1'b1;
+        A = 1'b1;
+        B = 1'b1;
     end 
  
 endmodule

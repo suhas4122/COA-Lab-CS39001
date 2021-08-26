@@ -19,17 +19,17 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module full_adder (
-    i_bit1, 
-    i_bit2, 
-    i_carry,
-    o_sum, 
-    o_carry
+    A, 
+    B, 
+    Ci,
+    S, 
+    Co
 );
     
-    input i_bit1, i_bit2, i_carry;
-    output o_sum, o_carry;
+    input A, B, Ci;
+    output S, Co;
 
-    assign o_sum = i_bit1 ^ i_bit2 ^ i_carry;
-    assign o_carry = (i_bit1 & i_bit2) | (i_bit2 & i_carry) | (i_carry & i_bit1);
+    assign S = A ^ B ^ Ci;
+    assign Co = (A & B) | (B & Ci) | (Ci & A);
 
 endmodule
