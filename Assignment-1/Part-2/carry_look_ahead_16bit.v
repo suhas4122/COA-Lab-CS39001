@@ -1,17 +1,12 @@
 module carry_look_ahead_16bit(A, B, Ci, S, Co, PG1, GG1);
 
-    input [15:0] A;
-    input [15:0] B;
+    input [15:0] A, B;
     input Ci;
     output [15:0] S;
-    output Co;
-    output PG1;
-    output GG1;
-    wire [3:0] GG;
-    wire [3:0] PG;
+    output Co, PG1, GG1;
+    wire [3:0] GG, PG, Cdummy;
     wire [3:1] C;
     wire Ci;
-    wire [3:0] Cdummy;
 
     assign C[1] = GG[0] | (PG[0] & Ci);
     assign C[2] = GG[1] | (PG[1] & GG[0])| (PG[1] & PG[0] & Ci);

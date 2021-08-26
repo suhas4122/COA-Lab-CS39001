@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COAA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COAA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.syr" 
+xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COAA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COAA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.syr" 
+xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 rca_4bit.ngc rca_4bit.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o rca_4bit_map.ncd rca_4bit.ngd rca_4bit.pcf 
+par -w -intstyle ise -ol high -mt off rca_4bit_map.ncd rca_4bit.ncd rca_4bit.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml rca_4bit.twx rca_4bit.ncd -o rca_4bit.twr rca_4bit.pcf 
+xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_4bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 rca_4bit.ngc rca_4bit.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o rca_4bit_map.ncd rca_4bit.ngd rca_4bit.pcf 
+par -w -intstyle ise -ol high -mt off rca_4bit_map.ncd rca_4bit.ncd rca_4bit.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml rca_4bit.twx rca_4bit.ncd -o rca_4bit.twr rca_4bit.pcf 

@@ -1,14 +1,14 @@
-module carry_look_ahead_16bit_tb;
-
+module carry_look_ahead_16bit_ripple_tb;
+    
     reg [15:0] A = 16'b0, B = 16'b0;
-    reg Ci;
+    reg Ci = 1'b0;
     wire [15:0] S;
-    wire Co, PG, GG;
+    wire Co;
 
-    carry_look_ahead_16bit carry_look_ahead(A, B, Ci, S, Co, PG, GG);
+    carry_look_ahead_16bit_ripple carry_look_ahead(A, B, Ci, S, Co);
 
     initial begin
-        $monitor("A = %b, i_teBrm2 = %b, Ci = %b, S = %b, Co = %b PG = %b, GG = %b", A, B, Ci, S, Co, PG, GG);
+        $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b", A, B, Ci, S, Co);
         #10
         A = 16'b0100101001001010;
         B = 16'b0101101101011011;
@@ -23,4 +23,4 @@ module carry_look_ahead_16bit_tb;
         Ci = 1'b1;
     end
 
-endmodule
+endmodule 

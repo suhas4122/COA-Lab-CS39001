@@ -1,0 +1,372 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 1 -n
+3 -fastpaths -xml rca_16bit.twx rca_16bit.ncd -o rca_16bit.twr rca_16bit.pcf
+
+Design file:              rca_16bit.ncd
+Physical constraint file: rca_16bit.pcf
+Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+i_carry        |o_carry        |   18.389|
+i_carry        |o_sum<0>       |    7.596|
+i_carry        |o_sum<1>       |    8.112|
+i_carry        |o_sum<2>       |    8.643|
+i_carry        |o_sum<3>       |    9.528|
+i_carry        |o_sum<4>       |   10.178|
+i_carry        |o_sum<5>       |   10.991|
+i_carry        |o_sum<6>       |   11.652|
+i_carry        |o_sum<7>       |   12.439|
+i_carry        |o_sum<8>       |   13.088|
+i_carry        |o_sum<9>       |   13.899|
+i_carry        |o_sum<10>      |   14.556|
+i_carry        |o_sum<11>      |   15.377|
+i_carry        |o_sum<12>      |   16.495|
+i_carry        |o_sum<13>      |   17.274|
+i_carry        |o_sum<14>      |   18.190|
+i_carry        |o_sum<15>      |   19.068|
+i_term1<0>     |o_carry        |   18.803|
+i_term1<0>     |o_sum<0>       |    8.043|
+i_term1<0>     |o_sum<1>       |    8.526|
+i_term1<0>     |o_sum<2>       |    9.057|
+i_term1<0>     |o_sum<3>       |    9.942|
+i_term1<0>     |o_sum<4>       |   10.592|
+i_term1<0>     |o_sum<5>       |   11.405|
+i_term1<0>     |o_sum<6>       |   12.066|
+i_term1<0>     |o_sum<7>       |   12.853|
+i_term1<0>     |o_sum<8>       |   13.502|
+i_term1<0>     |o_sum<9>       |   14.313|
+i_term1<0>     |o_sum<10>      |   14.970|
+i_term1<0>     |o_sum<11>      |   15.791|
+i_term1<0>     |o_sum<12>      |   16.909|
+i_term1<0>     |o_sum<13>      |   17.688|
+i_term1<0>     |o_sum<14>      |   18.604|
+i_term1<0>     |o_sum<15>      |   19.482|
+i_term1<1>     |o_carry        |   18.288|
+i_term1<1>     |o_sum<1>       |    8.043|
+i_term1<1>     |o_sum<2>       |    8.542|
+i_term1<1>     |o_sum<3>       |    9.427|
+i_term1<1>     |o_sum<4>       |   10.077|
+i_term1<1>     |o_sum<5>       |   10.890|
+i_term1<1>     |o_sum<6>       |   11.551|
+i_term1<1>     |o_sum<7>       |   12.338|
+i_term1<1>     |o_sum<8>       |   12.987|
+i_term1<1>     |o_sum<9>       |   13.798|
+i_term1<1>     |o_sum<10>      |   14.455|
+i_term1<1>     |o_sum<11>      |   15.276|
+i_term1<1>     |o_sum<12>      |   16.394|
+i_term1<1>     |o_sum<13>      |   17.173|
+i_term1<1>     |o_sum<14>      |   18.089|
+i_term1<1>     |o_sum<15>      |   18.967|
+i_term1<2>     |o_carry        |   17.515|
+i_term1<2>     |o_sum<2>       |    7.802|
+i_term1<2>     |o_sum<3>       |    8.654|
+i_term1<2>     |o_sum<4>       |    9.304|
+i_term1<2>     |o_sum<5>       |   10.117|
+i_term1<2>     |o_sum<6>       |   10.778|
+i_term1<2>     |o_sum<7>       |   11.565|
+i_term1<2>     |o_sum<8>       |   12.214|
+i_term1<2>     |o_sum<9>       |   13.025|
+i_term1<2>     |o_sum<10>      |   13.682|
+i_term1<2>     |o_sum<11>      |   14.503|
+i_term1<2>     |o_sum<12>      |   15.621|
+i_term1<2>     |o_sum<13>      |   16.400|
+i_term1<2>     |o_sum<14>      |   17.316|
+i_term1<2>     |o_sum<15>      |   18.194|
+i_term1<3>     |o_carry        |   16.809|
+i_term1<3>     |o_sum<3>       |    7.950|
+i_term1<3>     |o_sum<4>       |    8.598|
+i_term1<3>     |o_sum<5>       |    9.411|
+i_term1<3>     |o_sum<6>       |   10.072|
+i_term1<3>     |o_sum<7>       |   10.859|
+i_term1<3>     |o_sum<8>       |   11.508|
+i_term1<3>     |o_sum<9>       |   12.319|
+i_term1<3>     |o_sum<10>      |   12.976|
+i_term1<3>     |o_sum<11>      |   13.797|
+i_term1<3>     |o_sum<12>      |   14.915|
+i_term1<3>     |o_sum<13>      |   15.694|
+i_term1<3>     |o_sum<14>      |   16.610|
+i_term1<3>     |o_sum<15>      |   17.488|
+i_term1<4>     |o_carry        |   16.276|
+i_term1<4>     |o_sum<4>       |    8.098|
+i_term1<4>     |o_sum<5>       |    8.878|
+i_term1<4>     |o_sum<6>       |    9.539|
+i_term1<4>     |o_sum<7>       |   10.326|
+i_term1<4>     |o_sum<8>       |   10.975|
+i_term1<4>     |o_sum<9>       |   11.786|
+i_term1<4>     |o_sum<10>      |   12.443|
+i_term1<4>     |o_sum<11>      |   13.264|
+i_term1<4>     |o_sum<12>      |   14.382|
+i_term1<4>     |o_sum<13>      |   15.161|
+i_term1<4>     |o_sum<14>      |   16.077|
+i_term1<4>     |o_sum<15>      |   16.955|
+i_term1<5>     |o_carry        |   15.339|
+i_term1<5>     |o_sum<5>       |    7.941|
+i_term1<5>     |o_sum<6>       |    8.602|
+i_term1<5>     |o_sum<7>       |    9.389|
+i_term1<5>     |o_sum<8>       |   10.038|
+i_term1<5>     |o_sum<9>       |   10.849|
+i_term1<5>     |o_sum<10>      |   11.506|
+i_term1<5>     |o_sum<11>      |   12.327|
+i_term1<5>     |o_sum<12>      |   13.445|
+i_term1<5>     |o_sum<13>      |   14.224|
+i_term1<5>     |o_sum<14>      |   15.140|
+i_term1<5>     |o_sum<15>      |   16.018|
+i_term1<6>     |o_carry        |   14.814|
+i_term1<6>     |o_sum<6>       |    8.110|
+i_term1<6>     |o_sum<7>       |    8.864|
+i_term1<6>     |o_sum<8>       |    9.513|
+i_term1<6>     |o_sum<9>       |   10.324|
+i_term1<6>     |o_sum<10>      |   10.981|
+i_term1<6>     |o_sum<11>      |   11.802|
+i_term1<6>     |o_sum<12>      |   12.920|
+i_term1<6>     |o_sum<13>      |   13.699|
+i_term1<6>     |o_sum<14>      |   14.615|
+i_term1<6>     |o_sum<15>      |   15.493|
+i_term1<7>     |o_carry        |   13.878|
+i_term1<7>     |o_sum<7>       |    7.928|
+i_term1<7>     |o_sum<8>       |    8.577|
+i_term1<7>     |o_sum<9>       |    9.388|
+i_term1<7>     |o_sum<10>      |   10.045|
+i_term1<7>     |o_sum<11>      |   10.866|
+i_term1<7>     |o_sum<12>      |   11.984|
+i_term1<7>     |o_sum<13>      |   12.763|
+i_term1<7>     |o_sum<14>      |   13.679|
+i_term1<7>     |o_sum<15>      |   14.557|
+i_term1<8>     |o_carry        |   13.736|
+i_term1<8>     |o_sum<8>       |    8.468|
+i_term1<8>     |o_sum<9>       |    9.246|
+i_term1<8>     |o_sum<10>      |    9.903|
+i_term1<8>     |o_sum<11>      |   10.724|
+i_term1<8>     |o_sum<12>      |   11.842|
+i_term1<8>     |o_sum<13>      |   12.621|
+i_term1<8>     |o_sum<14>      |   13.537|
+i_term1<8>     |o_sum<15>      |   14.415|
+i_term1<9>     |o_carry        |   12.122|
+i_term1<9>     |o_sum<9>       |    7.599|
+i_term1<9>     |o_sum<10>      |    8.289|
+i_term1<9>     |o_sum<11>      |    9.110|
+i_term1<9>     |o_sum<12>      |   10.228|
+i_term1<9>     |o_sum<13>      |   11.007|
+i_term1<9>     |o_sum<14>      |   11.923|
+i_term1<9>     |o_sum<15>      |   12.801|
+i_term1<10>    |o_carry        |   11.966|
+i_term1<10>    |o_sum<10>      |    8.165|
+i_term1<10>    |o_sum<11>      |    8.954|
+i_term1<10>    |o_sum<12>      |   10.072|
+i_term1<10>    |o_sum<13>      |   10.851|
+i_term1<10>    |o_sum<14>      |   11.767|
+i_term1<10>    |o_sum<15>      |   12.645|
+i_term1<11>    |o_carry        |   10.658|
+i_term1<11>    |o_sum<11>      |    7.613|
+i_term1<11>    |o_sum<12>      |    8.764|
+i_term1<11>    |o_sum<13>      |    9.543|
+i_term1<11>    |o_sum<14>      |   10.459|
+i_term1<11>    |o_sum<15>      |   11.337|
+i_term1<12>    |o_carry        |    9.835|
+i_term1<12>    |o_sum<12>      |    7.940|
+i_term1<12>    |o_sum<13>      |    8.720|
+i_term1<12>    |o_sum<14>      |    9.636|
+i_term1<12>    |o_sum<15>      |   10.514|
+i_term1<13>    |o_carry        |    9.058|
+i_term1<13>    |o_sum<13>      |    7.941|
+i_term1<13>    |o_sum<14>      |    8.859|
+i_term1<13>    |o_sum<15>      |    9.737|
+i_term1<14>    |o_carry        |    7.690|
+i_term1<14>    |o_sum<14>      |    7.489|
+i_term1<14>    |o_sum<15>      |    8.369|
+i_term1<15>    |o_carry        |    7.094|
+i_term1<15>    |o_sum<15>      |    7.741|
+i_term2<0>     |o_carry        |   18.166|
+i_term2<0>     |o_sum<0>       |    7.405|
+i_term2<0>     |o_sum<1>       |    7.889|
+i_term2<0>     |o_sum<2>       |    8.420|
+i_term2<0>     |o_sum<3>       |    9.305|
+i_term2<0>     |o_sum<4>       |    9.955|
+i_term2<0>     |o_sum<5>       |   10.768|
+i_term2<0>     |o_sum<6>       |   11.429|
+i_term2<0>     |o_sum<7>       |   12.216|
+i_term2<0>     |o_sum<8>       |   12.865|
+i_term2<0>     |o_sum<9>       |   13.676|
+i_term2<0>     |o_sum<10>      |   14.333|
+i_term2<0>     |o_sum<11>      |   15.154|
+i_term2<0>     |o_sum<12>      |   16.272|
+i_term2<0>     |o_sum<13>      |   17.051|
+i_term2<0>     |o_sum<14>      |   17.967|
+i_term2<0>     |o_sum<15>      |   18.845|
+i_term2<1>     |o_carry        |   17.646|
+i_term2<1>     |o_sum<1>       |    7.401|
+i_term2<1>     |o_sum<2>       |    7.900|
+i_term2<1>     |o_sum<3>       |    8.785|
+i_term2<1>     |o_sum<4>       |    9.435|
+i_term2<1>     |o_sum<5>       |   10.248|
+i_term2<1>     |o_sum<6>       |   10.909|
+i_term2<1>     |o_sum<7>       |   11.696|
+i_term2<1>     |o_sum<8>       |   12.345|
+i_term2<1>     |o_sum<9>       |   13.156|
+i_term2<1>     |o_sum<10>      |   13.813|
+i_term2<1>     |o_sum<11>      |   14.634|
+i_term2<1>     |o_sum<12>      |   15.752|
+i_term2<1>     |o_sum<13>      |   16.531|
+i_term2<1>     |o_sum<14>      |   17.447|
+i_term2<1>     |o_sum<15>      |   18.325|
+i_term2<2>     |o_carry        |   17.073|
+i_term2<2>     |o_sum<2>       |    7.361|
+i_term2<2>     |o_sum<3>       |    8.212|
+i_term2<2>     |o_sum<4>       |    8.862|
+i_term2<2>     |o_sum<5>       |    9.675|
+i_term2<2>     |o_sum<6>       |   10.336|
+i_term2<2>     |o_sum<7>       |   11.123|
+i_term2<2>     |o_sum<8>       |   11.772|
+i_term2<2>     |o_sum<9>       |   12.583|
+i_term2<2>     |o_sum<10>      |   13.240|
+i_term2<2>     |o_sum<11>      |   14.061|
+i_term2<2>     |o_sum<12>      |   15.179|
+i_term2<2>     |o_sum<13>      |   15.958|
+i_term2<2>     |o_sum<14>      |   16.874|
+i_term2<2>     |o_sum<15>      |   17.752|
+i_term2<3>     |o_carry        |   16.258|
+i_term2<3>     |o_sum<3>       |    7.399|
+i_term2<3>     |o_sum<4>       |    8.047|
+i_term2<3>     |o_sum<5>       |    8.860|
+i_term2<3>     |o_sum<6>       |    9.521|
+i_term2<3>     |o_sum<7>       |   10.308|
+i_term2<3>     |o_sum<8>       |   10.957|
+i_term2<3>     |o_sum<9>       |   11.768|
+i_term2<3>     |o_sum<10>      |   12.425|
+i_term2<3>     |o_sum<11>      |   13.246|
+i_term2<3>     |o_sum<12>      |   14.364|
+i_term2<3>     |o_sum<13>      |   15.143|
+i_term2<3>     |o_sum<14>      |   16.059|
+i_term2<3>     |o_sum<15>      |   16.937|
+i_term2<4>     |o_carry        |   15.702|
+i_term2<4>     |o_sum<4>       |    7.523|
+i_term2<4>     |o_sum<5>       |    8.304|
+i_term2<4>     |o_sum<6>       |    8.965|
+i_term2<4>     |o_sum<7>       |    9.752|
+i_term2<4>     |o_sum<8>       |   10.401|
+i_term2<4>     |o_sum<9>       |   11.212|
+i_term2<4>     |o_sum<10>      |   11.869|
+i_term2<4>     |o_sum<11>      |   12.690|
+i_term2<4>     |o_sum<12>      |   13.808|
+i_term2<4>     |o_sum<13>      |   14.587|
+i_term2<4>     |o_sum<14>      |   15.503|
+i_term2<4>     |o_sum<15>      |   16.381|
+i_term2<5>     |o_carry        |   14.798|
+i_term2<5>     |o_sum<5>       |    7.400|
+i_term2<5>     |o_sum<6>       |    8.061|
+i_term2<5>     |o_sum<7>       |    8.848|
+i_term2<5>     |o_sum<8>       |    9.497|
+i_term2<5>     |o_sum<9>       |   10.308|
+i_term2<5>     |o_sum<10>      |   10.965|
+i_term2<5>     |o_sum<11>      |   11.786|
+i_term2<5>     |o_sum<12>      |   12.904|
+i_term2<5>     |o_sum<13>      |   13.683|
+i_term2<5>     |o_sum<14>      |   14.599|
+i_term2<5>     |o_sum<15>      |   15.477|
+i_term2<6>     |o_carry        |   14.215|
+i_term2<6>     |o_sum<6>       |    7.510|
+i_term2<6>     |o_sum<7>       |    8.265|
+i_term2<6>     |o_sum<8>       |    8.914|
+i_term2<6>     |o_sum<9>       |    9.725|
+i_term2<6>     |o_sum<10>      |   10.382|
+i_term2<6>     |o_sum<11>      |   11.203|
+i_term2<6>     |o_sum<12>      |   12.321|
+i_term2<6>     |o_sum<13>      |   13.100|
+i_term2<6>     |o_sum<14>      |   14.016|
+i_term2<6>     |o_sum<15>      |   14.894|
+i_term2<7>     |o_carry        |   13.025|
+i_term2<7>     |o_sum<7>       |    7.042|
+i_term2<7>     |o_sum<8>       |    7.724|
+i_term2<7>     |o_sum<9>       |    8.535|
+i_term2<7>     |o_sum<10>      |    9.192|
+i_term2<7>     |o_sum<11>      |   10.013|
+i_term2<7>     |o_sum<12>      |   11.131|
+i_term2<7>     |o_sum<13>      |   11.910|
+i_term2<7>     |o_sum<14>      |   12.826|
+i_term2<7>     |o_sum<15>      |   13.704|
+i_term2<8>     |o_carry        |   12.720|
+i_term2<8>     |o_sum<8>       |    7.451|
+i_term2<8>     |o_sum<9>       |    8.230|
+i_term2<8>     |o_sum<10>      |    8.887|
+i_term2<8>     |o_sum<11>      |    9.708|
+i_term2<8>     |o_sum<12>      |   10.826|
+i_term2<8>     |o_sum<13>      |   11.605|
+i_term2<8>     |o_sum<14>      |   12.521|
+i_term2<8>     |o_sum<15>      |   13.399|
+i_term2<9>     |o_carry        |   11.683|
+i_term2<9>     |o_sum<9>       |    7.191|
+i_term2<9>     |o_sum<10>      |    7.850|
+i_term2<9>     |o_sum<11>      |    8.671|
+i_term2<9>     |o_sum<12>      |    9.789|
+i_term2<9>     |o_sum<13>      |   10.568|
+i_term2<9>     |o_sum<14>      |   11.484|
+i_term2<9>     |o_sum<15>      |   12.362|
+i_term2<10>    |o_carry        |   11.259|
+i_term2<10>    |o_sum<10>      |    7.458|
+i_term2<10>    |o_sum<11>      |    8.247|
+i_term2<10>    |o_sum<12>      |    9.365|
+i_term2<10>    |o_sum<13>      |   10.144|
+i_term2<10>    |o_sum<14>      |   11.060|
+i_term2<10>    |o_sum<15>      |   11.938|
+i_term2<11>    |o_carry        |   10.071|
+i_term2<11>    |o_sum<11>      |    7.057|
+i_term2<11>    |o_sum<12>      |    8.177|
+i_term2<11>    |o_sum<13>      |    8.956|
+i_term2<11>    |o_sum<14>      |    9.872|
+i_term2<11>    |o_sum<15>      |   10.750|
+i_term2<12>    |o_carry        |    9.291|
+i_term2<12>    |o_sum<12>      |    7.389|
+i_term2<12>    |o_sum<13>      |    8.176|
+i_term2<12>    |o_sum<14>      |    9.092|
+i_term2<12>    |o_sum<15>      |    9.970|
+i_term2<13>    |o_carry        |    8.450|
+i_term2<13>    |o_sum<13>      |    7.335|
+i_term2<13>    |o_sum<14>      |    8.251|
+i_term2<13>    |o_sum<15>      |    9.129|
+i_term2<14>    |o_carry        |    7.588|
+i_term2<14>    |o_sum<14>      |    7.387|
+i_term2<14>    |o_sum<15>      |    8.267|
+i_term2<15>    |o_carry        |    6.844|
+i_term2<15>    |o_sum<15>      |    7.523|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Aug 26 13:59:18 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 751 MB
+
+
+

@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_16bit.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/rca_16bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 rca_16bit.ngc rca_16bit.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o rca_16bit_map.ncd rca_16bit.ngd rca_16bit.pcf 
+par -w -intstyle ise -ol high -mt off rca_16bit_map.ncd rca_16bit.ncd rca_16bit.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml rca_16bit.twx rca_16bit.ncd -o rca_16bit.twr rca_16bit.pcf 

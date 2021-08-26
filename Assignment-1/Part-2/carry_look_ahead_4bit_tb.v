@@ -2,12 +2,12 @@
 
 module carry_look_ahead_4bit_tb;
     
-    reg [3:0] A = 4'b0000, B = 4'b0000;
+    reg [3:0] A = 4'b0, B = 4'b0;
     reg Ci = 1'b0;
     wire [3:0] S;
     wire Co, PG, GG;
 
-    carry_look_ahead_4bit carry_look_ahead(.A(A), .B(B), .Ci(Ci), .S(S), .Co(Co), .PG(PG), .GG(GG));
+    carry_look_ahead_4bit carry_look_ahead(A, B, Ci, S, Co, PG, GG);
 
     initial begin
         $monitor("i_term1 = %b, i_term2 = %b, i_carry = %b, o_sum = %b, o_carry = %b, PG = %b, GG = %b", A, B, Ci, S, Co, PG, GG);
