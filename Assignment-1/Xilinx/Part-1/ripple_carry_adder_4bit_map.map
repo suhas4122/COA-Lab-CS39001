@@ -11,7 +11,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Thu Aug 26 14:59:44 2021
+Mapped Date    : Thu Aug 26 19:26:48 2021
 
 WARNING:LIT:701 - PAD symbol "A<3>" has an undefined IOSTANDARD.
 WARNING:LIT:702 - PAD symbol "A<3>" is not constrained (LOC) to a specific
@@ -37,10 +37,10 @@ Phase 3.31  Local Placement Optimization (Checksum:ec) REAL time: 12 secs
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 .....
-Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:ec) REAL time: 12 secs 
+Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:ec) REAL time: 13 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:ec) REAL time: 12 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:ec) REAL time: 13 secs 
 
 Phase 6.3  Local Placement Optimization
 .....
@@ -212,9 +212,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                1.00
 
-Peak Memory Usage:  1179 MB
+Peak Memory Usage:  1180 MB
 Total REAL time to MAP completion:  14 secs 
-Total CPU time to MAP completion:   13 secs 
+Total CPU time to MAP completion:   14 secs 
 
 Mapping completed.
 See MAP report file "ripple_carry_adder_4bit_map.mrp" for details.

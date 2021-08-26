@@ -5,6 +5,8 @@ Group no. 8
 Suhas Jain and Monal Prasad
 */
 
+`timescale  1ns/1ps
+
 module carry_look_ahead_16bit_ripple_tb;
     
     reg [15:0] A = 16'b0, B = 16'b0;

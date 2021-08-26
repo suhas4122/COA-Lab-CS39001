@@ -85,14 +85,17 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ripple_carry_adder_4bit.ngc"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ripple_carry_adder_4bit.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ripple_carry_adder_4bit.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="ripple_carry_adder_4bit.pad"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="ripple_carry_adder_4bit.par" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="ripple_carry_adder_4bit.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ripple_carry_adder_4bit.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="ripple_carry_adder_4bit.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ripple_carry_adder_4bit.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ripple_carry_adder_4bit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="ripple_carry_adder_4bit.twr" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="ripple_carry_adder_4bit.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="ripple_carry_adder_4bit.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="ripple_carry_adder_4bit.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ripple_carry_adder_4bit.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry_adder_4bit_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ripple_carry_adder_4bit_guide.ncd" xil_pn:origination="imported"/>
@@ -100,9 +103,14 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ripple_carry_adder_4bit_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ripple_carry_adder_4bit_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="ripple_carry_adder_4bit_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_4bit_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_4bit_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ripple_carry_adder_4bit_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="ripple_carry_adder_4bit_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_4bit_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry_adder_4bit_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ripple_carry_adder_4bit_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="ripple_carry_adder_4bit_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_4bit_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ripple_carry_adder_64bit.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry_adder_64bit.cmd_log"/>
@@ -111,31 +119,23 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ripple_carry_adder_64bit.ngc"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ripple_carry_adder_64bit.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ripple_carry_adder_64bit.ngr"/>
-    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="ripple_carry_adder_64bit.pad"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="ripple_carry_adder_64bit.par" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="ripple_carry_adder_64bit.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ripple_carry_adder_64bit.prj"/>
-    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="ripple_carry_adder_64bit.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ripple_carry_adder_64bit.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ripple_carry_adder_64bit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="ripple_carry_adder_64bit.twr" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="ripple_carry_adder_64bit.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="ripple_carry_adder_64bit.unroutes" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XPI" xil_pn:name="ripple_carry_adder_64bit.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ripple_carry_adder_64bit.xst"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ripple_carry_adder_64bit_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ripple_carry_adder_64bit_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ripple_carry_adder_64bit_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ripple_carry_adder_64bit_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="ripple_carry_adder_64bit_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_64bit_map.xrpt"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_64bit_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ripple_carry_adder_64bit_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="ripple_carry_adder_64bit_pad.txt" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_64bit_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry_adder_64bit_summary.html"/>
-    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ripple_carry_adder_64bit_summary.xml"/>
-    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="ripple_carry_adder_64bit_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_64bit_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ripple_carry_adder_8bit.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry_adder_8bit.cmd_log"/>
@@ -170,98 +170,96 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1629970071" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1629970071">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970813" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="161221253338352424" xil_pn:start_ts="1629970813">
+    <transform xil_pn:end_ts="1629986197" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2178069129584510542" xil_pn:start_ts="1629986197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970813" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1599641352225180622" xil_pn:start_ts="1629970813">
+    <transform xil_pn:end_ts="1629986197" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8432439696071688120" xil_pn:start_ts="1629986197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970813" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1629970813">
+    <transform xil_pn:end_ts="1629986197" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1629986197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970813" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-3096847140478640822" xil_pn:start_ts="1629970813">
+    <transform xil_pn:end_ts="1629986197" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2835790719509557356" xil_pn:start_ts="1629986197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970813" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1629970813">
+    <transform xil_pn:end_ts="1629986197" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1629986197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970813" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8350469435967704488" xil_pn:start_ts="1629970813">
+    <transform xil_pn:end_ts="1629986197" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4217975474733513986" xil_pn:start_ts="1629986197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970818" xil_pn:in_ck="-8642163260185575947" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="3388060315450835231" xil_pn:start_ts="1629970813">
+    <transform xil_pn:end_ts="1629986202" xil_pn:in_ck="-8642163260185575947" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="8421190136025784265" xil_pn:start_ts="1629986197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="ripple_carry_adder_16bit.ngr"/>
-      <outfile xil_pn:name="ripple_carry_adder_32bit.ngr"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.lso"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.ngc"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.ngr"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.prj"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.stx"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.syr"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.xst"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_xst.xrpt"/>
-      <outfile xil_pn:name="ripple_carry_adder_8bit.ngr"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.lso"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.ngc"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.ngr"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.prj"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.stx"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.syr"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.xst"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1629970818" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5943083587623982347" xil_pn:start_ts="1629970818">
+    <transform xil_pn:end_ts="1629986202" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7645797983160879679" xil_pn:start_ts="1629986202">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1629970823" xil_pn:in_ck="2016443117516336877" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7010900088377172609" xil_pn:start_ts="1629970818">
+    <transform xil_pn:end_ts="1629986207" xil_pn:in_ck="2016443117516336877" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6281877437254039753" xil_pn:start_ts="1629986202">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.bld"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.ngd"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.bld"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.ngd"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1629970846" xil_pn:in_ck="4637444867899265330" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-7188367874928765557" xil_pn:start_ts="1629970823">
+    <transform xil_pn:end_ts="1629986222" xil_pn:in_ck="4637444867899265330" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-7188367874928765557" xil_pn:start_ts="1629986207">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.pcf"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_map.map"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_map.mrp"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_map.ncd"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_map.ngm"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_map.xrpt"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_summary.xml"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_usage.xml"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.pcf"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_map.map"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_map.mrp"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_map.ncd"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_map.ngm"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_map.xrpt"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_summary.xml"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1629970870" xil_pn:in_ck="-1043826677078503057" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1629970846">
+    <transform xil_pn:end_ts="1629986245" xil_pn:in_ck="-1043826677078503057" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1629986222">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.ncd"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.pad"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.par"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.ptwx"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.unroutes"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.xpi"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_pad.csv"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_pad.txt"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit_par.xrpt"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.ncd"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.pad"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.par"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.ptwx"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.unroutes"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.xpi"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_pad.csv"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_pad.txt"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1629970870" xil_pn:in_ck="9153351217834190238" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1629970860">
+    <transform xil_pn:end_ts="1629986245" xil_pn:in_ck="9153351217834190238" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1629986236">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.twr"/>
-      <outfile xil_pn:name="ripple_carry_adder_64bit.twx"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.twr"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.twx"/>
     </transform>
   </transforms>
 

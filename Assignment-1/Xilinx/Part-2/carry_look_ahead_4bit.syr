@@ -12,7 +12,7 @@ Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: carry_look_ahead_4bit.prj
@@ -86,7 +86,7 @@ Equivalent register Removal        : YES
 Optimization Goal                  : Speed
 Optimization Effort                : 1
 Power Reduction                    : NO
-Keep Hierarchy                     : Yes
+Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Global Optimization                : AllClockNets
@@ -186,13 +186,12 @@ Top Level Output File Name         : carry_look_ahead_4bit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 10
-#      LUT3                        : 3
-#      LUT4                        : 2
-#      LUT5                        : 5
-# IO Buffers                       : 16
+# BELS                             : 5
+#      LUT3                        : 2
+#      LUT5                        : 3
+# IO Buffers                       : 13
 #      IBUF                        : 9
-#      OBUF                        : 7
+#      OBUF                        : 4
 
 Device utilization summary:
 ---------------------------
@@ -201,19 +200,19 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   10  out of  63400     0%  
-    Number used as Logic:                10  out of  63400     0%  
+ Number of Slice LUTs:                    5  out of  63400     0%  
+    Number used as Logic:                 5  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     10
-   Number with an unused Flip Flop:      10  out of     10   100%  
-   Number with an unused LUT:             0  out of     10     0%  
-   Number of fully used LUT-FF pairs:     0  out of     10     0%  
+ Number of LUT Flip Flop pairs used:      5
+   Number with an unused Flip Flop:       5  out of      5   100%  
+   Number with an unused LUT:             0  out of      5     0%  
+   Number of fully used LUT-FF pairs:     0  out of      5     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                          16
- Number of bonded IOBs:                  16  out of    210     7%  
+ Number of bonded IOBs:                  13  out of    210     6%  
 
 Specific Feature Utilization:
 
@@ -248,7 +247,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.209ns
+   Maximum combinational path delay: 2.115ns
 
 Timing Details:
 ---------------
@@ -256,24 +255,23 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 57 / 7
+  Total number of paths / destination ports: 24 / 4
 -------------------------------------------------------------------------
-Delay:               3.209ns (Levels of Logic = 5)
-  Source:            B<1> (PAD)
-  Destination:       Co (PAD)
+Delay:               2.115ns (Levels of Logic = 4)
+  Source:            A<1> (PAD)
+  Destination:       S<3> (PAD)
 
-  Data Path: B<1> to Co
+  Data Path: A<1> to S<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   0.001   0.796  B_1_IBUF (B_1_IBUF)
-     LUT4:I0->O            1   0.124   0.919  PG_SW0 (N4)
-     LUT5:I0->O            2   0.124   0.722  PG (PG_OBUF)
-     LUT3:I0->O            1   0.124   0.399  Co1 (Co_OBUF)
-     OBUF:I->O                 0.000          Co_OBUF (Co)
+     IBUF:I->O             2   0.001   0.925  A_1_IBUF (A_1_IBUF)
+     LUT5:I0->O            2   0.124   0.542  C<2><1>1 (C<2>)
+     LUT5:I3->O            1   0.124   0.399  Mxor_S_3_xo<0>1 (S_3_OBUF)
+     OBUF:I->O                 0.000          S_3_OBUF (S<3>)
     ----------------------------------------
-    Total                      3.209ns (0.373ns logic, 2.836ns route)
-                                       (11.6% logic, 88.4% route)
+    Total                      2.115ns (0.249ns logic, 1.866ns route)
+                                       (11.8% logic, 88.2% route)
 
 =========================================================================
 
@@ -284,12 +282,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.29 secs
+Total CPU time to Xst completion: 4.27 secs
  
 --> 
 
 
-Total memory usage is 485836 kilobytes
+Total memory usage is 485840 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

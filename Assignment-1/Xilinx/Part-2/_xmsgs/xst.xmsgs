@@ -5,29 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v" Line 15: Assignment to <arg fmt="%s" index="1">Cdummy</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v" Line 16: Assignment to <arg fmt="%s" index="1">Cdummy</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v" Line 17: Assignment to <arg fmt="%s" index="1">Cdummy</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v" Line 18: Assignment to <arg fmt="%s" index="1">Cdummy</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v</arg>&quot; line <arg fmt="%s" index="2">15</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">carry_look_ahead1</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v</arg>&quot; line <arg fmt="%s" index="2">16</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">carry_look_ahead2</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v</arg>&quot; line <arg fmt="%s" index="2">17</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">carry_look_ahead3</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit.v</arg>&quot; line <arg fmt="%s" index="2">18</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">carry_look_ahead4</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
 </messages>
 

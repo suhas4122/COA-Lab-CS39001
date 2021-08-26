@@ -11,7 +11,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Thu Aug 26 15:22:08 2021
+Mapped Date    : Thu Aug 26 19:12:42 2021
 
 WARNING:LIT:701 - PAD symbol "A<3>" has an undefined IOSTANDARD.
 WARNING:LIT:702 - PAD symbol "A<3>" is not constrained (LOC) to a specific
@@ -27,56 +27,51 @@ Total REAL time at the beginning of Placer: 11 secs
 Total CPU  time at the beginning of Placer: 11 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:17f) REAL time: 12 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:b0) REAL time: 12 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:17f) REAL time: 12 secs 
+Phase 2.7  Design Feasibility Check (Checksum:b0) REAL time: 12 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:17f) REAL time: 12 secs 
+Phase 3.31  Local Placement Optimization (Checksum:b0) REAL time: 12 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-.....
-Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:17f) REAL time: 12 secs 
+...
+Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:b0) REAL time: 12 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:17f) REAL time: 12 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:b0) REAL time: 12 secs 
 
 Phase 6.3  Local Placement Optimization
 ...
-Phase 6.3  Local Placement Optimization (Checksum:4a96c1) REAL time: 13 secs 
+Phase 6.3  Local Placement Optimization (Checksum:99f33a) REAL time: 13 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:4a96c1) REAL time: 13 secs 
+Phase 7.5  Local Placement Optimization (Checksum:99f33a) REAL time: 13 secs 
 
 Phase 8.8  Global Placement
 ...
 ................
 ................
-Phase 8.8  Global Placement (Checksum:65eeb4bb) REAL time: 13 secs 
+Phase 8.8  Global Placement (Checksum:3979959c) REAL time: 13 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:65eeb4bb) REAL time: 13 secs 
+Phase 9.5  Local Placement Optimization (Checksum:3979959c) REAL time: 13 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:65dacebb) REAL time: 13 secs 
+Phase 10.18  Placement Optimization (Checksum:3979959c) REAL time: 13 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:65dacebb) REAL time: 13 secs 
+Phase 11.5  Local Placement Optimization (Checksum:3979959c) REAL time: 13 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:65dacebb) REAL time: 13 secs 
+Phase 12.34  Placement Validation (Checksum:3979959c) REAL time: 13 secs 
 
 Total REAL time to Placer completion: 13 secs 
 Total CPU  time to Placer completion: 13 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:2452 - The IOB A<0> is either not constrained (LOC) to a
-   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB GG is either not constrained (LOC) to a
    specific location and/or has an undefined I/O Standard (IOSTANDARD). This
    condition may seriously affect the device and will be an error in bitstream
    creation. It should be corrected by properly specifying the pin location and
@@ -116,17 +111,7 @@ WARNING:PhysDesignRules:2452 - The IOB B<3> is either not constrained (LOC) to a
    condition may seriously affect the device and will be an error in bitstream
    creation. It should be corrected by properly specifying the pin location and
    I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB PG is either not constrained (LOC) to a
-   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB Ci is either not constrained (LOC) to a
-   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB Co is either not constrained (LOC) to a
    specific location and/or has an undefined I/O Standard (IOSTANDARD). This
    condition may seriously affect the device and will be an error in bitstream
    creation. It should be corrected by properly specifying the pin location and
@@ -157,24 +142,24 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:   18
+Number of warnings:   15
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of 126,800    0%
-  Number of Slice LUTs:                          6 out of  63,400    1%
-    Number used as logic:                        6 out of  63,400    1%
-      Number using O6 output only:               2
+  Number of Slice LUTs:                          3 out of  63,400    1%
+    Number used as logic:                        3 out of  63,400    1%
+      Number using O6 output only:               1
       Number using O5 output only:               0
-      Number using O5 and O6:                    4
+      Number using O5 and O6:                    2
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
   Number of occupied Slices:                     2 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:            6
-    Number with an unused Flip Flop:             6 out of       6  100%
-    Number with an unused LUT:                   0 out of       6    0%
-    Number of fully used LUT-FF pairs:           0 out of       6    0%
+  Number of LUT Flip Flop pairs used:            3
+    Number with an unused Flip Flop:             3 out of       3  100%
+    Number with an unused LUT:                   0 out of       3    0%
+    Number of fully used LUT-FF pairs:           0 out of       3    0%
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,800    0%
 
@@ -187,7 +172,7 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        16 out of     210    7%
+  Number of bonded IOBs:                        13 out of     210    6%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
@@ -220,7 +205,7 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.89
+Average Fanout of Non-Clock Nets:                1.21
 
 Peak Memory Usage:  1179 MB
 Total REAL time to MAP completion:  13 secs 

@@ -1,3 +1,10 @@
+/*
+Computer Organisation and Architecture Lab
+Assignment no. 1
+Group no. 8
+Suhas Jain and Monal Prasad
+*/
+
 module  ripple_carry_adder_16bit (
     A,
     B,

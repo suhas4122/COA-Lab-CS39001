@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-08-26T19:28:07</DateModified>
+  <DateModified>2021-08-26T17:16:19</DateModified>
   <ModuleName>carry_look_ahead_4bit</ModuleName>
-  <SummaryTimeStamp>2021-08-26T19:13:18</SummaryTimeStamp>
-  <SavedFilePath>/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/iseconfig/carry_look_ahead_4bit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/</ImplementationReportsDirectory>
-  <DateInitialized>2021-08-26T15:21:46</DateInitialized>
+  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SavedFilePath>/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/iseconfig/carry_look_ahead_16bit.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2</ImplementationReportsDirectory>
+  <DateInitialized>2021-08-26T17:16:19</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

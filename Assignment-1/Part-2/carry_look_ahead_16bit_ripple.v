@@ -1,3 +1,10 @@
+/*
+Computer Organisation and Architecture Lab
+Assignment no. 1
+Group no. 8
+Suhas Jain and Monal Prasad
+*/
+
 module carry_look_ahead_16bit_ripple(A, B, Ci, S, Co);
 
     input [15:0] A, B;

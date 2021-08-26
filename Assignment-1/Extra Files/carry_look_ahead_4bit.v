@@ -1,29 +1,31 @@
-module carry_look_ahead_4bit (
-    A,
-    B,
-    Ci,
-    S,
-    Co
-);
+/*
+Computer Organisation and Architecture Lab
+Assignment no. 1
+Group no. 8
+Suhas Jain and Monal Prasad
+*/
+
+module carry_look_ahead_4bit (A, B, Ci, S, Co);
+
     input [3:0] A, B;
     input Ci;
     output [3:0] S;
     output Co;
-    wire [3:0] p, g;
-    wire [4:0] c;
+    wire [3:0] P, G;
+    wire [4:0] C;
 
-    assign p = A ^ B;
-    assign g = A & B;
+    assign P = A ^ B;
+    assign G = A & B;
 
-    assign c[0] = Ci;
-    assign c[1] = g[0] | (p[0] & Ci);
-    assign c[2] = g[1] | (p[1] & g[0]) | (p[1] & p[0] & Ci);
-    assign c[3] = g[2] | (p[2] & g[1]) | (p[2] & p[1] & g[0]) | (p[2] & p[1] & p[0] & Ci);
-    assign c[4] = g[3] | (p[3] & g[2]) | (p[3] & p[2] & g[1]) | (p[3] & p[2] & p[1] & g[0]) | (p[3] & p[2] & p[1] & p[0] & Ci);
+    assign C[0] = Ci;
+    assign C[1] = G[0] | (P[0] & Ci);
+    assign C[2] = G[1] | (P[1] & G[0]) | (P[1] & P[0] & Ci);
+    assign C[3] = G[2] | (P[2] & G[1]) | (P[2] & P[1] & G[0]) | (P[2] & P[1] & P[0] & Ci);
+    assign C[4] = G[3] | (P[3] & G[2]) | (P[3] & P[2] & G[1]) | (P[3] & P[2] & P[1] & G[0]) | (P[3] & P[2] & P[1] & P[0] & Ci);
 
-    assign S = p ^ c;
+    assign S = P ^ C;
 
-    assign Co = c[4];
+    assign Co = C[4];
 
 endmodule 
 

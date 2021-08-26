@@ -1,3 +1,10 @@
+/*
+Computer Organisation and Architecture Lab
+Assignment no. 1
+Group no. 8
+Suhas Jain and Monal Prasad
+*/
+
 module carry_look_ahead_16bit_tb;
 
     reg [15:0] A = 16'b0, B = 16'b0;
