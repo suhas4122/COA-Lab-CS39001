@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-08-26T15:10:10</DateModified>
-  <ModuleName>ripple_carry_adder_64bit</ModuleName>
+  <DateModified>2021-08-26T20:07:28</DateModified>
+  <ModuleName>ripple_carry_adder_4bit</ModuleName>
   <SummaryTimeStamp>2021-08-26T15:07:33</SummaryTimeStamp>
   <SavedFilePath>/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/iseconfig/ripple_carry_adder_4bit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/</ImplementationReportsDirectory>
   <DateInitialized>2021-08-26T15:10:10</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

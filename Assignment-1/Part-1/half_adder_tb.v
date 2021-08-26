@@ -9,8 +9,8 @@ Suhas Jain and Monal Prasad
 
 module half_adder_tb;
  
-    reg A = 0;
-    reg B = 0;
+    reg A = 1'b0;
+    reg B = 1'b0;
     wire S;
     wire Co;
     

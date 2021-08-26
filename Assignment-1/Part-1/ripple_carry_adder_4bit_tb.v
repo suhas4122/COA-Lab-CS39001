@@ -9,7 +9,7 @@ Suhas Jain and Monal Prasad
 
 module ripple_carry_adder_4bit_tb;
     
-    reg [3:0] A = 4'b0000, B = 4'b0000;
+    reg [3:0] A = 4'b0, B = 4'b0;
     reg Ci = 1'b0;
     wire [3:0] S;
     wire Co;

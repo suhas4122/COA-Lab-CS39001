@@ -7,9 +7,9 @@ Suhas Jain and Monal Prasad
 
 `timescale  1ns/1ps
 
-module ripple_carry_adder_32bit_tb;
+module ripple_carry_adder_64bit_tb;
     
-    reg [63:0] A = 64'b0000000000000000000000000000000000000000000000000000000000000000, B = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+    reg [63:0] A = 64'b0, B = 64'b0;
     reg Ci = 1'b0;
     wire [63:0] S;
     wire Co;

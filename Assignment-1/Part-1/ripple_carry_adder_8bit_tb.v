@@ -9,7 +9,7 @@ Suhas Jain and Monal Prasad
 
 module ripple_carry_adder_8bit_tb;
     
-    reg [7:0] A = 8'b00000000, B = 8'b00000000;
+    reg [7:0] A = 8'b0, B = 8'b0;
     reg Ci = 1'b0;
     wire [7:0] S;
     wire Co;

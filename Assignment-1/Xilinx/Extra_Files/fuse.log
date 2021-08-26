@@ -1,0 +1,24 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Extra_Files/carry_look_ahead_16bit_ripple_tb_isim_beh.exe -prj /home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Extra_Files/carry_look_ahead_16bit_ripple_tb_beh.prj work.carry_look_ahead_16bit_ripple_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Extra_Files/../../Extra Files/carry_look_ahead_4bit.v" into library work
+Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Extra_Files/../../Extra Files/carry_look_ahead_16bit_ripple.v" into library work
+Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Extra_Files/../../Extra Files/carry_look_ahead_16bit_ripple_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 82948 KB
+Fuse CPU Usage: 430 ms
+Compiling module carry_look_ahead_4bit
+Compiling module carry_look_ahead_16bit_ripple
+Compiling module carry_look_ahead_16bit_ripple_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 Verilog Units
+Built simulation executable /home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Extra_Files/carry_look_ahead_16bit_ripple_tb_isim_beh.exe
+Fuse Memory Usage: 1692040 KB
+Fuse CPU Usage: 450 ms
+GCC CPU Usage: 200 ms
