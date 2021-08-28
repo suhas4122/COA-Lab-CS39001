@@ -5,7 +5,7 @@ Group no. 8
 Suhas Jain and Monal Prasad
 */
 
-module  ripple_carry_adder_64bit (A, B, Ci, S, Co);
+module ripple_carry_adder_64bit(A, B, Ci, S, Co);
 
     input [63:0] A, B;
     input Ci;
