@@ -1,4 +1,0 @@
-verilog work "../../Part-1/full_adder.v"
-verilog work "../../Part-1/ripple_carry_adder_8bit.v"
-verilog work "../../Part-1/ripple_carry_adder_8bit_tb.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

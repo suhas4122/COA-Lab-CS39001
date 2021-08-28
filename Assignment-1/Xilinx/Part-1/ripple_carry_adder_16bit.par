@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-suhas-ubuntu::  Thu Aug 26 15:05:31 2021
+suhas-ubuntu::  Sun Aug 29 00:58:44 2021
 
 par -w -intstyle ise -ol high -mt off ripple_carry_adder_16bit_map.ncd
 ripple_carry_adder_16bit.ncd ripple_carry_adder_16bit.pcf 
@@ -92,33 +92,33 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 8 secs 
-Finished initial Timing Analysis.  REAL time: 8 secs 
+Starting initial Timing Analysis.  REAL time: 9 secs 
+Finished initial Timing Analysis.  REAL time: 9 secs 
 
 Starting Router
 
 
-Phase  1  : 81 unrouted;      REAL time: 9 secs 
+Phase  1  : 81 unrouted;      REAL time: 10 secs 
 
-Phase  2  : 65 unrouted;      REAL time: 9 secs 
+Phase  2  : 65 unrouted;      REAL time: 10 secs 
 
-Phase  3  : 11 unrouted;      REAL time: 9 secs 
+Phase  3  : 11 unrouted;      REAL time: 10 secs 
 
-Phase  4  : 11 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  4  : 11 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Updating file: ripple_carry_adder_16bit.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
-Total REAL time to Router completion: 11 secs 
-Total CPU time to Router completion: 11 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
+Total REAL time to Router completion: 12 secs 
+Total CPU time to Router completion: 12 secs 
 
 Partition Implementation Status
 -------------------------------

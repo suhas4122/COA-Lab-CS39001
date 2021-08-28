@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: carry_look_ahead_4bit.prj
@@ -86,7 +86,7 @@ Equivalent register Removal        : YES
 Optimization Goal                  : Speed
 Optimization Effort                : 1
 Power Reduction                    : NO
-Keep Hierarchy                     : No
+Keep Hierarchy                     : Yes
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Global Optimization                : AllClockNets
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_4bit.v" into library work
+Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit.v" into library work
 Parsing module <carry_look_ahead_4bit>.
 
 =========================================================================
@@ -116,13 +116,14 @@ Parsing module <carry_look_ahead_4bit>.
 =========================================================================
 
 Elaborating module <carry_look_ahead_4bit>.
+WARNING:HDLCompiler:413 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit.v" Line 26: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <carry_look_ahead_4bit>.
-    Related source file is "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_4bit.v".
+    Related source file is "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit.v".
     Summary:
 Unit <carry_look_ahead_4bit> synthesized.
 
@@ -131,7 +132,8 @@ HDL Synthesis Report
 
 Macro Statistics
 # Xors                                                 : 2
- 4-bit xor2                                            : 2
+ 4-bit xor2                                            : 1
+ 5-bit xor2                                            : 1
 
 =========================================================================
 
@@ -145,7 +147,8 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Xors                                                 : 2
- 4-bit xor2                                            : 2
+ 4-bit xor2                                            : 1
+ 5-bit xor2                                            : 1
 
 =========================================================================
 
@@ -186,12 +189,12 @@ Top Level Output File Name         : carry_look_ahead_4bit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5
+# BELS                             : 6
 #      LUT3                        : 2
-#      LUT5                        : 3
-# IO Buffers                       : 13
+#      LUT5                        : 4
+# IO Buffers                       : 14
 #      IBUF                        : 9
-#      OBUF                        : 4
+#      OBUF                        : 5
 
 Device utilization summary:
 ---------------------------
@@ -200,19 +203,19 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    5  out of  63400     0%  
-    Number used as Logic:                 5  out of  63400     0%  
+ Number of Slice LUTs:                    6  out of  63400     0%  
+    Number used as Logic:                 6  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      5
-   Number with an unused Flip Flop:       5  out of      5   100%  
-   Number with an unused LUT:             0  out of      5     0%  
-   Number of fully used LUT-FF pairs:     0  out of      5     0%  
+ Number of LUT Flip Flop pairs used:      6
+   Number with an unused Flip Flop:       6  out of      6   100%  
+   Number with an unused LUT:             0  out of      6     0%  
+   Number of fully used LUT-FF pairs:     0  out of      6     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          16
- Number of bonded IOBs:                  13  out of    210     6%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    210     6%  
 
 Specific Feature Utilization:
 
@@ -247,7 +250,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 2.115ns
+   Maximum combinational path delay: 2.123ns
 
 Timing Details:
 ---------------
@@ -255,9 +258,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 24 / 4
+  Total number of paths / destination ports: 33 / 5
 -------------------------------------------------------------------------
-Delay:               2.115ns (Levels of Logic = 4)
+Delay:               2.123ns (Levels of Logic = 4)
   Source:            A<1> (PAD)
   Destination:       S<3> (PAD)
 
@@ -266,12 +269,12 @@ Delay:               2.115ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   0.001   0.925  A_1_IBUF (A_1_IBUF)
-     LUT5:I0->O            2   0.124   0.542  C<2><1>1 (C<2>)
-     LUT5:I3->O            1   0.124   0.399  Mxor_S_3_xo<0>1 (S_3_OBUF)
-     OBUF:I->O                 0.000          S_3_OBUF (S<3>)
+     LUT5:I0->O            3   0.124   0.550  C<2><1>1 (C<2>)
+     LUT5:I3->O            1   0.124   0.399  Co<3>1 (Co_OBUF)
+     OBUF:I->O                 0.000          Co_OBUF (Co)
     ----------------------------------------
-    Total                      2.115ns (0.249ns logic, 1.866ns route)
-                                       (11.8% logic, 88.2% route)
+    Total                      2.123ns (0.249ns logic, 1.874ns route)
+                                       (11.7% logic, 88.3% route)
 
 =========================================================================
 
@@ -282,14 +285,14 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.27 secs
+Total CPU time to Xst completion: 4.19 secs
  
 --> 
 
 
-Total memory usage is 485840 kilobytes
+Total memory usage is 485856 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

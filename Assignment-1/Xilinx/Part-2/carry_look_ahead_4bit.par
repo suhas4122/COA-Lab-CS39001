@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-suhas-ubuntu::  Thu Aug 26 19:12:57 2021
+suhas-ubuntu::  Sun Aug 29 03:06:17 2021
 
 par -w -intstyle ise -ol high -mt off carry_look_ahead_4bit_map.ncd
 carry_look_ahead_4bit.ncd carry_look_ahead_4bit.pcf 
@@ -28,9 +28,9 @@ Device Utilization Summary:
 
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of 126,800    0%
-  Number of Slice LUTs:                          3 out of  63,400    1%
-    Number used as logic:                        3 out of  63,400    1%
-      Number using O6 output only:               1
+  Number of Slice LUTs:                          4 out of  63,400    1%
+    Number used as logic:                        4 out of  63,400    1%
+      Number using O6 output only:               2
       Number using O5 output only:               0
       Number using O5 and O6:                    2
       Number used as ROM:                        0
@@ -38,11 +38,11 @@ Slice Logic Utilization:
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                     2 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:            3
-    Number with an unused Flip Flop:             3 out of       3  100%
-    Number with an unused LUT:                   0 out of       3    0%
-    Number of fully used LUT-FF pairs:           0 out of       3    0%
+  Number of occupied Slices:                     3 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:            4
+    Number with an unused Flip Flop:             4 out of       4  100%
+    Number with an unused LUT:                   0 out of       4    0%
+    Number of fully used LUT-FF pairs:           0 out of       4    0%
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,800    0%
 
@@ -55,7 +55,7 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        13 out of     210    6%
+  Number of bonded IOBs:                        14 out of     210    6%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
@@ -98,13 +98,13 @@ Finished initial Timing Analysis.  REAL time: 8 secs
 Starting Router
 
 
-Phase  1  : 19 unrouted;      REAL time: 9 secs 
+Phase  1  : 23 unrouted;      REAL time: 9 secs 
 
-Phase  2  : 19 unrouted;      REAL time: 9 secs 
+Phase  2  : 23 unrouted;      REAL time: 9 secs 
 
-Phase  3  : 4 unrouted;      REAL time: 9 secs 
+Phase  3  : 10 unrouted;      REAL time: 9 secs 
 
-Phase  4  : 4 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  4  : 10 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
 Updating file: carry_look_ahead_4bit.ncd with current fully routed design.
 

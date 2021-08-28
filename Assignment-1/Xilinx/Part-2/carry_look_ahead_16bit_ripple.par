@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-suhas-ubuntu::  Thu Aug 26 15:25:03 2021
+suhas-ubuntu::  Sun Aug 29 03:12:50 2021
 
 par -w -intstyle ise -ol high -mt off carry_look_ahead_16bit_ripple_map.ncd
 carry_look_ahead_16bit_ripple.ncd carry_look_ahead_16bit_ripple.pcf 
@@ -28,21 +28,21 @@ Device Utilization Summary:
 
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of 126,800    0%
-  Number of Slice LUTs:                         24 out of  63,400    1%
-    Number used as logic:                       24 out of  63,400    1%
+  Number of Slice LUTs:                         16 out of  63,400    1%
+    Number used as logic:                       16 out of  63,400    1%
       Number using O6 output only:               8
       Number using O5 output only:               0
-      Number using O5 and O6:                   16
+      Number using O5 and O6:                    8
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    12 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:           24
-    Number with an unused Flip Flop:            24 out of      24  100%
-    Number with an unused LUT:                   0 out of      24    0%
-    Number of fully used LUT-FF pairs:           0 out of      24    0%
+  Number of occupied Slices:                     9 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:           16
+    Number with an unused Flip Flop:            16 out of      16  100%
+    Number with an unused LUT:                   0 out of      16    0%
+    Number of fully used LUT-FF pairs:           0 out of      16    0%
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,800    0%
 
@@ -98,13 +98,13 @@ Finished initial Timing Analysis.  REAL time: 8 secs
 Starting Router
 
 
-Phase  1  : 149 unrouted;      REAL time: 9 secs 
+Phase  1  : 89 unrouted;      REAL time: 9 secs 
 
-Phase  2  : 133 unrouted;      REAL time: 9 secs 
+Phase  2  : 81 unrouted;      REAL time: 10 secs 
 
-Phase  3  : 56 unrouted;      REAL time: 10 secs 
+Phase  3  : 22 unrouted;      REAL time: 10 secs 
 
-Phase  4  : 56 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  4  : 22 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Updating file: carry_look_ahead_16bit_ripple.ncd with current fully routed design.
 

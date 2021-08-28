@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: carry_look_ahead_16bit_ripple.prj
@@ -108,9 +108,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_4bit.v" into library work
+Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit.v" into library work
 Parsing module <carry_look_ahead_4bit>.
-Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" into library work
+Analyzing Verilog file "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_16bit_ripple.v" into library work
 Parsing module <carry_look_ahead_16bit_ripple>.
 
 =========================================================================
@@ -120,31 +120,20 @@ Parsing module <carry_look_ahead_16bit_ripple>.
 Elaborating module <carry_look_ahead_16bit_ripple>.
 
 Elaborating module <carry_look_ahead_4bit>.
-WARNING:HDLCompiler:1127 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" Line 10: Assignment to PG_dummy ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" Line 11: Assignment to PG_dummy ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" Line 12: Assignment to PG_dummy ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" Line 13: Assignment to PG_dummy ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit.v" Line 26: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <carry_look_ahead_16bit_ripple>.
-    Related source file is "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v".
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 10: Output port <PG> of the instance <carry_look_ahead1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 10: Output port <GG> of the instance <carry_look_ahead1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 11: Output port <PG> of the instance <carry_look_ahead2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 11: Output port <GG> of the instance <carry_look_ahead2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 12: Output port <PG> of the instance <carry_look_ahead3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 12: Output port <GG> of the instance <carry_look_ahead3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 13: Output port <PG> of the instance <carry_look_ahead4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_16bit_ripple.v" line 13: Output port <GG> of the instance <carry_look_ahead4> is unconnected or connected to loadless signal.
+    Related source file is "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_16bit_ripple.v".
     Summary:
 	no macro.
 Unit <carry_look_ahead_16bit_ripple> synthesized.
 
 Synthesizing Unit <carry_look_ahead_4bit>.
-    Related source file is "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-2/carry_look_ahead_4bit.v".
+    Related source file is "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit.v".
     Summary:
 Unit <carry_look_ahead_4bit> synthesized.
 
@@ -153,7 +142,8 @@ HDL Synthesis Report
 
 Macro Statistics
 # Xors                                                 : 8
- 4-bit xor2                                            : 8
+ 4-bit xor2                                            : 4
+ 5-bit xor2                                            : 4
 
 =========================================================================
 
@@ -167,7 +157,8 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Xors                                                 : 8
- 4-bit xor2                                            : 8
+ 4-bit xor2                                            : 4
+ 5-bit xor2                                            : 4
 
 =========================================================================
 
@@ -210,10 +201,9 @@ Top Level Output File Name         : carry_look_ahead_16bit_ripple.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 40
-#      LUT3                        : 12
-#      LUT4                        : 8
-#      LUT5                        : 20
+# BELS                             : 24
+#      LUT3                        : 8
+#      LUT5                        : 16
 # IO Buffers                       : 50
 #      IBUF                        : 33
 #      OBUF                        : 17
@@ -225,14 +215,14 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   40  out of  63400     0%  
-    Number used as Logic:                40  out of  63400     0%  
+ Number of Slice LUTs:                   24  out of  63400     0%  
+    Number used as Logic:                24  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     40
-   Number with an unused Flip Flop:      40  out of     40   100%  
-   Number with an unused LUT:             0  out of     40     0%  
-   Number of fully used LUT-FF pairs:     0  out of     40     0%  
+ Number of LUT Flip Flop pairs used:     24
+   Number with an unused Flip Flop:      24  out of     24   100%  
+   Number with an unused LUT:             0  out of     24     0%  
+   Number of fully used LUT-FF pairs:     0  out of     24     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -272,7 +262,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 5.909ns
+   Maximum combinational path delay: 6.167ns
 
 Timing Details:
 ---------------
@@ -280,36 +270,37 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 545 / 17
+  Total number of paths / destination ports: 321 / 17
 -------------------------------------------------------------------------
-Delay:               5.909ns (Levels of Logic = 13)
-  Source:            B<1> (PAD)
+Delay:               6.167ns (Levels of Logic = 14)
+  Source:            A<1> (PAD)
   Destination:       S<15> (PAD)
 
-  Data Path: B<1> to S<15>
+  Data Path: A<1> to S<15>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   0.001   0.796  B_1_IBUF (B_1_IBUF)
-     begin scope: 'carry_look_ahead1:B<1>'
-     LUT4:I0->O            1   0.124   0.919  PG_int_SW0 (N2)
-     LUT5:I0->O            1   0.124   0.716  PG_int (PG)
-     LUT3:I0->O            4   0.124   0.556  Co1 (Co)
+     IBUF:I->O             2   0.001   0.925  A_1_IBUF (A_1_IBUF)
+     begin scope: 'carry_look_ahead1:A<1>'
+     LUT5:I0->O            3   0.124   0.550  C<2><1>1 (C<2>)
+     LUT5:I3->O            3   0.124   0.550  C<4><3>1 (Co)
      end scope: 'carry_look_ahead1:Co'
      begin scope: 'carry_look_ahead2:Ci'
-     LUT3:I1->O            4   0.124   0.556  Co1 (Co)
+     LUT5:I3->O            3   0.124   0.550  C<2><1>1 (C<2>)
+     LUT5:I3->O            3   0.124   0.550  C<4><3>1 (Co)
      end scope: 'carry_look_ahead2:Co'
      begin scope: 'carry_look_ahead3:Ci'
-     LUT3:I1->O            4   0.124   0.556  Co1 (Co)
+     LUT5:I3->O            3   0.124   0.550  C<2><1>1 (C<2>)
+     LUT5:I3->O            3   0.124   0.550  C<4><3>1 (Co)
      end scope: 'carry_look_ahead3:Co'
      begin scope: 'carry_look_ahead4:Ci'
-     LUT5:I3->O            2   0.124   0.542  C<2><1>1 (C<2>)
-     LUT5:I3->O            1   0.124   0.399  Mxor_S_3_xo<0>1 (S<3>)
-     end scope: 'carry_look_ahead4:S<3>'
-     OBUF:I->O                 0.000          S_15_OBUF (S<15>)
+     LUT5:I3->O            3   0.124   0.550  C<2><1>1 (C<2>)
+     LUT5:I3->O            1   0.124   0.399  C<4><3>1 (Co)
+     end scope: 'carry_look_ahead4:Co'
+     OBUF:I->O                 0.000          Co_OBUF (Co)
     ----------------------------------------
-    Total                      5.909ns (0.869ns logic, 5.040ns route)
-                                       (14.7% logic, 85.3% route)
+    Total                      6.167ns (0.993ns logic, 5.174ns route)
+                                       (16.1% logic, 83.9% route)
 
 =========================================================================
 
@@ -319,15 +310,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.29 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.24 secs
  
 --> 
 
 
-Total memory usage is 485908 kilobytes
+Total memory usage is 485900 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
-Number of infos    :    8 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

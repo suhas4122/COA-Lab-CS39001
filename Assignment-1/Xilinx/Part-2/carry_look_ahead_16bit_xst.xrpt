@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Aug 26 15:26:42 2021">
+  <application stringID="Xst" timeStamp="Sun Aug 29 01:02:30 2021">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -67,7 +67,7 @@
       <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="1"/>
       <item DEFAULT="No" label="-power" stringID="XST_POWER" value="NO"/>
       <item DEFAULT="No" label="-iuc" stringID="XST_IUC" value="NO"/>
-      <item DEFAULT="No" label="-keep_hierarchy" stringID="XST_KEEPHIERARCHY" value="Yes"/>
+      <item DEFAULT="No" label="-keep_hierarchy" stringID="XST_KEEPHIERARCHY" value="No"/>
       <item DEFAULT="As_Optimized" label="-netlist_hierarchy" stringID="XST_NETLISTHIERARCHY" value="As_Optimized"/>
       <item DEFAULT="No" label="-rtlview" stringID="XST_RTLVIEW" value="Yes"/>
       <item DEFAULT="AllClockNets" label="-glob_opt" stringID="XST_GLOBOPT" value="AllClockNets"/>
@@ -127,11 +127,11 @@
       </section>
       <section stringID="XST_PRIMITIVE_AND_BLACK_BOX_USAGE">
         <item dataType="int" stringID="XST_BELS" value="43">
-          <item dataType="int" stringID="XST_LUT2" value="1"/>
-          <item dataType="int" stringID="XST_LUT3" value="9"/>
-          <item dataType="int" stringID="XST_LUT4" value="9"/>
-          <item dataType="int" stringID="XST_LUT5" value="22"/>
-          <item dataType="int" stringID="XST_LUT6" value="2"/>
+          <item dataType="int" stringID="XST_LUT2" value="2"/>
+          <item dataType="int" stringID="XST_LUT3" value="8"/>
+          <item dataType="int" stringID="XST_LUT4" value="6"/>
+          <item dataType="int" stringID="XST_LUT5" value="20"/>
+          <item dataType="int" stringID="XST_LUT6" value="7"/>
         </item>
         <item dataType="int" stringID="XST_IO_BUFFERS" value="52">
           <item dataType="int" stringID="XST_IBUF" value="33"/>

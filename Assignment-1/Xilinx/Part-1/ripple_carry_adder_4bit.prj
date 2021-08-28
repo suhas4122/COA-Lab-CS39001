@@ -1,2 +1,2 @@
-verilog work "../../Part-1/full_adder.v"
-verilog work "../../Part-1/ripple_carry_adder_4bit.v"
+verilog work "full_adder.v"
+verilog work "ripple_carry_adder_4bit.v"

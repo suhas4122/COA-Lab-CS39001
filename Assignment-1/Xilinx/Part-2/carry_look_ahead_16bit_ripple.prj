@@ -1,2 +1,2 @@
-verilog work "../../Part-2/carry_look_ahead_4bit.v"
-verilog work "../../Part-2/carry_look_ahead_16bit_ripple.v"
+verilog work "carry_look_ahead_4bit.v"
+verilog work "carry_look_ahead_16bit_ripple.v"

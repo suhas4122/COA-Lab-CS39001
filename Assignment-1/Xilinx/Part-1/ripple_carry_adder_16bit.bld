@@ -32,6 +32,6 @@ Total memory usage is 447188 kilobytes
 
 Writing NGD file "ripple_carry_adder_16bit.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   2 sec
+Total CPU time to NGDBUILD completion:   3 sec
 
 Writing NGDBUILD log file "ripple_carry_adder_16bit.bld"...
