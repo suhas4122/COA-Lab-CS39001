@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/ripple_carry_adder_32bit_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/ripple_carry_adder_32bit_tb_isim_beh.wdb 
+Running: /home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/ripple_carry_adder_8bit_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-1/ripple_carry_adder_8bit_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,8 +11,8 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-A = 00000000000000000000000000000000, B = 00000000000000000000000000000000, Ci = 0, S = 00000000000000000000000000000000, Co = 0
-A = 01001010010010100100101001001010, B = 01011011010110110101101101011011, Ci = 0, S = 10100101101001011010010110100101, Co = 0
-A = 00011111000111110001111100011111, B = 11100000111000001110000011100000, Ci = 1, S = 00000000000000000000000000000000, Co = 1
-A = 01111010011110100111101001111010, B = 11000110110001101100011011000110, Ci = 1, S = 01000001010000010100000101000001, Co = 1
+A = 00000000, B = 00000000, Ci = 0, S = 00000000, Co = 0
+A = 01001010, B = 01011011, Ci = 0, S = 10100101, Co = 0
+A = 00011111, B = 11100000, Ci = 1, S = 00000000, Co = 1
+A = 01111010, B = 11000110, Ci = 1, S = 01000001, Co = 1
 # exit 0

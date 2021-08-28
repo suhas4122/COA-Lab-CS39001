@@ -8,7 +8,25 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/ripple_carry_adder_64bit_tb.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/full_adder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/half_adder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/ripple_carry_adder_16bit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/ripple_carry_adder_32bit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/ripple_carry_adder_4bit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/ripple_carry_adder_64bit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Part-1/ripple_carry_adder_8bit.v&quot; into library work</arg>
 </msg>
 
 </messages>
