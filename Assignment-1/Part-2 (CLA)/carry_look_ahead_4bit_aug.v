@@ -13,8 +13,8 @@ module carry_look_ahead_4bit_aug(A, B, Ci, S, Co, PG, GG);
         Ci: Input carry bit 
         S: 3-bit output sum 
         Co: Output carry bit 
-        PG: Group Propagate
-        GG: Group Generate
+        PG: Output Group Propagate bit
+        GG: Output Group Generate bit
     */
     
     input [3:0] A;
