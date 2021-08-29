@@ -6,13 +6,20 @@ Suhas Jain and Monal Prasad
 */
 
 module  ripple_carry_adder_8bit (A, B, Ci, S, Co);
-
+    /*
+        A: 7-bit input to add 
+        B: 7-bit input to add 
+        Ci: Input carry bit 
+        S: 7-bit output sum 
+        Co: Output carry bit 
+    */
     input [7:0] A, B;
     input Ci;
     output [7:0] S;
     output Co;
     wire [6:0] w_temp;
 
+    //Calculating sums by 8 individual full adders and rippling in the carry via wire w_temp    
     full_adder full_adder1(.A(A[0]), .B(B[0]), .Ci(Ci), .S(S[0]), .Co(w_temp[0]));
     full_adder full_adder2(.A(A[1]), .B(B[1]), .Ci(w_temp[0]), .S(S[1]), .Co(w_temp[1]));
     full_adder full_adder3(.A(A[2]), .B(B[2]), .Ci(w_temp[1]), .S(S[2]), .Co(w_temp[2]));
