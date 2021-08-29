@@ -8,10 +8,10 @@ Suhas Jain and Monal Prasad
 module ripple_carry_adder_64bit(A, B, Ci, S, Co);
     
     /*
-        A: 63-bit input to add 
-        B: 63-bit input to add 
+        A: 64-bit input to add 
+        B: 64-bit input to add 
         Ci: Input carry bit 
-        S: 63-bit output sum 
+        S: 64-bit output sum 
         Co: Output carry bit 
     */
     
