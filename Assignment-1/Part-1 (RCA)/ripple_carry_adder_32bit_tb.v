@@ -10,10 +10,10 @@ Suhas Jain and Monal Prasad
 module ripple_carry_adder_32bit_tb;
     
     /*
-        A: 31-bit input to add 
-        B: 31-bit input to add 
+        A: 32-bit input to add 
+        B: 32-bit input to add 
         Ci: Input carry bit 
-        S: 31-bit output sum 
+        S: 32-bit output sum 
         Co: Output carry bit 
     */
     
