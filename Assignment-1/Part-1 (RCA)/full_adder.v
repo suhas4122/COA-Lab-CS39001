@@ -18,7 +18,7 @@ module full_adder (A, B, Ci, S, Co);
     input A, B, Ci;
     output S, Co;
 
-    assign S = A ^ B ^ Ci;                         // Caalulating sum bit by taking the XOR
+    assign S = A ^ B ^ Ci;                         // Calulating sum bit by taking the XOR
     assign Co = (A & B) | (B & Ci) | (Ci & A);     // Calculating output carry bit by taking OR of pairwise ANDs
 
 endmodule
