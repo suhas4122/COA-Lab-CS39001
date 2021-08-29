@@ -8,10 +8,10 @@ Suhas Jain and Monal Prasad
 module carry_look_ahead_16bit(A, B, Ci, S, Co, PG1, GG1);
     
     /*
-        A: 4-bit input to add 
-        B: 4-bit input to add 
+        A: 16-bit input to add 
+        B: 16-bit input to add 
         Ci: Input carry bit 
-        S: 4-bit output sum 
+        S: 16-bit output sum 
         Co: Output carry bit 
         PG1: Output PG bits
         GG1: Output GG bits
