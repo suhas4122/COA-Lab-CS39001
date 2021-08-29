@@ -8,10 +8,10 @@ Suhas Jain and Monal Prasad
 module carry_look_ahead_4bit (A, B, Ci, S, Co);
     
     /*
-        A: 3-bit input to add 
-        B: 3-bit input to add 
+        A: 4-bit input to add 
+        B: 4-bit input to add 
         Ci: Input carry bit 
-        S: 3-bit output sum 
+        S: 4-bit output sum 
         Co: Output carry bit 
     */
 
