@@ -9,15 +9,26 @@ Suhas Jain and Monal Prasad
 
 module ripple_carry_adder_32bit_tb;
     
+    /*
+        A: 31-bit input to add 
+        B: 31-bit input to add 
+        Ci: Input carry bit 
+        S: 31-bit output sum 
+        Co: Output carry bit 
+    */
+    
     reg [31:0] A = 32'b0, B = 32'b0;
     reg Ci = 1'b0;
     wire [31:0] S;
     wire Co;
 
     ripple_carry_adder_32bit ripple_carry_adder(A, B, Ci, S, Co);
-
+    //Connecting the registers and wires to actual 32-bit RCA design using structural modeling
+    
     initial begin
         $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b", A, B, Ci, S, Co);
+        // Printing the output after each iteration 
+        // Assigning different values to input bits and testing the outputs
         #10
         A = 32'b01001010010010100100101001001010;
         B = 32'b01011011010110110101101101011011;
