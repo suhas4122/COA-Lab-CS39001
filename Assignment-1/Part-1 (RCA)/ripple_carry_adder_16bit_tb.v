@@ -10,10 +10,10 @@ Suhas Jain and Monal Prasad
 module ripple_carry_adder_16bit_tb;
     
     /*
-        A: 15-bit input to add 
-        B: 15-bit input to add 
+        A: 16-bit input to add 
+        B: 16-bit input to add 
         Ci: Input carry bit 
-        S: 15-bit output sum 
+        S: 16-bit output sum 
         Co: Output carry bit 
     */
     
