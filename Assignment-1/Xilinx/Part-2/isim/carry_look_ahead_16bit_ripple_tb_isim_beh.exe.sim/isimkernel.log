@@ -1,0 +1,29 @@
+Command line:
+   carry_look_ahead_16bit_ripple_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  35267
+
+Sun Aug 29 16:30:20 2021
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 194.048 Meg
+
+ Total Signals          : 53
+ Total Nets             : 118
+ Total Signal Drivers   : 44
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 46
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 231
+Total Line Count : 64
+
+ Total Simulation Time: 0.02 sec
+
+ Current Memory Usage: 269.55 Meg
+
+Sun Aug 29 16:30:25 2021
+

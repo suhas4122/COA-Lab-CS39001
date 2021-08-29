@@ -37,7 +37,12 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="full_adder.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="full_adder.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="full_adder_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="full_adder_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="full_adder_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ripple_carry_adder_16bit.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry_adder_16bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ripple_carry_adder_16bit.lso"/>
@@ -70,6 +75,7 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_16bit_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry_adder_16bit_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ripple_carry_adder_16bit_summary.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ripple_carry_adder_16bit_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="ripple_carry_adder_16bit_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_16bit_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry_adder_32bit.cmd_log"/>
@@ -81,6 +87,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ripple_carry_adder_32bit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ripple_carry_adder_32bit.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry_adder_32bit_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ripple_carry_adder_32bit_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_32bit_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry_adder_4bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ripple_carry_adder_4bit.lso"/>
@@ -91,6 +98,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ripple_carry_adder_4bit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ripple_carry_adder_4bit.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry_adder_4bit_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ripple_carry_adder_4bit_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_4bit_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry_adder_64bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ripple_carry_adder_64bit.lso"/>
@@ -101,13 +109,87 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ripple_carry_adder_64bit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ripple_carry_adder_64bit.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ripple_carry_adder_64bit_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ripple_carry_adder_64bit_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ripple_carry_adder_64bit_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ripple_carry_adder_8bit_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ripple_carry_adder_8bit_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ripple_carry_adder_8bit_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1630233990" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1630233990">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1630233990" xil_pn:in_ck="-83301883202375995" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1630233990">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="full_adder.v"/>
+      <outfile xil_pn:name="full_adder_tb.v"/>
+      <outfile xil_pn:name="ple_carry_adder_4bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_16bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_16bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_32bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_32bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_64bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_64bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_8bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_8bit_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1630234048" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1472541237413514963" xil_pn:start_ts="1630234048">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1630234048" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5461205161120618805" xil_pn:start_ts="1630234048">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1630233990" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2278085889696389491" xil_pn:start_ts="1630233990">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1630233990" xil_pn:in_ck="-83301883202375995" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1630233990">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="full_adder.v"/>
+      <outfile xil_pn:name="full_adder_tb.v"/>
+      <outfile xil_pn:name="ple_carry_adder_4bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_16bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_16bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_32bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_32bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_4bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_64bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_64bit_tb.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_8bit.v"/>
+      <outfile xil_pn:name="ripple_carry_adder_8bit_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1630234048" xil_pn:in_ck="-83301883202375995" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4615594977967846935" xil_pn:start_ts="1630234048">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="ripple_carry_adder_8bit_tb_beh.prj"/>
+      <outfile xil_pn:name="ripple_carry_adder_8bit_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1630234049" xil_pn:in_ck="-7901798695588790023" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1669583053597052052" xil_pn:start_ts="1630234048">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="ripple_carry_adder_8bit_tb_isim_beh.wdb"/>
+    </transform>
     <transform xil_pn:end_ts="1630178776" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1630178776">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -139,6 +221,9 @@
     <transform xil_pn:end_ts="1630231163" xil_pn:in_ck="-1328589462278724359" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-423189854812037794" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="full_adder.lso"/>
       <outfile xil_pn:name="full_adder.ngc"/>
