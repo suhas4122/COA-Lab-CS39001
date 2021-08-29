@@ -6,7 +6,17 @@ Suhas Jain and Monal Prasad
 */
 
 module carry_look_ahead_4bit_aug(A, B, Ci, S, Co, PG, GG);
-
+    
+     /*
+        A: 3-bit input to add 
+        B: 3-bit input to add 
+        Ci: Input carry bit 
+        S: 3-bit output sum 
+        Co: Output carry bit 
+        PG: Group Propagate
+        GG: Group Generate
+    */
+    
     input [3:0] A;
     input [3:0] B;
     input Ci;
@@ -21,16 +31,17 @@ module carry_look_ahead_4bit_aug(A, B, Ci, S, Co, PG, GG);
 
     assign G = A & B;
     assign P = A ^ B;
-    assign S = A ^ B ^ C;
+    assign S = A ^ B ^ C;  //calculating the sum bit by taking the XOR
 
     assign C[0] = Ci;
     assign C[1] = G[0] | (P[0] & Ci);
     assign C[2] = G[1] | (P[1] & G[0])| (P[1] & P[0] & Ci);
     assign C[3] = G[2] | (P[2] & G[1]) | (P[2] & P[1] & G[0])| (P[2] & P[1] & P[0] & Ci);
-
+    
+    //calculating the group propagate (PG) and group generate (GG) values to further use the CLA in higher-level circuits
     assign PG_int = P[3] & P[2] & P[1] & P[0];
     assign GG_int = G[3] | (P[3] & G[2]) | (P[3] & P[2] & G[1]) | (P[3] & P[2] & P[1] & G[0]);
-    assign Co = GG_int | (PG_int & Ci);
+    assign Co = GG_int | (PG_int & Ci);   // Calculating output carry bit by taking OR
     assign PG = PG_int;
     assign GG = GG_int;
 
