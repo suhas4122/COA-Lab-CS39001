@@ -28,6 +28,16 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="full_adder.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="full_adder.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="full_adder.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="full_adder.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="full_adder.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="full_adder.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="full_adder.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="full_adder.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="full_adder_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="full_adder_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ripple_carry_adder_16bit.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ripple_carry_adder_16bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ripple_carry_adder_16bit.lso"/>
@@ -102,42 +112,42 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1630187227" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2178069129584510542" xil_pn:start_ts="1630187227">
+    <transform xil_pn:end_ts="1630231157" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5811512593666683769" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1630187227" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8432439696071688120" xil_pn:start_ts="1630187227">
+    <transform xil_pn:end_ts="1630231157" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-2278085889696389491" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1630187227" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1630187227">
+    <transform xil_pn:end_ts="1630231157" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1630187227" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2835790719509557356" xil_pn:start_ts="1630187227">
+    <transform xil_pn:end_ts="1630231157" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="205010303659158313" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1630187227" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1630187227">
+    <transform xil_pn:end_ts="1630231157" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1630187227" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4217975474733513986" xil_pn:start_ts="1630187227">
+    <transform xil_pn:end_ts="1630231157" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-334867774619565161" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1630187232" xil_pn:in_ck="-1328589462278724359" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="8421190136025784265" xil_pn:start_ts="1630187227">
+    <transform xil_pn:end_ts="1630231163" xil_pn:in_ck="-1328589462278724359" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-423189854812037794" xil_pn:start_ts="1630231157">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit.lso"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit.ngc"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit.ngr"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit.prj"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit.stx"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit.syr"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit.xst"/>
-      <outfile xil_pn:name="ripple_carry_adder_4bit_xst.xrpt"/>
+      <outfile xil_pn:name="full_adder.lso"/>
+      <outfile xil_pn:name="full_adder.ngc"/>
+      <outfile xil_pn:name="full_adder.ngr"/>
+      <outfile xil_pn:name="full_adder.prj"/>
+      <outfile xil_pn:name="full_adder.stx"/>
+      <outfile xil_pn:name="full_adder.syr"/>
+      <outfile xil_pn:name="full_adder.xst"/>
+      <outfile xil_pn:name="full_adder_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
