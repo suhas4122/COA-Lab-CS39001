@@ -9,15 +9,27 @@ Suhas Jain and Monal Prasad
 
 module carry_look_ahead_4bit_tb;
     
+    /*
+        A: 3-bit input to add 
+        B: 3-bit input to add 
+        Ci: Input carry bit 
+        S: 3-bit output sum 
+        Co: Output carry bit 
+    */
+    
     reg [3:0] A = 4'b0000, B = 4'b0000;
     reg Ci = 1'b0;
     wire [3:0] S;
     wire Co;
 
     carry_look_ahead_4bit carry_look_ahead(A, B, Ci, S, Co);
+    //Connecting the registers and wires to actual 4-bit CLA design using structural modeling
+
 
     initial begin
         $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b", A, B, Ci, S, Co);
+        // Printing the output after each iteration 
+        // Assigning different values to input bits and testing the outputs
         #10
         A = 4'b0100;
         B = 4'b0101;
