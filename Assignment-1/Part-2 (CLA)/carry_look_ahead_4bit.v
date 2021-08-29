@@ -6,6 +6,14 @@ Suhas Jain and Monal Prasad
 */
 
 module carry_look_ahead_4bit (A, B, Ci, S, Co);
+    
+    /*
+        A: 3-bit input to add 
+        B: 3-bit input to add 
+        Ci: Input carry bit 
+        S: 3-bit output sum 
+        Co: Output carry bit 
+    */
 
     input [3:0] A, B;
     input Ci;
@@ -13,7 +21,8 @@ module carry_look_ahead_4bit (A, B, Ci, S, Co);
     output Co;
     wire [3:0] P, G;
     wire [4:0] C;
-
+    
+    //calculating Generate and Propagate signals 
     assign P = A ^ B;
     assign G = A & B;
 
