@@ -7,10 +7,10 @@ Suhas Jain and Monal Prasad
 
 module  ripple_carry_adder_8bit (A, B, Ci, S, Co);
     /*
-        A: 7-bit input to add 
-        B: 7-bit input to add 
+        A: 8-bit input to add 
+        B: 8-bit input to add 
         Ci: Input carry bit 
-        S: 7-bit output sum 
+        S: 8-bit output sum 
         Co: Output carry bit 
     */
     input [7:0] A, B;
