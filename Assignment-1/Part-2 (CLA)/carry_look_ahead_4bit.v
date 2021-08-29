@@ -26,6 +26,7 @@ module carry_look_ahead_4bit (A, B, Ci, S, Co);
     assign P = A ^ B;
     assign G = A & B;
 
+    //calculating the carry output Boolean function of each stage in a 4 stage carry look-ahead adder
     assign C[0] = Ci;
     assign C[1] = G[0] | (P[0] & Ci);
     assign C[2] = G[1] | (P[1] & G[0]) | (P[1] & P[0] & Ci);
