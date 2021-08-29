@@ -9,14 +9,26 @@ Suhas Jain and Monal Prasad
 
 module ripple_carry_adder_16bit_tb;
     
+    /*
+        A: 15-bit input to add 
+        B: 15-bit input to add 
+        Ci: Input carry bit 
+        S: 15-bit output sum 
+        Co: Output carry bit 
+    */
+    
     reg [15:0] A = 16'b0, B = 16'b0;
     reg Ci = 1'b0;
     wire [15:0] S;
     wire Co;
 
     ripple_carry_adder_16bit ripple_carry_adder(A, B, Ci, S, Co);
+    //Connecting the registers and wires to actual 16-bit RCA design using structural modeling
+
 
     initial begin
+        // Printing the output after each iteration 
+        // Assigning different values to input bits and testing the outputs
         $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b", A, B, Ci, S, Co);
         #10
         A = 16'b0100101001001010;
