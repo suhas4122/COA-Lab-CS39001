@@ -9,11 +9,11 @@ Suhas Jain and Monal Prasad
 
 module carry_look_ahead_4bit_aug_tb;
     
-    /*
-        A: 3-bit input to add 
-        B: 3-bit input to add 
+     /*
+        A: 4-bit input to add 
+        B: 4-bit input to add 
         Ci: Input carry bit 
-        S: 3-bit output sum 
+        S: 4-bit output sum 
         Co: Output carry bit 
         PG: Output Group Propagate bit
         GG: Output Group Generate bit
