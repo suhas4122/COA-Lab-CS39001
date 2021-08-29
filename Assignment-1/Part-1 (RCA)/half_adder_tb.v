@@ -22,7 +22,8 @@ module half_adder_tb;
     wire S;
     wire Co;
     
- half_adder half_adder_inst(A, B, S, Co); //Connecting the registers and wires to half adder design using structural modeling
+   half_adder half_adder_inst(A, B, S, Co); 
+   //Connecting the registers and wires to half adder design using structural modeling
    
     
     initial begin
