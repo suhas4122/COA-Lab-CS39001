@@ -1,5 +1,5 @@
 #    Assignment - 2
-#    Problem  - 4 (Finding if the number is perfect or not)
+#    Problem  - 4 (checking if the number is perfect or not)
 #    Semester Aut - 2021 
 #    Group - 8
 #    Name_1 : Suhas Jain 
@@ -69,7 +69,7 @@ error_msg:
 	
 			increment_loop:
 				addi 	$t1, $t1, 1
-				j		loop
+				j	loop
 		
 		# checks if number is not perfect
 		end_loop:
@@ -106,10 +106,3 @@ error_msg:
 		li		$v0, 10
 		syscall
 
-
-
-
-
-li		$t0, 0          		# $t0 = 0
-    slt     $t0, $t0, $a0           # $t0 = 1 if 0< num
-    beq		$t0, $zero, Error_Exit	# if $t0 == 0 then Error_Exit
