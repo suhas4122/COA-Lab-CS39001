@@ -26,6 +26,11 @@ output_message2:
 
 .globl main
 
+# main program
+# program variables
+#  n	:   $a0
+#  i	:	$t0 
+ 
     main:
         # Printing message before taking integer as input
         la      $a0, input_message

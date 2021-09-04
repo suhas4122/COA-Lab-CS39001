@@ -1,5 +1,5 @@
 #    Assignment - 2
-#    Problem  - 4 (checking if the number is perfect or not)
+#    Problem  - 4 (Checking if the number is perfect or not)
 #    Semester Aut - 2021 
 #    Group - 8
 #    Name_1 : Suhas Jain 
@@ -14,13 +14,13 @@ input_message:
     .asciiz "Enter a positive integer: "
 
 perfect_msg:
-    .asciiz "\nEntered number is a perfect number.\n"
+    .asciiz "Entered number is a perfect number\n\n"
 
 not_perfect_msg:
-    .asciiz "\nEntered number is not a perfect number.\n"
+    .asciiz "Entered number is not a perfect number\n\n"
 
 error_msg:
-    .asciiz "\nArgument should be an integer greater than 0\n"
+    .asciiz "Argument should be an integer greater than 0\n\n"
 
 
 .text
@@ -29,7 +29,7 @@ error_msg:
 
 # main program
 # program variables
-#  num	:   $s0
+#  n	:   $s0
 #  sum	:	$s1 
 #  i	:	$t1 
 
@@ -51,7 +51,6 @@ error_msg:
 		li      $s1, 0           		# sum = 0
 		li		$t1, 1					# i=1
 		
-
 		# loop till i<n
 		loop:
 			# exit loop if 	i>=n		
@@ -65,7 +64,6 @@ error_msg:
 
 			# sum = sum + i
 			add		$s1, $s1, $t1
-		
 	
 			increment_loop:
 				addi 	$t1, $t1, 1
@@ -93,8 +91,6 @@ error_msg:
 		# Exit the code
 		j       exit_code
 		
-
-
 	invalid_input:
 	# Printing the error message
 		la		$a0, error_msg

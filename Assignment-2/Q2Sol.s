@@ -29,6 +29,11 @@ newline_message:
 
 .globl main
 
+# main program
+# program variables
+#  n1	:   $t0
+#  n2	:	$t1 
+
     main:
         # Printing message before taking first integer as input
         la      $a0, input_message1
