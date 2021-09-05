@@ -209,7 +209,9 @@ Finally, fact jumps again to the return address:
 
 ### Cheat Sheet and Quick Tutorial
 ---
-- [Instruction Set](https://github.com/itsShnik/COA/tree/master/MIPS/CheatSheets/instructions.pdf)
+- [MIPS Bible](https://github.com/suhas4122/COAA-Lab-Sem-5/blob/master/Slides%20and%20resources/combined_SPIM.pdf)
+ 
+- [Instruction Set](https://github.com/suhas4122/COAA-Lab-Sem-5/blob/master/Slides%20and%20resources/MIPS_cheat_sheet.pdf)
 
-- [Quick Tutorial](https://github.com/itsShnik/COA/tree/master/MIPS/CheatSheets/quick_tut.pdf)
+- [Quick Reference](https://github.com/suhas4122/COAA-Lab-Sem-5/blob/master/Slides%20and%20resources/MIPS_Quick_Reference.pdf)
 
