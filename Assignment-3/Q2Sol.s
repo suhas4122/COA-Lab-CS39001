@@ -7,10 +7,12 @@
 #    Name_2 : Monal Prasad
 #    Roll_2 : 19CS30030
 
-.data
 .data 
 
-# Seclaration of output strings 
+# Declaration of output strings 
+enter_message:
+    .asciiz "*** FINDING Kth LARGEST NUMBER AND INSERTION SORT ***\n\n"
+
 input_message1: 
     .asciiz "Enter ten integers to be sorted (press enter after each integer): \n"
 
@@ -18,7 +20,7 @@ input_message2:
     .asciiz "\nEnter the value of K (between 1 to 10): "
 
 output_message1:
-    .asciiz "\nTen integers in decending order are: "
+    .asciiz "\nTen integers in ascending order are: "
 
 output_message2:
     .asciiz "\n\nKth largest integer: "
@@ -40,10 +42,14 @@ error_message:
 array: .space 40
 
 .text
-
 .globl main 
 
 	main:
+        # Printing welcome message when the program starts
+		la      $a0, enter_message
+		li      $v0, 4
+		syscall
+
 		# Printing message before taking array as input
 		la      $a0, input_message1
 		li      $v0, 4
@@ -71,84 +77,25 @@ array: .space 40
         # Taking the integer as input (k)
         li      $v0, 5
         syscall
-        move    $s0, $v0   
+        move    $s0, $v0  
 
         # Sanity check of k (k should be <= 10 and >= 0)
         blt     $s0, 0, invalid_input
         bgt     $s0, 10, invalid_input
 
+        jal     find_k_largest
+
+    find_k_largest:
 	    li      $a0, 10                     # Set count arg (length of array)
 		la      $a1, array 		            # Load address of array in $a1 
-		li      $t0, 0
-		j       insertion_sort
-        
-        # Printing the sorted array 
-		print_loop:
-            # Loading address of array and initialising variables 				
-			la      $a1, array 		 
-			li      $t0, 0
-			move    $t0, $a0	
-			la      $a0, output_message1 	
-			li      $v0, 4
-			syscall
+        jal     sort_array
+        jal     print_array
 
-            print_loop_helper: 
-                # Check if loop has run 10 times 
-                ble     $t0, $zero, print_kth_largest 	        
-                lw      $a0, ($a1)           # Load word at current address 
-                li      $v0, 1 				        
-                syscall         		     # Print word
-                
-                # Increment current word address by 4 and decrease $t0
-                addi    $a1, $a1, 4 		        
-                sub     $t0, $t0, 1    	        
-
-                # Print white space
-                la      $a0, white_space     		       
-                li      $v0, 4
-                syscall 
-
-                # Continue the loop 
-                j       print_loop_helper 					
-
-    insertion_sort:				
-        beq     $t0, $a0, print_loop 	    # Check if loop has run 10 times
-        move    $t1, $t0 				    # $t1 = $t0
-        move    $t2, $a1				    # Assigning current address to $t2 (storing current maximum)
-        move    $t3, $a1                    # Assigning current address to $t2 (storing current value)
-
-		loop: 			
-			beq     $t1, $a0, swap_pos 		# If inner loop has reached last position
-
-			lw      $t5, ($t2) 				# Load current max
-			lw      $t6, ($t3) 				# Load current value
-
-			bgt     $t5, $t6 , store 		# If t5 > t6 store
-
-			addi    $t2, $t2, 4 			# Increase t2
-			addi    $t1, $t1, 1 			# Increase inner loop counter 
-			j       loop
-
-		store:
-			move    $t3, $t2 				# Store address of numbers to be exchanged
-			
-			addi    $t2, $t2, 4 			# Increase t2
-			addi    $t1, $t1, 1 			# Increase innerloop
-			j loop
-							
-		swap_pos: 
-			lw      $t5, ($a1) 			    # $t5 = ($a1)
-			lw      $t6, ($t3)			    # $t6 = ($t3) 
-			sw      $t6, ($a1) 				# ($a1) = $t6
-			sw      $t5, ($t3) 				# ($t3) = $t5
-			addi    $t0, $t0, 1			    # Increase outer loop
-			addi    $a1, $a1, 4			    # Increase a1 by 4
-			j insertion_sort
-
-    print_kth_largest:
         # Loading the address of array into the memort and accessing the Kth element
         la      $a1, array 		
-        addi    $s0, $s0, -1                # Decrement K by 1 (0 based indexing)
+        addi    $s0, $s0, -10               # K = K - 10
+        li      $t0, -1                     
+        mul     $s0, $s0, $t0               # K = -K
         sll     $s0, $s0, 2                 # K = K*4
         add     $a1, $a1, $s0               # Move address of array by K
 
@@ -160,10 +107,73 @@ array: .space 40
         # Printing Kth largest integer
         lw      $a0, ($a1)                  # Load word at current address 
         li      $v0, 1 				        
-        syscall  
+        syscall
 
         j       exit_code
+        
+    # Printing the sorted array 
+    print_array:
+        # Loading address of array and initialising variables 				
+        la      $a1, array 		 
+        li      $t0, 0
+        move    $t0, $a0	
+        la      $a0, output_message1 	
+        li      $v0, 4
+        syscall
 
+        print_loop: 
+            # Check if loop has run 10 times 
+            ble     $t0, $zero, return 	        
+            lw      $a0, ($a1)           # Load word at current address 
+            li      $v0, 1 				        
+            syscall         		     # Print word
+            
+            # Increment current word address by 4 and decrease $t0
+            addi    $a1, $a1, 4 		        
+            sub     $t0, $t0, 1    	        
+
+            # Print white space
+            la      $a0, white_space     		       
+            li      $v0, 4
+            syscall 
+
+            # Continue the loop 
+            j       print_loop 	
+
+        return:
+            jr      $ra				
+
+    sort_array:
+        # Loading variables passed in function in temporary memory 
+        move    $t0  $a0
+        move    $t1, $a1
+        li      $t2, 1
+
+        # Outer foe loop as mentioned in the pseudo-code 
+        sort_loop:
+            la      $t1, array          # Loading array into temporary memory
+            bge     $t2, $t0, return    # Checking loop condition (if j >= 10, then exit)
+            add     $t3, $t2, $zero 
+
+            # Inner while loop as mentioned in the pseudo-code
+            while_loop:
+                blt     $t3, 0, end_while       # if i <= 0 then exit while loop
+                la      $t1, array              # Loading array into temporary memory 
+                mul     $t4, $t3, 4             # Calculating 4*(i+1) to access arr[i]
+                add     $t1, $t1, $t4           # $t1 stores arr+4(i+1)
+                lw      $t5, 0($t1)             # Loading arr[i+1]
+                lw      $t6, -4($t1)            # Loding arr[i]
+                bge     $t5, $t6, end_while     # Check condition to exit while loop
+                lw      $t7, 0($t1)              
+                sw      $t6, 0($t1)             
+                sw      $t7, -4($t1)            # Shifting by one position ( arr[i+1] = arr[i] )
+                addi    $t3, $t3, -1            # i--
+                j       while_loop              
+
+        end_while:
+            addi    $t2, $t2, 1         # j++ ( increasing iterator of for loop )
+            j       sort_loop
+                  
 	invalid_input:
         # Printing the error message
         la      $a0, error_message
