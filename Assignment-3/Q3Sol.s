@@ -11,7 +11,7 @@
 
 # Declaration of output strings 
 enter_message:
-    .asciiz "*** STORING A GP IN A MATRIX AND PRINTING TRANSPOSE *** \n\n"
+    .asciiz "*** STORING GP IN A MATRIX AND PRINTING IT ALONG WITH ITS TRANSPOSE *** \n\n"
 
 input_message: 
     .asciiz "Enter four positive integers m, n, a and r (press enter after entering each):  \n"
