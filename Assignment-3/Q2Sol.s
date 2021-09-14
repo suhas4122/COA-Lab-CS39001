@@ -83,7 +83,7 @@ array: .space 40
         blt     $s0, 0, invalid_input
         bgt     $s0, 10, invalid_input
 
-        jal     find_k_largest
+        jal     find_k_largest              # Calling the function to find Kth largest integer
 
     find_k_largest:
 	    li      $a0, 10                     # Set count arg (length of array)
@@ -109,8 +109,8 @@ array: .space 40
         li      $v0, 1 				        
         syscall
 
-        j       exit_code
-        
+        j       exit_code                   # Exiting the code
+
     # Printing the sorted array 
     print_array:
         # Loading address of array and initialising variables 				
@@ -125,7 +125,7 @@ array: .space 40
             # Check if loop has run 10 times 
             ble     $t0, $zero, return 	        
             lw      $a0, ($a1)           # Load word at current address 
-            li      $v0, 1 				        
+            li      $v0, 1 				      
             syscall         		     # Print word
             
             # Increment current word address by 4 and decrease $t0
@@ -140,8 +140,9 @@ array: .space 40
             # Continue the loop 
             j       print_loop 	
 
-        return:
-            jr      $ra				
+    return:
+        jr      $ra				
+
 
     sort_array:
         # Loading variables passed in function in temporary memory 
@@ -150,30 +151,37 @@ array: .space 40
         li      $t2, 1
 
         # Outer foe loop as mentioned in the pseudo-code 
-        sort_loop:
+        for_loop:
             la      $t1, array          # Loading array into temporary memory
             bge     $t2, $t0, return    # Checking loop condition (if j >= 10, then exit)
-            add     $t3, $t2, $zero 
+            addi    $t3, $t2, -1        # i = j - 1
+            
+            # Storing temp (arr[j]) in $t6
+            sll     $t4, $t2, 2         # Calculating 4*j to access arr[j]
+            add     $t6, $t1, $t4       # $t1 stores arr+4(j)
+            lw      $t6, 0($t6)         # Loading arr[j]
 
             # Inner while loop as mentioned in the pseudo-code
             while_loop:
-                blt     $t3, 0, end_while       # if i <= 0 then exit while loop
+                blt     $t3, 0, end_while       # if i < 0 then exit while loop
                 la      $t1, array              # Loading array into temporary memory 
-                mul     $t4, $t3, 4             # Calculating 4*(i+1) to access arr[i]
-                add     $t1, $t1, $t4           # $t1 stores arr+4(i+1)
+                sll     $t4, $t3, 2             # Calculating 4*i to access arr[i]
+                add     $t1, $t1, $t4           # $t1 stores arr+4(i)
                 lw      $t5, 0($t1)             # Loading arr[i+1]
-                lw      $t6, -4($t1)            # Loding arr[i]
-                bge     $t5, $t6, end_while     # Check condition to exit while loop
-                lw      $t7, 0($t1)              
-                sw      $t6, 0($t1)             
-                sw      $t7, -4($t1)            # Shifting by one position ( arr[i+1] = arr[i] )
-                addi    $t3, $t3, -1            # i--
-                j       while_loop              
+                bge     $t6, $t5, end_while     # Check if temp <= arr[i], if yes then exit
+                sw      $t5, 4($t1)             # arr[i+1] = arr[i]
+                addi    $t3, $t3, -1            # i = i - 1
+                j       while_loop              # Continue the while loop 
 
         end_while:
-            addi    $t2, $t2, 1         # j++ ( increasing iterator of for loop )
-            j       sort_loop
-                  
+            la      $t1, array              # Loading array into temporary memory 
+            mul     $t4, $t3, 4             # Calculating 4*i to access arr[i]
+            add     $t1, $t1, $t4           # $t1 stores arr+4*i
+            sw      $t6, 4($t1)             # arr[i+1] = temp 
+            addi    $t2, $t2, 1             # j = j + 1 ( increasing iterator of for loop )
+            j       for_loop               # Continue the for loop
+
+
 	invalid_input:
         # Printing the error message
         la      $a0, error_message
@@ -183,6 +191,7 @@ array: .space 40
         # Exit the code
         j       exit_code
     
+
     exit_code:
         # Printing thank you message 
         la      $a0, end_message
