@@ -17,7 +17,7 @@ input_message:
     .asciiz "Enter ten integers to be sorted (press enter after each integer): \n"
 
 output_message:
-    .asciiz "\nTen integers in ascending order are: "
+    .asciiz "\nSorted array : "
 
 white_space:
     .asciiz " "

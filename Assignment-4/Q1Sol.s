@@ -14,13 +14,16 @@ enter_message:
     .asciiz "*** STORING A GP IN A MATRIX AND FINDING DETERMINANT *** \n\n"
 
 input_message: 
-    .asciiz "Enter four positive integers n, a and r (press enter after entering each):  \n"
+    .asciiz "Enter four positive integers n, a, r and m (press enter after entering each):  \n"
 
 output_message1:
-    .asciiz "Matrix after storing the GP (matrix A): \n"
+    .asciiz "Matrix after storing the GP with MOD m (matrix A): \n"
 
 output_message2:
-    .asciiz "\nDeterminant of matrix A: "
+    .asciiz "\nFinal determinant of the matrix A is "
+
+return:
+	.asciiz "\nReturn value : "
 
 white_space:
     .asciiz " "
@@ -29,7 +32,7 @@ new_line:
     .asciiz "\n"
 
 end_message:
-    .asciiz "\n*********** THANK YOU *********** \n\n"
+    .asciiz "\n\n*********** THANK YOU *********** \n\n"
 
 .text
 .globl main
@@ -60,7 +63,12 @@ end_message:
         # Taking first number (r) as input in $s0 
         li      $v0, 5
         syscall
-        move    $s2, $v0    
+        move    $s2, $v0 
+
+		# Taking first number (m) as input in $s0 
+        li      $v0, 5
+        syscall
+        move    $s4, $v0    
 
         mul     $a0, $s0, $s0
         jal     mallocInStack
@@ -69,12 +77,16 @@ end_message:
         mul     $t0, $s0, $s0
         li      $t1, 0
         move    $t2, $s1
+		div		$t2, $s4
+		mfhi 	$t2
         move    $t3, $s3
         j       loop1
 
         loop1:
             sw      $t2, 0($t3)
             mul		$t2, $t2, $s2
+			div		$t2, $s4
+			mfhi 	$t2
             addi    $t3, 4
             addi    $t1, 1
             blt     $t1, $t0, loop1
@@ -214,7 +226,7 @@ end_message:
 			li 		$t2, 0	# Loop counter
 			
 		det_loop:	
-			beq 	$t2, $t0, end_det
+			# beq 	$t2, $t0, end_det
 			sw 		$t1, 8($sp)
 			sw 		$t2, 4($sp)
 			sw 		$s1, 0($sp)
@@ -235,7 +247,6 @@ end_message:
 			
 			subu 	$t0, $t0, 1
 
-
 			move 	$a0, $s2
 			move 	$a1, $t0
 			jal 	recursive_Det
@@ -246,10 +257,9 @@ end_message:
 			lw 		$t1, 8($sp)
 			lw 		$t2, 4($sp)
 			lw 		$s1, 0($sp)
-
-			li 		$t5, 0
-			addu 	$t5, $t5, $t2
-			sll 	$t5, $t5, 2
+			
+			move 	$t5, $t2
+			mul 	$t5, $t5, 4
 			add 	$t5, $s0, $t5
 			lw 		$t3, 0($t5)
 			mul 	$t3, $t3, $t1
@@ -259,9 +269,11 @@ end_message:
 			neg 	$t1, $t1
 			addu 	$t2, $t2, 1
 
-			b 		det_loop
+			blt 	$t2, $t0, det_loop
 
 	end_det: 
+		move 	$t3, $s1
+
 		jal 	popFromStack
 		move 	$s1, $v0
 
@@ -280,16 +292,7 @@ end_message:
 		jal 	popFromStack
 		move 	$ra, $v0
 
-		# lw 		$ra, 20($sp)
-		# lw 		$t0, 16($sp)
-		# lw 		$s0, 12($sp)
-		# lw 		$t1, 8($sp)
-		# lw 		$t2, 4($sp)
-		# lw 		$s1, 0($sp)
-		# lw 		$fp, 24($sp)
-		move 	$v0, $s1
-		# addu 	$sp, $sp, 24
-		
+		move 	$v0, $t3
 		jr 		$ra
 	 
 	getCoFactor: 
