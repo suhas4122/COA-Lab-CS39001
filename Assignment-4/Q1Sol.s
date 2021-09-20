@@ -137,6 +137,11 @@ end_message:
         sw      $a0, 0($sp)         # Store the value 
         jr      $ra                 # Return 
 
+	popFromStack:
+		lw      $v0, 0($sp)         # Store the value 
+		addi    $sp, $sp, 4         # Give 4 bytes to the stack to store the value
+        jr      $ra                 # Return 
+
     printMatrix:
         move    $t0, $a0
         move    $t1, $t0
@@ -184,23 +189,35 @@ end_message:
 		jr 		$ra							# Return 
 
 		findDet: 
-			subu 	$sp, $sp, 32
-			sw 		$ra, 28($sp)
-			sw 		$fp, 24($sp)
-			addu 	$fp, $sp, 32
-			
 			move 	$t0, $a1
 			move 	$s0, $a0
-			sw 		$s0, 20($sp)
-			sw 		$t0, 16($sp)			
+
+			move 	$a0, $ra
+			jal 	pushToStack
+
+			move 	$a0, $t0
+			jal 	pushToStack
+
+			move 	$a0, $s0
+			jal 	pushToStack
+			
+			move 	$a0, $t1
+			jal 	pushToStack
+
+			move 	$a0, $t2
+			jal 	pushToStack
+
+			move 	$a0, $s1
+			jal 	pushToStack
+					
 			li 		$t1, 1
 			li 		$t2, 0	# Loop counter
 			
 		det_loop:	
 			beq 	$t2, $t0, end_det
-			sw 		$t1, 12($sp)
-			sw 		$t2, 8($sp)
-			sw 		$s1, 4($sp)
+			sw 		$t1, 8($sp)
+			sw 		$t2, 4($sp)
+			sw 		$s1, 0($sp)
 			
 			addi 	$t1, $t0, -1
 			mul 	$a0, $t1, $t1
@@ -225,10 +242,10 @@ end_message:
 			move 	$t4, $v0
 			
 			lw 		$t0, 16($sp)
-			lw 		$s0, 20($sp)
-			lw 		$t2, 8($sp)
-			lw 		$t1, 12($sp)
-			lw 		$s1, 4($sp)
+			lw 		$s0, 12($sp)
+			lw 		$t1, 8($sp)
+			lw 		$t2, 4($sp)
+			lw 		$s1, 0($sp)
 
 			li 		$t5, 0
 			addu 	$t5, $t5, $t2
@@ -245,10 +262,34 @@ end_message:
 			b 		det_loop
 
 	end_det: 
-		lw 		$ra, 28($sp)
-		lw 		$fp, 24($sp)
+		jal 	popFromStack
+		move 	$s1, $v0
+
+		jal 	popFromStack
+		move 	$t2, $v0
+
+		jal 	popFromStack
+		move 	$t1, $v0
+
+		jal 	popFromStack
+		move 	$s0, $v0
+
+		jal 	popFromStack
+		move 	$t0, $v0
+
+		jal 	popFromStack
+		move 	$ra, $v0
+
+		# lw 		$ra, 20($sp)
+		# lw 		$t0, 16($sp)
+		# lw 		$s0, 12($sp)
+		# lw 		$t1, 8($sp)
+		# lw 		$t2, 4($sp)
+		# lw 		$s1, 0($sp)
+		# lw 		$fp, 24($sp)
 		move 	$v0, $s1
-		addu 	$sp, $sp, 32
+		# addu 	$sp, $sp, 24
+		
 		jr 		$ra
 	 
 	getCoFactor: 
