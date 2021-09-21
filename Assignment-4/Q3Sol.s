@@ -13,17 +13,26 @@
 enter_message:
     .asciiz "*** SORTING ARRAY OF 10 NUMBERS BY RECURSIVE SORT ***\n\n"
 
-input_message: 
+input_message1: 
     .asciiz "Enter ten integers to be sorted (press enter after each integer): \n"
+
+input_message2: 
+    .asciiz "\nEnter an integer to be searched in the array (n): "
 
 output_message:
     .asciiz "\nSorted array : "
+
+found:
+    .asciiz " is FOUND in the array at index "
+
+not_found:
+    .asciiz " NOT FOUND in the array."
 
 white_space:
     .asciiz " "
 
 new_line:
-    .asciiz "\n"
+    .asciiz "\n\n"
 
 end_message:
     .asciiz "\n\n*********** THANK YOU *********** \n\n"
@@ -42,7 +51,7 @@ array: .space 40
 		syscall
 
 		# Printing message before taking array as input
-		la      $a0, input_message
+		la      $a0, input_message1
 		li      $v0, 4
 		syscall
 
@@ -60,6 +69,15 @@ array: .space 40
 	        addi    $t3, $t3, 4 		    # Increasing address of $t3 to access next address
 	        bne     $t1, 11, input_Loop     # Get user input 10 times
 
+        la      $a0, input_message2
+		li      $v0, 4
+		syscall
+
+        li      $v0, 5 			            # Taking integer (n) as input
+	    syscall
+        move    $a0, $v0
+        jal     pushToStack
+
         # Calling function recursive sort to sort the array 
         la      $a0, array                  # First argument = array address
         addi    $a1, $zero, 0               # Second argument = start index
@@ -69,6 +87,38 @@ array: .space 40
         la      $a0, array                  # First argument = array address
         addi    $a1, $zero, 10              # Second argument = number of elements in the array
         jal     printArray
+
+        la      $a0, array                  # First argument = array address
+        addi    $a1, $zero, 0               # Second argument = start index
+        addi    $a2, $zero, 9               # Third argument = end index
+        lw      $a3, 0($sp)
+        jal     recursive_search
+
+        move    $t0, $v0
+        li      $t1, -1
+        
+        jal     popFromStack
+        move    $a0, $v0
+        li      $v0, 1
+        syscall
+
+        beq     $t0, $t1, fail
+        j       success 
+             
+        fail:
+            la      $a0, not_found
+            li      $v0, 4
+            syscall
+            j       exit_code
+
+        success:
+            la      $a0, found
+            li      $v0, 4
+            syscall
+
+            move    $a0, $t0
+            li      $v0, 1
+            syscall
 
         j       exit_code
 		
@@ -86,9 +136,9 @@ array: .space 40
         jr      $ra                         # Return 
 
     popFromStack:
-		lw      $v0, 0($sp)                 # Store the value 
-		addi    $sp, $sp, 4                 # Give 4 bytes to the stack to store the value
-        jr      $ra                         # Return 
+		lw      $v0, 0($sp)         # Store the value 
+		addi    $sp, $sp, 4         # Give 4 bytes to the stack to store the value
+        jr      $ra                 # Return 
 
     # Function to swap two elements of an array 
     SWAP:
@@ -112,7 +162,7 @@ array: .space 40
         print_loop: 
             # Check if loop has run 10 times 
             ble     $t1, $zero, return 	        
-            lw      $a0, ($t0)              # Load word at current address 
+            lw      $a0, 0($t0)              # Load word at current address 
             li      $v0, 1 				        
             syscall                         # Print word
             
@@ -129,6 +179,10 @@ array: .space 40
             j       print_loop 	
 
         return:
+            la      $a0, new_line     		       
+            li      $v0, 4
+            syscall
+
             jr      $ra				
 
     recursive_sort:
@@ -248,6 +302,88 @@ array: .space 40
         addu    $sp, $sp, 24
 
         j       sort_return
+
+    
+    recursive_search:
+        move    $t0, $a0
+        move    $t1, $a1
+        move    $t2, $a2
+        move    $t3, $a3
+
+        move    $a0, $ra
+        jal     pushToStack
+
+        bge     $t1, $t2, search_fail
+
+        sub     $t4, $t2, $t1
+        li      $t5, 3
+        div     $t4, $t5
+        mflo    $t4
+        sub     $t5, $t2, $t4
+        add     $t4, $t1, $t4
+
+        sll     $t6, $t4, 2
+        add     $t6, $t0, $t6
+        lw      $t6, 0($t6)
+
+        sll     $t7, $t5, 2
+        add     $t7, $t0, $t7
+        lw      $t7, 0($t7)
+
+        beq     $t3, $t6, if_1
+        beq     $t3, $t7, if_2
+        blt     $t3, $t6, if_3
+        bgt     $t3, $t7, if_4
+        j       else
+
+    if_1:
+        move    $v0, $t4
+        j       return_search
+
+    if_2:
+        move    $v0, $t5
+        j       return_search
+
+    if_3:
+        subu    $t4, $t4, 1
+        move    $a0, $t0
+        move    $a1, $t1
+        move    $a2, $t4
+        move    $a3, $t3
+        jal     recursive_search
+        j       return_search
+
+    if_4:
+        addu    $t5, $t5, 1
+        move    $a0, $t0
+        move    $a1, $t5
+        move    $a2, $t2
+        move    $a3, $t3
+        jal     recursive_search
+        j       return_search
+
+    else:
+        addu    $t4, $t4, 1
+        subu    $t5, $t5, 1
+        move    $a0, $t0
+        move    $a1, $t4
+        move    $a2, $t5
+        move    $a3, $t3
+        jal     recursive_search
+        j       return_search
+
+    search_fail:
+        jal     popFromStack
+        move    $ra, $v0
+        li      $v0, -1
+        jr      $ra
+    
+    return_search:
+        move    $t0, $v0 
+        jal     popFromStack
+        move    $ra, $v0
+        move    $v0, $t0 
+        jr      $ra
 
     exit_code:
         # Printing thank you message 
