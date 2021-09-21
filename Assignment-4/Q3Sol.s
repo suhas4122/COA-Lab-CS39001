@@ -1,5 +1,5 @@
 #    Assignment - 4
-#    Problem  - 2 (Recursive sort of 10 numbers)
+#    Problem  - 3 (Recursive search in an sorted array)
 #    Semester Aut - 2021 
 #    Group - 8
 #    Name_1 : Suhas Jain 
