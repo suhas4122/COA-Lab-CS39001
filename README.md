@@ -1,4 +1,4 @@
-# Notes
+# MIPS Notes
 
 ### Types of instructions
 
