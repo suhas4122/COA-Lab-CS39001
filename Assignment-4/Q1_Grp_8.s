@@ -1,5 +1,5 @@
 #    Assignment - 4
-#    Problem  - 1 (Transpose of a matrix)
+#    Problem  - 1 (Determinant of a matrix)
 #    Semester Aut - 2021 
 #    Group - 8
 #    Name_1 : Suhas Jain 
