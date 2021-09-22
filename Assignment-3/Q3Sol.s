@@ -189,7 +189,7 @@ end_message:
             # If all the elements have been printed (i1 == m*n) then exit loop
             beq     $t3, $t5, end_print_loop
 
-            #If current row has ended then print newline (i2 == n)
+            # If current row has ended then print newline (i2 == n)
             beq     $t4, $t1, print_newline
             
             # Continue the loop otherwise 
