@@ -73,7 +73,7 @@ array: .space 40
 		li      $v0, 4
 		syscall
 
-        li      $v0, 5 			            # Taking integer (n) as input
+        li      $v0, 5 			            # Taking integer to be searched (key)  as input
 	    syscall
         move    $a0, $v0
         jal     pushToStack
@@ -92,36 +92,38 @@ array: .space 40
         addi    $a1, $zero, 0               # Second argument = start index
         addi    $a2, $zero, 9               # Third argument = end index
         lw      $a3, 0($sp)
-        jal     recursive_search
 
-        move    $t0, $v0
-        li      $t1, -1
+        jal     recursive_search			# calls recursive_search
+
+        move    $t0, $v0					# stores return value of recursive_search in $t0
+        li      $t1, -1						# stores -1 in $t1
         
-        jal     popFromStack
+        jal     popFromStack				# gets value of key
         move    $a0, $v0
         li      $v0, 1
-        syscall
+        syscall								# prints value of key
 
-        beq     $t0, $t1, fail
-        j       success 
+        beq     $t0, $t1, fail				# if value returned by recursive_search equals -1, key was not found
+        j       success 					# else key was found in array
              
         fail:
-            la      $a0, not_found
+            la      $a0, not_found			# printing failure message
             li      $v0, 4
             syscall
-            j       exit_code
+            j       exit_code				# control jumps to exit_code block
 
         success:
-            la      $a0, found
+            la      $a0, found				# printing success message if number is found
             li      $v0, 4
             syscall
 
-            move    $a0, $t0
+            move    $a0, $t0				# printing the position of the key in the array
             li      $v0, 1
             syscall
 
-        j       exit_code
-		
+        j       exit_code					# control jumps to exit_code block
+
+	#---------HELPER FUNCTIONS-------------------	
 	# Initialise the stack ($sp and $fp pointers)
     initStack:
         addi    $sp, $sp, -4                # Give 4 bytes to the stack to store the frame pointer
@@ -136,9 +138,9 @@ array: .space 40
         jr      $ra                         # Return 
 
     popFromStack:
-		lw      $v0, 0($sp)         # Store the value 
-		addi    $sp, $sp, 4         # Give 4 bytes to the stack to store the value
-        jr      $ra                 # Return 
+		lw      $v0, 0($sp)         	# Store the value 
+		addi    $sp, $sp, 4         	# Give 4 bytes to the stack to store the value
+        jr      $ra                 	# Return 
 
     # Function to swap two elements of an array 
     SWAP:
@@ -305,85 +307,90 @@ array: .space 40
 
     
     recursive_search:
-        move    $t0, $a0
-        move    $t1, $a1
-        move    $t2, $a2
-        move    $t3, $a3
+        move    $t0, $a0					# stores the sorted array A
+        move    $t1, $a1					# stores the value of start
+        move    $t2, $a2					# stores the value of end
+        move    $t3, $a3					# stores the value of key
 
         move    $a0, $ra
         jal     pushToStack
 
-        bge     $t1, $t2, search_fail
+        bgt     $t1, $t2, search_fail		# if start>end jump to search_fail
 
-        sub     $t4, $t2, $t1
-        li      $t5, 3
+        sub     $t4, $t2, $t1				# stores value of (end - start) in $t4
+        li      $t5, 3						# stores 3 in $t5
         div     $t4, $t5
-        mflo    $t4
-        sub     $t5, $t2, $t4
-        add     $t4, $t1, $t4
+        mflo    $t4							# stores (end - start)/3 in $t4
+        sub     $t5, $t2, $t4				# stores value of mid2
+        add     $t4, $t1, $t4				# stores value of mid1
 
-        sll     $t6, $t4, 2
-        add     $t6, $t0, $t6
-        lw      $t6, 0($t6)
+        sll     $t6, $t4, 2					# stores value of mid1*4
+        add     $t6, $t0, $t6				# stores position of A[mid1]
+        lw      $t6, 0($t6)					# stores A[mid1]
 
-        sll     $t7, $t5, 2
-        add     $t7, $t0, $t7
-        lw      $t7, 0($t7)
+        sll     $t7, $t5, 2					# stores value of mid2*4
+        add     $t7, $t0, $t7				# stores position of A[mid2]
+        lw      $t7, 0($t7)					# stores A[mid2]
 
-        beq     $t3, $t6, if_1
-        beq     $t3, $t7, if_2
-        blt     $t3, $t6, if_3
-        bgt     $t3, $t7, if_4
-        j       else
-
+        beq     $t3, $t6, if_1				# if key is found at mid1
+        beq     $t3, $t7, if_2				# if key is found at mid2
+        blt     $t3, $t6, if_3				# if key < A[mid1]---> search in left subarray
+        bgt     $t3, $t7, if_4				# if key > A[mid2] ---> search in right subarray
+        j       else						# else search in the center subarray
+	
+	# if key is found at mid1
     if_1:
-        move    $v0, $t4
-        j       return_search
-
+        move    $v0, $t4					# stores mid1 in register
+        j       return_search				# calls return_search to return mid1
+	
+	# if key is found at mid2
     if_2:
-        move    $v0, $t5
-        j       return_search
+        move    $v0, $t5					# stores mid2 in register
+        j       return_search				# calls return_search to return mid2
 
+	# if key < A[mid1]---> search in left subarray
     if_3:
-        subu    $t4, $t4, 1
-        move    $a0, $t0
-        move    $a1, $t1
-        move    $a2, $t4
-        move    $a3, $t3
-        jal     recursive_search
-        j       return_search
+        subu    $t4, $t4, 1					# mid1 = mid1 - 1
+        move    $a0, $t0					# stores the array A for recursive call
+        move    $a1, $t1					# stores the value of start
+        move    $a2, $t4					# stores the value of end = mid1-1
+        move    $a3, $t3					# stores the value of key
+        jal     recursive_search			# calls the function in the left subarray
+        j       return_search				# jump to return_search block
 
+	# if key > A[mid2] ---> search in right subarray
     if_4:
-        addu    $t5, $t5, 1
-        move    $a0, $t0
-        move    $a1, $t5
-        move    $a2, $t2
-        move    $a3, $t3
-        jal     recursive_search
-        j       return_search
-
+        addu    $t5, $t5, 1					# mid2 = mid2 + 1
+        move    $a0, $t0					# stores the array A for recursive call
+        move    $a1, $t5					# stores the value of start = mid2+1
+        move    $a2, $t2					# stores the value of end
+        move    $a3, $t3					# stores the value of key
+        jal     recursive_search			# calls the function in the right subarray
+        j       return_search				# jump to return_search block
+	
+	# if A[mid1] < key < A[mid2] ---> seearch in center subarray
     else:
-        addu    $t4, $t4, 1
-        subu    $t5, $t5, 1
-        move    $a0, $t0
-        move    $a1, $t4
-        move    $a2, $t5
-        move    $a3, $t3
-        jal     recursive_search
-        j       return_search
+        addu    $t4, $t4, 1					# mid1 = mid1 + 1
+        subu    $t5, $t5, 1					# mid2 = mid2 - 1	
+        move    $a0, $t0					# stores the array A for recursive call
+        move    $a1, $t4					# stores the value of start = mid1+1
+        move    $a2, $t5					# stores the value of end = mid2-1
+        move    $a3, $t3					# stores the value of key
+        jal     recursive_search			# calls the function in the center subarray
+        j       return_search				# jump to return_search block
 
-    search_fail:
-        jal     popFromStack
-        move    $ra, $v0
-        li      $v0, -1
-        jr      $ra
+    search_fail:							# called when start>end
+        jal     popFromStack				# calls helper function 
+        move    $ra, $v0					 
+        li      $v0, -1						# load -1 in register $v0
+        jr      $ra							# return -1 to caller function
     
     return_search:
-        move    $t0, $v0 
-        jal     popFromStack
+        move    $t0, $v0 					# store index of key in $t0
+        jal     popFromStack				# calls helper function
         move    $ra, $v0
-        move    $v0, $t0 
-        jr      $ra
+        move    $v0, $t0 					# load index of key in $v0
+        jr      $ra							# return index to caller function
 
     exit_code:
         # Printing thank you message 
