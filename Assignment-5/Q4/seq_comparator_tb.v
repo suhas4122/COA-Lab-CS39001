@@ -14,8 +14,8 @@ module seq_comparator_tb;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		a = 32'd50;
-		b = 32'd50;
+		a = 32'd10;
+		b = 32'd10;
 		reset = 1;
 		OP = 0;
 
