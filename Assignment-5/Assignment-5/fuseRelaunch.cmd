@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-5/Assignment-5/mult_three_fsm_tb_isim_beh.exe" -prj "/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-5/Assignment-5/mult_three_fsm_tb_beh.prj" "work.mult_three_fsm_tb" "work.glbl" 

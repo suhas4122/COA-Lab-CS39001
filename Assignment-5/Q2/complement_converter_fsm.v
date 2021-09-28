@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module to implement a complement convetor 
 
-module complement_converter (
+module complement_converter_fsm (
     input clk,
     input inp,
     input reset,
@@ -45,5 +45,6 @@ module complement_converter (
             end
         endcase
     end
+    
 endmodule
 

@@ -17,7 +17,7 @@ module dff (
     output reg q
 );
     // Sequential Control (FLIP FLOP CONTROL)
-	// asynchronous reset
+	// Asynchronous reset
     always @(posedge clk or posedge reset) begin
         if (reset) begin
         // Asynchronous reset when reset goes high

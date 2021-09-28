@@ -11,10 +11,10 @@
 // Module to implement a testbench for multiple of three module
 
 module mult_three_fsm_tb;
-	// Inputs
-	reg clk, inp, reset;
-
-	// Outputs
+	// Initialising inputs and outputs 
+	reg clk, reset, inp;
+	reg [7:0] inp_array;				// Array from which we will read bit wise input 
+	integer i;
 	wire out;
 
 	// Instantiate the Unit Under Test (UUT)
@@ -23,29 +23,27 @@ module mult_three_fsm_tb;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
+		inp_array = 8'b11010011;		// Declaration of input array 
 		inp = 0;
 		reset = 1;
 
 		// Wait 10 ns for global reset to finish
 		#10;
-		reset = 0; // Make reset 
-        
+		reset = 0; 		// Make reset 0
+        // Wait 10 ns for reset to become 0
         #10;
-		$monitor("clk: %d, inp: %d, out: %d", clk, inp, out);
-		// Starting inputs
-		inp = 1;
-		#10 inp = 1;
-		#10 inp = 0;
-		#10 inp = 1;
-		#10 inp = 0;
-		#10 inp = 0;
-		#10 inp = 1;
-		#10 inp = 1;
-		#10 inp = 0;
-		#7 $finish;
+		
+		for(i = 0; i<8; i = i+1) begin
+			inp = inp_array[7-i]; 		// Read inputs from the MSB side 
+			#10
+			$display("inp: %d, out: %d", inp, out);
+		end
+
+		#10 $finish;
 	end
-   
+
+   	// Always block to toggle the clock every 5 time units 
 	always
-		#5 clk = !clk;
+		#5 clk = ~clk;
 
 endmodule

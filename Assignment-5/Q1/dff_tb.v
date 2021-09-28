@@ -30,12 +30,12 @@ module dff_tb;
         
         // Check release reset functionality 
         $display("Release reset");
-        d = 1;
+        d = 1'b1;
         reset = 0;
         display;
 
         // Check toggle clock functionality 
-        $display("Toggle clk");
+        $display("Toggle clock");
         clk = 1;
         display;
     end

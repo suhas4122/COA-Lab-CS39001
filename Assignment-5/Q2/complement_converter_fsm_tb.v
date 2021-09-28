@@ -10,40 +10,41 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module to implement a testbench for complement convetor module  
 
-module complement_converter_tb;
+module complement_converter_fsm_tb;
 	// Initialise inputs and outputs 
 	reg clk, inp, reset;
-	wire out;
+	reg [7:0]inp_array;					// Array from which we will read bit wise input 
+	integer i;
+	wire out;		
 
 	// Instantiate the Unit Under Test (UUT)
-	complement_converter FSM(.clk(clk), .inp(inp), .reset(reset), .out(out));
+	complement_converter_fsm FSM(.clk(clk), .inp(inp), .reset(reset), .out(out));
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
+		inp_array = 8'b11010100;		// Declaration of input array 
 		inp = 0;
 		reset = 1;
 
 		// Wait 10 ns for global reset to finish
 		#10;
-		reset = 0; // Make reset 0
-        
+		reset = 0; 		// Make reset 0
+        // Wait 10 ns for reset to become 0
         #10;
-		// Display the results if any of the parameters change 
-		$monitor("clk: %d, inp: %d, out: %d", clk, inp, out);
-		// Starting inputs
-		inp = 0;
-		#10 inp = 0;
-		#10 inp = 1;
-		#10 inp = 0;
-		#10 inp = 1;
-		#10 inp = 1;
-		#10 inp = 0;
-		#7 $finish;
+
+		for(i = 0; i<8; i = i+1) begin
+			inp = inp_array[i]; 		// Read inputs from the LSB side
+			#1							// Wait for output to change 
+			$display("inp: %d, out: %d", inp, out);
+			#9;							// Rest of the time period ie. 10 - 1 = 9 ns 
+		end
+
+		#10 $finish;
 	end
    
    	// Always block to toggle the clock every 5 time units 
 	always
-		#5 clk = !clk;
+		#5 clk = ~clk;
 
 endmodule
