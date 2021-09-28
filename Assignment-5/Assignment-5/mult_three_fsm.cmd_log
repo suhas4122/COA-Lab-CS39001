@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-5/Assignment-5/mult_three_fsm.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-5/Assignment-5/mult_three_fsm.syr" 
+xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-5/Assignment-5/mult_three_fsm.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-5/Assignment-5/mult_three_fsm.syr" 

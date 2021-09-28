@@ -1,5 +1,15 @@
 `timescale 1ns / 1ps
 
+//////////////////////////////////////////////////////////////////////////////////
+// Assignment No: 5
+// Group No     : 8
+// Problem No   : 3
+// Group Members: Suhas Jain    (19CS30048)
+//				  Monal Prasad  (19CS30030)
+// Semester No  : 5 (Autumn 2021-22)
+//////////////////////////////////////////////////////////////////////////////////
+// Module to implement a testbench for multiple of three module
+
 module mult_three_fsm_tb;
 	// Inputs
 	reg clk, inp, reset;
@@ -18,21 +28,21 @@ module mult_three_fsm_tb;
 
 		// Wait 10 ns for global reset to finish
 		#10;
-		reset = 0; // Make reset 0
+		reset = 0; // Make reset 
         
         #10;
 		$monitor("clk: %d, inp: %d, out: %d", clk, inp, out);
 		// Starting inputs
+		inp = 1;
+		#10 inp = 1;
+		#10 inp = 0;
+		#10 inp = 1;
+		#10 inp = 0;
+		#10 inp = 0;
 		#10 inp = 1;
 		#10 inp = 1;
 		#10 inp = 0;
-		#10 inp = 1;
-		#10 inp = 0;
-		#10 inp = 0;
-		#10 inp = 1;
-		#10 inp = 1;
-		#10 inp = 0;
-		#5 $finish;
+		#7 $finish;
 	end
    
 	always

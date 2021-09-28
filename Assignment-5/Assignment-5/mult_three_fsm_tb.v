@@ -1,22 +1,34 @@
 `timescale 1ns / 1ps
-
 //////////////////////////////////////////////////////////////////////////////////
-// Assignment No: 5
-// Group No     : 8
-// Problem No   : 2
-// Group Members: Suhas Jain    (19CS30048)
-//				  Monal Prasad  (19CS30030)
-// Semester No  : 5 (Autumn 2021-22)
+// Company: 
+// Engineer: 
+// 
+// Create Date:    14:16:35 09/28/2021 
+// Design Name: 
+// Module Name:    mult_three_fsm_tb 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
 //////////////////////////////////////////////////////////////////////////////////
-// Module to implement a testbench for complement convetor module  
+`timescale 1ns / 1ps
 
-module complement_converter_tb;
-	// Initialise inputs and outputs 
+module mult_three_fsm_tb;
+	// Inputs
 	reg clk, inp, reset;
+
+	// Outputs
 	wire out;
 
 	// Instantiate the Unit Under Test (UUT)
-	complement_converter FSM(.clk(clk), .inp(inp), .reset(reset), .out(out));
+	mult_three_fsm FSM(.clk(clk), .inp(inp), .reset(reset), .out(out));
 
 	initial begin
 		// Initialize Inputs
@@ -26,23 +38,23 @@ module complement_converter_tb;
 
 		// Wait 10 ns for global reset to finish
 		#10;
-		reset = 0; // Make reset 0
+		reset = 0; // Make reset 
         
         #10;
-		// Display the results if any of the parameters change 
 		$monitor("clk: %d, inp: %d, out: %d", clk, inp, out);
 		// Starting inputs
-		inp = 0;
+		inp = 1;
+		// #10 inp = 1;
 		#10 inp = 0;
 		#10 inp = 1;
+		// #10 inp = 0;
 		#10 inp = 0;
 		#10 inp = 1;
-		#10 inp = 1;
-		#10 inp = 0;
-		#7 $finish;
+		// #10 inp = 1;
+		// #10 inp = 0;
+		#7  $finish;
 	end
    
-   	// Always block to toggle the clock every 5 time units 
 	always
 		#5 clk = !clk;
 
