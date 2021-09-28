@@ -36,14 +36,14 @@ end_message:
 
     main:
         # Printing welcome message when the program starts
-		la      $a0, enter_message
-		li      $v0, 4
-		syscall
+        la      $a0, enter_message
+        li      $v0, 4
+        syscall
 
-		# Printing message to make the 2-D array
-		la      $a0, input_message
-		li      $v0, 4
-		syscall
+        # Printing message to make the 2-D array
+        la      $a0, input_message
+        li      $v0, 4
+        syscall
 
         # Taking first number (m) as input in $s0 
         li      $v0, 5
@@ -94,8 +94,8 @@ end_message:
 
         # Print the output message before printing matrix A
         la      $a0, output_message1
-		li      $v0, 4
-		syscall
+        li      $v0, 4
+        syscall
         
         # Set appropriate parameter and print matrix A
         move    $a0, $s0
@@ -117,13 +117,13 @@ end_message:
 
         # Print new line 
         la      $a0, new_line
-		li      $v0, 4
-		syscall
+        li      $v0, 4
+        syscall
 
         # Print the output message before printing matrix B
         la      $a0, output_message2
-		li      $v0, 4
-		syscall
+        li      $v0, 4
+        syscall
 
         # Set appropriate parameter and print matrix B
         move    $a0, $s1
@@ -134,7 +134,7 @@ end_message:
         # Restore stack pointer to its initial memory location 
         move    $sp, $fp            
 
-        j		exit_code      
+        j       exit_code      
 
     # Initialise the stack ($sp and $fp pointers)
     initStack:
@@ -238,7 +238,7 @@ end_message:
                 addi    $t2, $t2, -4                    # Moving address of current element of A to next position 
                 sll     $t7, $t0, 2                     # Calculate value of 4*n
                 sub     $t6, $t6, $t7                   # Move address of current element of B by 4*n (to the next row)
-                j		inner_loop                      # Continue the loop
+                j       inner_loop                      # Continue the loop
                 
             exit_inner_loop:
                 li      $t5, 0                          # Set j = 0

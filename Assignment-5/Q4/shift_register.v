@@ -5,14 +5,14 @@
 // Group No     : 8
 // Problem No   : 4
 // Group Members: Suhas Jain    (19CS30048)
-//				  Monal Prasad  (19CS30030)
+//                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////////////
 // Module to implement a left shift register 
 
 module shift_register(
-	input clk,
-	input [31:0]inp, 
+    input clk,
+    input [31:0]inp, 
     input reset,
     output reg out 
 );  

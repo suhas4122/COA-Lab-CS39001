@@ -5,20 +5,20 @@
 // Group No     : 8
 // Problem No   : 3
 // Group Members: Suhas Jain    (19CS30048)
-//				  Monal Prasad  (19CS30030)
+//                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////////////
 // Module to implement a multiple of 3 checker 
 
 module seq_comparator(
     input clk,
-	input [31:0] inp1,
-	input [31:0] inp2, 
+    input [31:0] inp1,
+    input [31:0] inp2, 
     input reset,
     input OP, 
-	output wire L,
-	output wire E,
-	output wire G
+    output wire L,
+    output wire E,
+    output wire G
 );
     // Two wires for connecting shift registers to the FSM 
     wire inp_bit1, inp_bit2;

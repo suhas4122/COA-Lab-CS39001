@@ -28,8 +28,8 @@ output_message2:
 
 # main program
 # program variables
-#  n	:   $a0
-#  i	:	$t0 
+#  n    :   $a0
+#  i    :   $t0 
  
     main:
         # Printing message before taking integer as input
@@ -40,7 +40,7 @@ output_message2:
         # Taking the integer as input (n)
         li      $v0, 5
         syscall
-        move    $a0, $v0       	       
+        move    $a0, $v0               
 
         # Sanity check of first integer (n should be >= 10)
         blt     $a0, 10, invalid_input

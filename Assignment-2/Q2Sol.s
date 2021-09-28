@@ -31,8 +31,8 @@ newline_message:
 
 # main program
 # program variables
-#  n1	:   $t0
-#  n2	:	$t1 
+#  n1   :   $t0
+#  n2   :   $t1 
 
     main:
         # Printing message before taking first integer as input

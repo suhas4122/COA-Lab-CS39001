@@ -44,30 +44,30 @@ array: .space 40
 .text
 .globl main 
 
-	main:
+    main:
         # Printing welcome message when the program starts
-		la      $a0, enter_message
-		li      $v0, 4
-		syscall
+        la      $a0, enter_message
+        li      $v0, 4
+        syscall
 
-		# Printing message before taking array as input
-		la      $a0, input_message1
-		li      $v0, 4
-		syscall
+        # Printing message before taking array as input
+        la      $a0, input_message1
+        li      $v0, 4
+        syscall
 
         # Initialising $t1 and loading adress of array in $t3
-		li      $t1, 1  				
-		la      $t3, array			
+        li      $t1, 1                  
+        la      $t3, array          
 
         # Loop to take input from the user
-		input_Loop: 			
-	        li      $v0, 5 			        # Taking integer as input
-	        syscall
-	        move    $t0, $v0 		        # Moving input value to $t0
-	        addi    $t1, $t1, 1 	        # Increasing $t1(i) by 1
-	        sw      $t0, ($t3) 		        # Storing entered value at array[i]
-	        addi    $t3, $t3, 4 		    # Increasing address of $t3 to access next address
-	        bne     $t1, 11, input_Loop     # Get user input 10 times
+        input_Loop:             
+            li      $v0, 5                  # Taking integer as input
+            syscall
+            move    $t0, $v0                # Moving input value to $t0
+            addi    $t1, $t1, 1             # Increasing $t1(i) by 1
+            sw      $t0, ($t3)              # Storing entered value at array[i]
+            addi    $t3, $t3, 4             # Increasing address of $t3 to access next address
+            bne     $t1, 11, input_Loop     # Get user input 10 times
 
         # Printing message before taking integer (k) as input
         la      $a0, input_message2
@@ -86,13 +86,13 @@ array: .space 40
         jal     find_k_largest              # Calling the function to find Kth largest integer
 
     find_k_largest:
-	    li      $a0, 10                     # Set count arg (length of array)
-		la      $a1, array 		            # Load address of array in $a1 
+        li      $a0, 10                     # Set count arg (length of array)
+        la      $a1, array                  # Load address of array in $a1 
         jal     sort_array
         jal     print_array
 
         # Loading the address of array into the memort and accessing the Kth element
-        la      $a1, array 		
+        la      $a1, array      
         addi    $s0, $s0, -10               # K = K - 10
         li      $t0, -1                     
         mul     $s0, $s0, $t0               # K = -K
@@ -106,42 +106,42 @@ array: .space 40
 
         # Printing Kth largest integer
         lw      $a0, ($a1)                  # Load word at current address 
-        li      $v0, 1 				        
+        li      $v0, 1                      
         syscall
 
         j       exit_code                   # Exiting the code
 
     # Printing the sorted array 
     print_array:
-        # Loading address of array and initialising variables 				
-        la      $a1, array 		 
+        # Loading address of array and initialising variables               
+        la      $a1, array       
         li      $t0, 0
-        move    $t0, $a0	
-        la      $a0, output_message1 	
+        move    $t0, $a0    
+        la      $a0, output_message1    
         li      $v0, 4
         syscall
 
         print_loop: 
             # Check if loop has run 10 times 
-            ble     $t0, $zero, return 	        
+            ble     $t0, $zero, return          
             lw      $a0, ($a1)           # Load word at current address 
-            li      $v0, 1 				      
-            syscall         		     # Print word
+            li      $v0, 1                    
+            syscall                      # Print word
             
             # Increment current word address by 4 and decrease $t0
-            addi    $a1, $a1, 4 		        
-            sub     $t0, $t0, 1    	        
+            addi    $a1, $a1, 4                 
+            sub     $t0, $t0, 1             
 
             # Print white space
-            la      $a0, white_space     		       
+            la      $a0, white_space                   
             li      $v0, 4
             syscall 
 
             # Continue the loop 
-            j       print_loop 	
+            j       print_loop  
 
     return:
-        jr      $ra				
+        jr      $ra             
 
 
     sort_array:
@@ -182,7 +182,7 @@ array: .space 40
             j       for_loop               # Continue the for loop
 
 
-	invalid_input:
+    invalid_input:
         # Printing the error message
         la      $a0, error_message
         li      $v0, 4

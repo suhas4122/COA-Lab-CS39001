@@ -5,25 +5,25 @@
 // Group No     : 8
 // Problem No   : 4
 // Group Members: Suhas Jain    (19CS30048)
-//				  Monal Prasad  (19CS30030)
+//                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////////////
 // Module to implement a fsm of sequential seq_comparator 
 
 module seq_comparator_fsm(
-	input clk,
-	input inp_bit1,
-	input inp_bit2, 
+    input clk,
+    input inp_bit1,
+    input inp_bit2, 
     input reset,
     input OP, 
-	output reg L,
-	output reg E,
-	output reg G
+    output reg L,
+    output reg E,
+    output reg G
 ); 
     // Declare states of the fsm (same as numbeer % 3)
     parameter EQUAL = 0, LESS = 1, GREATER = 2;
     // Declare present state and next state 
-	reg [1:0]PS, NS;
+    reg [1:0]PS, NS;
 
     // Sequential contol block
     // Asynchronous reset 
@@ -45,7 +45,7 @@ module seq_comparator_fsm(
     // remain in those states because we are reading 
     // from MSB to LSB side 
     always @(*) begin
-	    case (PS)
+        case (PS)
             EQUAL : begin
                 if(inp_bit1 == inp_bit2)            // If both the inputs are equal, stay in EQUAL
                     NS = EQUAL;
@@ -62,14 +62,14 @@ module seq_comparator_fsm(
             GREATER : begin
                 NS = GREATER;               // If in state GREATER, stay in state GREATER unless reset
             end                       
-        endcase	
-	end
+        endcase 
+    end
 
     // Output control block
     // Whenever OP becomes 1 set the  
     // values of L, E, G accordingly 
     always @(posedge OP) begin
-	    case (PS)
+        case (PS)
             EQUAL : begin                    // For state EQUAL, L = G = 0 and E = 1
                 L <= 0;
                 E <= 1;
@@ -85,7 +85,7 @@ module seq_comparator_fsm(
                 E <= 0;
                 G <= 1;
             end                       
-        endcase	
-	end
+        endcase 
+    end
 
 endmodule 
