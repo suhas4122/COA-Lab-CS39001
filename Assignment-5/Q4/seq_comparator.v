@@ -1,72 +1,32 @@
+`timescale 1ns / 1ps
+
+//////////////////////////////////////////////////////////////////////////////////
+// Assignment No: 5
+// Group No     : 8
+// Problem No   : 3
+// Group Members: Suhas Jain    (19CS30048)
+//				  Monal Prasad  (19CS30030)
+// Semester No  : 5 (Autumn 2021-22)
+//////////////////////////////////////////////////////////////////////////////////
+// Module to implement a multiple of 3 checker 
+
 module seq_comparator(
     input clk,
+	input [31:0] inp1,
+	input [31:0] inp2, 
     input reset,
-    input OP,
-    input [31:0] temp_a,
-    input [31:0] temp_b,
-    output reg L,
-    output reg E,
-    output reg G
-    
+    input OP, 
+	output wire L,
+	output wire E,
+	output wire G
 );
-reg [31:0] a,b;
-parameter  l = 3'b100,  e = 3'b010, g = 3'b001;
-reg [2:0]PS,NS;            
-
-always @(posedge clk or posedge reset) begin
-        if(reset)
-            PS <= e;
-        else
-            PS <= NS;
-    end 
-
-always @(posedge clk) begin
-        a <= (a << 1);
-        b <= (b << 1);
-    end
-
-
-always @(posedge clk) begin
-    NS= PS;
-    case(PS)
-        l:  begin
-            NS = l;
-            end
-        e: begin
-            if(! (a[32] ^ b[32]))
-                NS = e;
-            else if (a[31] && !b[31])
-                NS = g;
-            else if (b[31] && !a[31])
-                NS = l;  
-            end
-        g: begin
-            NS = g;
-            end
-        
-    endcase
-end
-
-always @(OP) begin
-    if(OP)
-    begin
-    case(PS)
-        l:  begin
-            L<=1;
-            E<=0;
-            G<=0;
-            end
-        e:  begin
-            L<=0;
-            E<=1;
-            G<=0;
-            end
-        g:  begin
-            L<=0;
-            E<=0;
-            G<=1;
-            end
-    endcase
-    end 
-end               
-endmodule
+    // Two wires for connecting shift registers to the FSM 
+    wire inp_bit1, inp_bit2;
+    // Instantiating first shift register to read bits from inp1
+    shift_register sh1(.clk(clk), .inp(inp1), .reset(reset), .out(inp_bit1));
+    // Instantiating second shift register to read bits from inp2
+    shift_register sh2(.clk(clk), .inp(inp2), .reset(reset), .out(inp_bit2));
+    // Instantiating the FSM for bit by bit comparision 
+    seq_comparator_fsm sc(.clk(clk), .inp_bit1(inp_bit1), .inp_bit2(inp_bit2), .reset(reset), .OP(OP), .L(L), .E(E), .G(G));
+    
+endmodule 
