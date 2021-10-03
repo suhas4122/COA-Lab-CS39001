@@ -102,7 +102,8 @@ endmodule
 
 ### Cheat Sheet
 ---
-![Cheat Sheet](Images/cheatSheet.png?raw=true)
+![Cheat Sheet](Images/verilog1?raw=true)
+![Cheat Sheet](Images/verilog2?raw=true)
 
 # MIPS Notes
 
