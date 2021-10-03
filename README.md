@@ -3,100 +3,87 @@
 ### Sample Program
 ---
 ```verilog
-// Simulation of a Divide by 3 detector FSM
-/* 
- * Do not change Module name 
-*/
-module div_by_3_detector_tb;
+// Module to implement a testbench for multiple of three module
 
-// The input signals to the circuit
-reg clk, rst;
-reg [0:7] num;
+module mult_three_fsm_tb;
+    // Initialising inputs and outputs 
+    reg clk, reset, inp;
+    reg [7:0] inp_array;                // Array from which we will read bit wise input 
+    integer i;
+    wire out;
 
-// The output signals from the circuit
-wire [1:0] state;
-wire isdiv_by_3;
+    // Instantiate the Unit Under Test (UUT)
+    mult_three_fsm FSM(.clk(clk), .inp(inp), .reset(reset), .out(out));
 
-  initial 
-    begin
-      $monitor($time, " num=%d state=%b isdiv_by_3=%b", num, state, isdiv_by_3);
-      clk = 1'b0; rst = 1'b0; num = 111;
-      #1 rst = 1'b1;
-      #1 rst = 1'b0;
-      #100 $finish ;
+    initial begin
+        // Initialize Inputs
+        clk = 0;
+        inp_array = 8'b11010011;        // Declaration of input array 
+        inp = 0;
+        reset = 1;
+
+        // Wait 10 ns for global reset to finish
+        #10;
+        reset = 0;      // Make reset 0
+        // Wait 10 ns for reset to become 0
+        #10;
+        
+        for(i = 0; i<8; i = i+1) begin
+            inp = inp_array[7-i];       // Read inputs from the MSB side 
+            #10
+            $display("inp: %d, out: %d", inp, out);
+        end
+
+        #10 $finish;
     end
 
-always #5 clk = ~clk;
+    // Always block to toggle the clock every 5 time units 
+    always
+        #5 clk = ~clk;
 
-// Intitialize the module
-div_by_3_detector my_detector (
-.clk (clk),
-.rst (rst),
-.num (num),
-.state (state),
-.isdiv_by_3 (isdiv_by_3) 
-);
 endmodule
 
-// Module Defintion of the Divide by 3 Detector Circuit
-module div_by_3_detector (clk, rst, num, state, isdiv_by_3);
+// Module to check if a number is a multiple of three
 
-// The number of bits in the input
-parameter N = 8;
-// The state encodings
-parameter S0 = 2'b00, S1 = 2'b01, S2 = 2'b10;
+module mult_three_fsm(
+    input clk,
+    input inp,
+    input reset,
+    output reg out
+);  
+    // Declare states of the fsm (same as numbeer % 3)
+    parameter S0 = 0, S1 = 1, S2 = 2;
+    // Declare present state and next state 
+    reg [1:0]PS, NS;
 
-// The input control signals
-input clk, rst;
-// The input data signal
-input [0:N-1] num;
+    // Sequential control block
+    // Asynchronous reset
+    always @(posedge clk or posedge reset) begin
+        if(reset)
+            PS <= S0;       // If reset is 1, FSM goes to initial state 
+        else
+            PS <= NS;       // If reset is 0, it goes to next state
+    end 
 
-// The output signal that when asserted implies that the
-// input number is divisible by 3
-output wire isdiv_by_3;
-// The state of the FSM
-output reg [1:0] state; 
-
-// An internal counter value that counts the number of
-// clock cycles passed
-reg [3:0] count;
-
-// An internal control signal that keeps track whether
-// all the bits of the input has been processed
-wire done;
-
-// The output detect signal is very simple. It is asserted
-// whenever the FSM is in state S0
-assign isdiv_by_3 = (state == S0);
-
-// The done signal is asserted whenever the counter reaches N
-assign done = (count == N); 
-
-// The counter which keeps track of how many bits of the 
-// input number has been processed till now. The counter
-// stops count at N.
-always @(posedge clk or posedge rst) begin
-    if (rst) count <= 4'b0;	
-    else if (~done) count <= count + 1;
-end
-
-// The main FSM
-always @(posedge clk or posedge rst) begin
-    if (rst) state <= S0;
-    else if (~done) begin
-        case (state)
-            S0: if (num[count]==1'b0) state <= S0; 
-                else if (num[count]==1'b1) state <= S1;
-            S1: if (num[count]==1'b0) state <= S2; 
-                else if (num[count]==1'b1) state <= S0;
-            S2: if (num[count]==1'b0) state <= S1; 
-                else if (num[count]==1'b1) state <= S2;
-            default: state <= S0; 
-        endcase
-    end // end else if
-end
-
-// The End!!
+    // Next state and output control
+    // Output is divisible by 3 only if we reach state S0
+    // In S1 or S2 the modulo is non zero
+    always @(*) begin
+        case (PS)
+            S0 : begin
+                out = 1;                // Divisible 
+                NS = inp ? S1 : S0;     // if inp is 1 => 2*(3n) + 1 = 3m + 1 ie. S1
+            end                         // if inp is 0 => 2*(3n) = 3m ie. S0
+            S1 : begin 
+                out = 0;                // Non-divisible 
+                NS = inp ? S0 : S2;     // if inp is 1 => 2*(3n+1) + 1 = 3m ie. S0
+            end                         // if inp is 0 => 2*(3n+1) = 3m + 2 ie. S2
+            S2 : begin
+                out = 0;                // Non-divisible 
+                NS = inp ? S2 : S1;     // if inp is 1 => 2*(3n+2) + 1 = 3m + 2 ie. S2
+            end                         // if inp is 0 => 2*(3n+2)  = 3m + 1 ie. S1
+        endcase 
+    end
 endmodule
 ```
 
