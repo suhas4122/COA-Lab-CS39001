@@ -25,7 +25,7 @@ module bitSerialAdder(
 	dff D(clk,rst_ff,cout,cin,c);
 	
 	//Calling adder module
-	Adder FA1(x[0],z[0],c,s,cout);
+	full_adder FA1(x[0],z[0],c,s,cout);
 	
 	//Store sum in SIPO
 	sipo S1(clk,sipo_load,s,sum);
