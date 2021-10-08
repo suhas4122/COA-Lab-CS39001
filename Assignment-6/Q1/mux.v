@@ -23,4 +23,5 @@ module mux(
         else
             out <= in0;    // Output is same as input in port 0 if s = 0
     end
+    
 endmodule 
