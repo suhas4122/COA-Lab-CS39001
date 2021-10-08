@@ -1,9 +1,13 @@
-/*
-Computer Organisation and Architecture Lab
-Assignment no. 6
-Group no. 8
-Suhas Jain and Monal Prasad
-*/
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Assignment No: 6
+// Group No     : 8
+// Problem No   : 2
+// Group Members: Suhas Jain    (19CS30048)
+//                Monal Prasad  (19CS30030)
+// Semester No  : 5 (Autumn 2021-22)
+//////////////////////////////////////////////////////////////////////////////////
+// Module to implement a full adder
 
 module full_adder (A, B, Ci, S, Co);
     
