@@ -8,9 +8,8 @@
 //				  Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////////////
+
 // Module to implement a 8 bit bidirectional barrel shifter  
-//dir = 0 -> RIGHT SHIFT
-//dir = 1 -> LEFT SHIFT
  
 module barrel_shifter(
     input [7:0] in,
@@ -18,7 +17,13 @@ module barrel_shifter(
     input dir,
     output [7:0] out
 );
-
+    /*
+        in:     8-bit input of the barrel shifter
+        shamt:  Shift amount, i.e. number of bits to be shifted
+        dir:    Direction of the shift, 0 for left shift, 1 for right shift 
+        out:    8-bit output of the barrel shifter 
+    */
+    
     wire [7:0] x, y, w, z;
 
     // Reversing the 8 bit number in case of left shift

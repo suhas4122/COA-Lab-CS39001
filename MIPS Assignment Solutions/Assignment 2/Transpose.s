@@ -144,10 +144,7 @@ EXIT_CODE:           .word 10
 
     # Function to print the matrix.
     printMatrix:
-        #$a0 -> integer m
-        #$a1 -> integer n
-        #$a2 -> address of array which is stored in row major
-
+    
         addi $sp, $sp, -4   # Decrement stack pointer by 4 -> Allocating memory of 4 bytes = 32 bits
         sw $t0, 0($sp)      # Save $t0 to stack
         addi $sp, $sp, -4   # Decrement stack pointer by 4 -> Allocating memory of 4 bytes = 32 bits

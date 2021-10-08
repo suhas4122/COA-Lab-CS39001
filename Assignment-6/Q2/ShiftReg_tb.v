@@ -29,10 +29,10 @@ module ShiftReg_tb;
         in = 'b11110110;
         #10 load= 1; in = 'b1111111;
     end
+
     initial begin
-        
         $display("load = %d in = %b out = %b", load, in, out);
-        #10
-        
+        #10;
     end
+
  endmodule

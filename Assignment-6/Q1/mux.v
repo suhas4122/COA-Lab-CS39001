@@ -16,6 +16,13 @@ module mux(
     input s, 
     output reg out
 );
+    /*
+        in0: Input at port 0 of the mux 
+        in1: Input at port 1 of the mux 
+        s:   Select signal of the mux 
+        out: Output bit of the mux
+    */
+
     // Output control block 
     always @(*) begin
         if(s)

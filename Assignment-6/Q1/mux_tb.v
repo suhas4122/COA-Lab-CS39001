@@ -8,9 +8,11 @@
 //				  Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////////////
+
 // Module to implement a testbench for 2:1 mux  
 
 module mux_tb;
+
     // Declare inputs and outputs 
     reg in0, in1, s;
     wire out;
@@ -32,5 +34,6 @@ module mux_tb;
             $display("s:%0h, in0:%0h, in1:%0h, out:%0h", s, in0, in1, out);
         end
     end 
+
 endmodule
    
