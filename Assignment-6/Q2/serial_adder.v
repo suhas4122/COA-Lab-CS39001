@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 `include "ShiftReg.v"
 `include "dff.v"
-`include "Adder.v"
+`include "full_adder.v"
 `include "sipo.v"
 module bitSerialAdder(
     input clk,
