@@ -14,6 +14,7 @@ module dff (
     input clk,
     input reset,
     input d,
+    input cin,
     output reg q
 );
     // Sequential Control (FLIP FLOP CONTROL)
@@ -21,7 +22,7 @@ module dff (
     always @(posedge clk or posedge reset) begin
         if (reset) begin
         // Asynchronous reset when reset goes high
-        q <= 1'b0;
+        q <= cin;
         end 
         else begin
         // Assign D to Q on positive clock edge

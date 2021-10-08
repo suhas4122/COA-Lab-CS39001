@@ -55,7 +55,8 @@ module bitSerialAdder_tb;
 		
 		#400
 		load = 1'b0;
-		
+		# 10000
+		$finish;
 	end
 	
 	always
@@ -63,7 +64,7 @@ module bitSerialAdder_tb;
 		
    initial begin
 		#850 sipo_load = 1'b1;
-		$display("%d, %d, %d", a, b, sum);
+		$display("sum of %d and  %d =  %d", a, b, sum);
 	end
 	
 endmodule
