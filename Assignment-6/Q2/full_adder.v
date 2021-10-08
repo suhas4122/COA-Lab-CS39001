@@ -9,7 +9,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module to implement a full adder
 
-module full_adder (A, B, Ci, S, Co);
+module full_adder (
+    input A, 
+    input B, 
+    input Ci, 
+    output wire S, 
+    output wire Co
+);
     
     /*
         A: Input bit to add
@@ -18,9 +24,6 @@ module full_adder (A, B, Ci, S, Co);
         S: Output sum bit
         Co: Output carry bit
     */
-
-    input A, B, Ci;
-    output S, Co;
 
     assign S = A ^ B ^ Ci;                         // Calulating sum bit by taking the XOR
     assign Co = (A & B) | (B & Ci) | (Ci & A);     // Calculating output carry bit by taking OR of pairwise ANDs

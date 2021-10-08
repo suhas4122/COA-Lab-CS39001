@@ -12,52 +12,28 @@
 
 
 module full_adder_tb;
-    /*
-        A: Input bit to add
-        B: Input bit to add
-        Ci: Input carry bit 
-        S: Output sum bit
-        Co: Output carry bit
-    */
 
+    // Initialising inputs and outputs 
     reg A = 1'b0, B = 1'b0;
     reg Ci = 1'b0;
     wire S;
     wire Co;
     
-    full_adder full_adder_inst(A, B, Ci, S, Co);  //Connecting the registers and wires to actual full adder design using structural modeling
-    
-    initial begin
-        $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b", A, B, Ci, S, Co);  // Printing the output after each iteration
+    // Instantiate the Unit Under Test (UUT)
+    full_adder UUT(A, B, Ci, S, Co);  
+    // Initialise the loop variable 
+    integer i;
+
+    initial begin  
         // Assigning different values to input bits and testing the outputs
-        #10;
-        A = 1'b0;
-        B = 1'b0;
-        Ci = 1'b1;
-        #10;
-        A = 1'b0;
-        B = 1'b1;
-        Ci = 1'b0;
-        #10;
-        A = 1'b0;
-        B = 1'b1;
-        Ci = 1'b1;
-        #10;
-        A = 1'b1;
-        B = 1'b0;
-        Ci = 1'b0;
-        #10;
-        A = 1'b1;
-        B = 1'b0;
-        Ci = 1'b1;
-        #10;
-        A = 1'b1;
-        B = 1'b1;
-        Ci = 1'b0;
-        #10;
-        A = 1'b1;
-        B = 1'b1;
-        Ci = 1'b1;
+        for(i = 0; i < 8; i++) begin
+            #1
+            // Assign s, in0, in1, 3 bits of numbers from 0 to 7
+            {A, B, Ci} = i;
+            #1
+            // Display the results 
+            $display("A:%0h, B:%0h, Cin:%0h, Sum:%0h, Cout:%d", A, B, Ci, S, Co);
+        end
     end 
  
 endmodule

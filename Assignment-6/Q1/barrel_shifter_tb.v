@@ -20,7 +20,7 @@ module barrel_shifter_tb;
     wire [7:0] out; 
     
     // Instantiate the Unit Under Test (UUT)
-    barrel_shifter uut(.in(in), .shamt(shamt), .dir(dir), .out(out));
+    barrel_shifter UUT(.in(in), .shamt(shamt), .dir(dir), .out(out));
 
     initial begin
 

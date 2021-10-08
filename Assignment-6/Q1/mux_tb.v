@@ -18,7 +18,7 @@ module mux_tb;
     wire out;
 
     // Instantiate the Unit Under Test (UUT)
-    mux MUX(.in0(in0), .in1(in1), .s(s), .out(out));
+    mux UUT(.in0(in0), .in1(in1), .s(s), .out(out));
     
     // Variable for the for loop 
     integer i;
