@@ -31,9 +31,8 @@ module ShiftReg_tb;
     end
     initial begin
         
-        $display("load = %d in = %b", load, in);
+        $display("load = %d in = %b out = %b", load, in, out);
         #10
-        $display("done");
-
+        
     end
     endmodule
