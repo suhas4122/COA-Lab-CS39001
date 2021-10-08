@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 //////////////////////////////////////////////////////////////////////////////////
-// Assignment No: 5
+// Assignment No: 6
 // Group No     : 8
 // Problem No   : 2
 // Group Members: Suhas Jain    (19CS30048)
@@ -35,4 +35,4 @@ module ShiftReg_tb;
         #10
         
     end
-    endmodule
+ endmodule

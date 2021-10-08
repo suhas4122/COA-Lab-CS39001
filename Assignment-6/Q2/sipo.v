@@ -1,26 +1,18 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Assignment No: 5
-// Group No     : 8
-// Problem No   : 2
-// Group Members: Suhas Jain    (19CS30048)
-//                Monal Prasad  (19CS30030)
-// Semester No  : 5 (Autumn 2021-22)
-//////////////////////////////////////////////////////////////////////////////////
-// Module to implement a SIPO module 
+module sipo(a,clk,rst,q);
+input clk,rst;
+input a;
+output [7:0]q;
 
-module sipo(
-    input clk,
-	 input load,
-    input in,
-    output [7:0] out
-    );
-
-	reg [7:0] out;
-	always @(posedge clk)	//if load=0, right shift, else do nothing
-	begin
-		if(load == 0)
-			out={in,out[7:1]};
-	end
-	
-endmodule 
+reg [7:0]temp;
+always@(posedge clk,posedge rst)
+begin
+if(rst==1'b1)
+temp<=8'b00000000;
+else
+begin
+temp<=temp<<1'b1;
+temp[0]<=a;
+end
+end
+assign q=temp;
+endmodule
