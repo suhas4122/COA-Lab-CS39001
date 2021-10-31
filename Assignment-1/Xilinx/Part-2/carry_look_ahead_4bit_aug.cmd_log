@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit_aug.xst" -ofn "/home/suhas/Desktop/Semester-5/COA/COAA-Lab-Sem-5/Assignment-1/Xilinx/Part-2/carry_look_ahead_4bit_aug.syr" 
