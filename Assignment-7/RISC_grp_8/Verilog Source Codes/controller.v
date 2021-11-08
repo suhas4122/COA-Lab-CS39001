@@ -25,7 +25,7 @@ module controller(
     output reg reg_write_select
 );
 
-    always @(op_code or func_code or reset or clk) begin
+    always @(*) begin
         if(reset == 1) begin        // Setting all flags to 0 on reset signal
             alu_control => 0;
             ab_set => 0;
@@ -53,7 +53,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:                          // Complement operation
+                11'd1:                          // Complement operation
                     begin
                         alu_control => 1;
                         ab_set => 1;
@@ -66,7 +66,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd2:
                     begin
                         alu_control => 2;
                         ab_set => 0;
@@ -79,7 +79,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd3:
                     begin
                         alu_control => 3;
                         ab_set => 0;
@@ -92,7 +92,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd4:
                     begin
                         alu_control => 4;
                         ab_set => 0;
@@ -105,7 +105,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd5:
                     begin
                         alu_control => 5;
                         ab_set => 0;
@@ -118,7 +118,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd6:
                     begin
                         alu_control => 4;
                         ab_set => 0;
@@ -131,7 +131,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd7:
                     begin
                         alu_control => 5;
                         ab_set => 0;
@@ -144,7 +144,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd8:
                     begin
                         alu_control => 6;
                         ab_set => 0;
@@ -157,7 +157,7 @@ module controller(
                         reg_to_PC => 0;
                         reg_write_select => 0;
                     end 
-                11'd0:
+                11'd9:
                     begin
                         alu_control => 6;
                         ab_set => 0;
@@ -166,6 +166,19 @@ module controller(
                         mem_read => 0;
                         ALU_src => 0;
                         reg_data => 1;
+                        const_src => 0;
+                        reg_to_PC => 0;
+                        reg_write_select => 0;
+                    end 
+                default:
+                    begin
+                        alu_control => 0;
+                        ab_set => 0;
+                        reg_write => 0;
+                        mem_write => 0;
+                        mem_read => 0;
+                        ALU_src => 0;
+                        reg_data => 0;
                         const_src => 0;
                         reg_to_PC => 0;
                         reg_write_select => 0;
@@ -328,7 +341,20 @@ module controller(
                         const_src => 0;
                         reg_to_PC => 0;
                         reg_write_select => 0;
-                    end         
+                    end    
+                default:
+                    begin
+                        alu_control => 0;
+                        ab_set => 0;
+                        reg_write => 0;
+                        mem_write => 0;
+                        mem_read => 0;
+                        ALU_src => 0;
+                        reg_data => 0;
+                        const_src => 0;
+                        reg_to_PC => 0;
+                        reg_write_select => 0;
+                    end      
             endcase
         end
     end

@@ -90,6 +90,10 @@ module branchLogic(
                         branch_success = 0;
                     end
                 end
+                default: begin
+                    offset_out = 0
+                    branch_success = 0;
+                end
             endcase
         end
     end

@@ -15,7 +15,7 @@ module instructionDecoder(
     output wire [4:0] reg_2, 
     output wire [4:0] shift_amount, 
     output wire [10:0] func_code,
-    output wire [20:0] immediate_constant, 
+    output wire [20:0] imm_constant, 
     output wire [20:0] offset 
 );
 
@@ -24,7 +24,7 @@ module instructionDecoder(
     assign reg_2 = instruction[20:16];
     assign shift_amount = instruction[15:11];
     assign func_code = instruction[10:0];
-    assign immediate_constant = instruction[15:0];
+    assign imm_constant = instruction[15:0];
     assign offset = instruction[20:0];
 
 endmodule 
