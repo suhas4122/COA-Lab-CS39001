@@ -13,8 +13,6 @@ module arithmeticLogicalUnit(
     input [31:0] B,
     input [3:0] alu_control,
     input ab_set,
-    input clk, 
-    input reset,
     output reg [31:0] alu_result,
     output reg carry_flag,
     output reg zero_flag,
@@ -38,50 +36,49 @@ module arithmeticLogicalUnit(
     assign sign = sum[31];
     assign zero = (sum == 32'd0) ? 1'd1 : 1'd0;
 
-    always @(A or B or alu_control or posedge clk) begin
-        if(reset) begin
-            alu_result <= 0;
-            carry_flag <= 0;
-            zero_flag <= 0;
-            sign_flag <= 0;
-        end
-        else begin
-            case(alu_control)
-                4'd0: begin
-                    alu_result <= sum;
-                    carry_flag <= carry;
-                    zero_flag <= zero;
-                    sign_flag <= sign;
-                end
-                4'd1: begin
-                    alu_result <= sum;
-                end
-                4'd2: begin
-                    alu_result <= A & B;
-                end
-                4'd3: begin
-                    alu_result <= A ^ B;
-                end
-                4'd4: begin
-                    alu_result <= A << B;
-                end
-                4'd5: begin
-                    alu_result <= A >> B;
-                end
-                4'd6: begin
-                    alu_result <= A >>> B;
-                end
-                4'd7: begin
-                    alu_result <= A;
-                end
-                4'd8: begin
-                    alu_result <= B;
-                end
-                4'd9: begin
-                    alu_result <= mem_offser_sum;
-                end
-            endcase
-        end
+    initial begin
+        alu_result <= 0;
+        carry_flag <= 0;
+        zero_flag <= 0;
+        sign_flag <= 0;
+    end
+
+    always @(A or B or alu_control) begin
+        case(alu_control)
+            4'd0: begin
+                alu_result <= sum;
+                carry_flag <= carry;
+                zero_flag <= zero;
+                sign_flag <= sign;
+            end
+            4'd1: begin
+                alu_result <= sum;
+            end
+            4'd2: begin
+                alu_result <= A & B;
+            end
+            4'd3: begin
+                alu_result <= A ^ B;
+            end
+            4'd4: begin
+                alu_result <= A << B;
+            end
+            4'd5: begin
+                alu_result <= A >> B;
+            end
+            4'd6: begin
+                alu_result <= A >>> B;
+            end
+            4'd7: begin
+                alu_result <= A;
+            end
+            4'd8: begin
+                alu_result <= B;
+            end
+            4'd9: begin
+                alu_result <= mem_offser_sum;
+            end
+        endcase
     end
 
 endmodule 

@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
 /*
 Assignment No - 7
@@ -31,7 +32,7 @@ module DataPath( input wire clk, input wire rst, input wire regWriteEnable, inpu
 	// The data memory module
 		Data_memory dm(.clk(clk), .rst(rst),.address(alu_result_temp),.data_in(regReadData_2),.MemRead(MemRead),
 						.MemWrite(MemWrite),.data_out(memDataOut));
-	
+
 	// Some muxes in the datapath 
 	Mux_32b_2x1 reg_input(.a(memDataOut),.b(alu_result_temp),.select(reg_data),.out(regWriteData_temp));
 	Mux_32b_2x1 regBank_pc_input(.a(regWriteData_temp),.b(npc),.select(reg_to_pc),.out(regWriteData));
@@ -45,7 +46,6 @@ module DataPath( input wire clk, input wire rst, input wire regWriteEnable, inpu
 	Mux_5b_2x1 regWriteAddr_select (.a(regAddr_1),.b(regAddr_2),.select(regWrite_select),.out(regWriteAddr));
 	RegisterBank RB(.clk(clk),.rst(rst),.regWriteEnable(regWriteEnable),.regWriteData(regWriteData), .regWriteAddr(regWriteAddr),
 					 .regAddr_1(reg_Addr_1_final),.regAddr_2(regAddr_2),.regReadData_1(regReadData_1),.regReadData_2(regReadData_2));
-	
 	
 	wire [31:0] alu_input_2, alu_const_input;
 
