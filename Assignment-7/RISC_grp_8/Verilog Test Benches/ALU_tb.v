@@ -24,14 +24,14 @@ module ALU_tb;
 
 	// Instantiate the Unit Under Test (UUT)
 	arithmeticLogicalUnit uut (
-		.a(a), 
-		.b(b), 
-		.control(control), 
-		.result(result), 
+		.A(a), 
+		.B(b), 
+		.alu_control(control), 
+        .ab_set(ab_set),
+		.alu_result(result), 
+        .carry_flag(carry_flag), 
 		.zero_flag(zero_flag), 
-		.carry_flag(carry_flag), 
-		.sign_flag(sign_flag), 
-		.overflow_flag(overflow_flag)
+		.sign_flag(sign_flag)
 	);
 
 	initial begin
@@ -45,7 +45,29 @@ module ALU_tb;
 		#100;
       
 		// Add stimulus here
+        $monitor("control=%b,A=%b,B=%b,ab_set = %b, alu_result=%b,out_extension=%b,carry=%b,zero=%b,sign=%b,overflow=%b",control,a,b,ab_set,result,carry_flag,zero_flag,sign_flag);
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 0;
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 1; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 2; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 3; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 4; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 5; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 6; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 7; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 8; 
+		#10; 
+		A = 32'b11111111111111111111111111111111; B = 32'b11111111111111111111111111111111; control = 9; 
+		#10;
 
+		$finish;
 		
 	end
       
