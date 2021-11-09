@@ -1,3 +1,13 @@
+`timescale 1ns / 1ps
+
+//////////////////////////////////////////////////////////////////////////
+// Assignment No: 7
+// Group No     : 8
+// Group Members: Suhas Jain    (19CS30048)
+//                Monal Prasad  (19CS30030)
+// Semester No  : 5 (Autumn 2021-22)
+//////////////////////////////////////////////////////////////////////////
+
 module carry_look_ahead_4bit_aug(A, B, Ci, S, Co, PG, GG);
     
      /*
@@ -40,7 +50,7 @@ module carry_look_ahead_4bit_aug(A, B, Ci, S, Co, PG, GG);
 
 endmodule
 
-module carry_look_ahead_16bit(A, B, Ci, S, Co, PG1, GG1);
+module carry_look_ahead_16bit(A, B, Ci, S, Co);
     
     /*
         A: 16-bit input to add 

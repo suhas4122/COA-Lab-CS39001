@@ -23,76 +23,76 @@ module branchLogic(
 
     always @(clk or reset) begin
         if(reset) begin
-            offset_out = 0;
-            branch_success = 0;
+            offset_out <= 16'd0;
+            branch_success <= 1'd0;
         end
         else begin
             case(op_code)
                 6'd5: begin
-                    offset_out = alu_result[15:0]
-                    branch_success = 1;
+                    offset_out <= alu_result[15:0];
+                    branch_success <= 1'd1;
                 end
                 6'd6: begin
                     if(alu_result[31]) begin
-                        offset_out = offset_in
-                        branch_success = 1;
+                        offset_out <= offset_in;
+                        branch_success <= 1'd1;
                     end 
                     else begin
-                        offset_out = 0
-                        branch_success = 0;
+                        offset_out <= 16'd0;
+                        branch_success <= 1'd0;
                     end
                 end
                 6'd7: begin
-                    if(alu_result == 32'd0) begin
-                        offset_out = offset_in
-                        branch_success = 1;
+                    if(alu_result == 16'd0) begin
+                        offset_out <= offset_in;
+                        branch_success <= 1'd1;
                     end 
                     else begin
-                        offset_out = 0
-                        branch_success = 0;
+                        offset_out <= 16'd0;
+                        branch_success <= 1'd0;
                     end
                 end
                 6'd8: begin
-                    if(alu_result != 32'd0) begin
-                        offset_out = offset_in
-                        branch_success = 1;
+                    if(alu_result != 16'd0) begin
+                        offset_out <= offset_in;
+                        branch_success <= 1'd1;
                     end 
                     else begin
-                        offset_out = 0
-                        branch_success = 0;
+                        offset_out <= 16'd0;
+                        branch_success <= 1'd0;
                     end
                 end
                 6'd9: begin
-                    offset_out = offset_in
-                    branch_success = 1;
+                    offset_out <= offset_in;
+                    branch_success <= 1'd1;
                 end
                 6'd10: begin
-                    offset_out = offset_in
-                    branch_success = 1;
+                    offset_out <= offset_in;
+                    branch_success <= 1'd1;
                 end
                 6'd11: begin
                     if(carry_flag) begin
-                        offset_out = offset_in
-                        branch_success = 1;
+                        offset_out <= offset_in;
+                        branch_success <= 1'd1;
                     end 
                     else begin
-                        offset_out = 0
-                        branch_success = 0;
+                        offset_out <= 16'd0;
+                        branch_success <= 1'd0;
                     end
                 end
                 6'd12: begin
                     if(!carry_flag) begin
-                        offset_out = offset_in
-                        branch_success = 1;
+                        offset_out <= offset_in;
+                        branch_success <= 1'd1;
                     end 
                     else begin
-                        offset_out = 0
-                        branch_success = 0;
+                        offset_out <= 16'd0;
+                        branch_success <= 1'd0;
                     end
                 end
                 default: begin
-                    offset_out = 0
-                    branch_success = 0;
+                    offset_out <= 16'd0;
+                    branch_success <= 1'd0;
                 end
             endcase
         end

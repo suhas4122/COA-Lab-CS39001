@@ -15,8 +15,8 @@ module arithmeticLogicalUnit(
     input ab_set,
     output reg [31:0] alu_result,
     output reg carry_flag,
-    output reg zero_flag,
-    output reg sign_flag
+    output wire zero_flag,
+    output wire sign_flag
 );
 
     wire [31:0] A_out, B_out, sum;
@@ -29,21 +29,24 @@ module arithmeticLogicalUnit(
 
     wire [31:0] mem_offser_sum;
     wire temp_carry;
-    wire temp_B = {16'd0, B[15:0]};
+    wire [31:0] temp_B;
+    assign temp_B = {16'd0, B[15:0]};
 
     carry_look_ahead_32bit cla2(.A(A), .B(temp_B), .Ci(1'd0), .S(mem_offser_sum), .Co(temp_carry));
 
-    assign sign_flag = result[31];
-    assign zero_flag = (result == 32'd0) ? 1'd1 : 1'd0;
+    assign sign_flag = alu_result[31];
+    assign zero_flag = (alu_result == 32'd0) ? 1'd1 : 1'd0;
 
     always @(A or B or alu_control) begin
         case(alu_control)
             4'd0: begin
-                alu_result <= sum;
-                carry_flag <= carry;
+                {carry_flag, alu_result} <= A + B;
+                // alu_result <= sum;
+                // carry_flag <= carry;
             end
             4'd1: begin
-                alu_result <= sum;
+                alu_control <= ~A + 32'd1;
+                // alu_result <= sum;
             end
             4'd2: begin
                 alu_result <= A & B;
