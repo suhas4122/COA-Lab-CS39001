@@ -11,10 +11,10 @@
 module ALU_tb;
 
 	// Inputs
-	wire [31:0] a;
-	wire [31:0] b;
-	wire [3:0] control;
-    wire ab_set;
+	reg [31:0] a;
+	reg [31:0] b;
+	reg [3:0] control;
+    reg ab_set;
 
 	// Outputs
 	wire [31:0] result;
