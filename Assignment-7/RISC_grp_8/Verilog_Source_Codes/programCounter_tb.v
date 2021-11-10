@@ -18,14 +18,13 @@ module programCounter_tb;
     // Output
     wire [31:0] out;
     
+    // Instantiate the Unit Under Test (UUT)
     programCounter UUT (.branch(branch),.offset(offset), .clk(clk),.reset(rst), .PC(out));
+    
     initial begin
          offset = 16'b1000100010001000;
          clk = 0;
          rst = 0;
-         // reset
-		#10; rst = 1; 
-		#10; rst = 0; 
 
         #10
         branch = 1;
