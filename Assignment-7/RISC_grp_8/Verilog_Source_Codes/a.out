@@ -1,7 +1,8 @@
 #! /usr/bin/vvp
-:ivl_version "11.0 (stable)";
+:ivl_version "10.3 (stable)";
 :ivl_delay_selection "TYPICAL";
 :vpi_time_precision - 12;
+<<<<<<< HEAD
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
@@ -81,6 +82,36 @@ T_1 ;
     %delay 10000, 0;
     %vpi_call 2 34 "$display", "branch:%d, offset:%d, clock:%d, reset:%d, out = %d", v0x5560e1ef7660_0, v0x5560e1ef77c0_0, v0x5560e1ef7720_0, v0x5560e1ef7960_0, v0x5560e1ef7890_0 {0 0 0};
     %vpi_call 2 35 "$finish" {0 0 0};
+=======
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x559641dfad00 .scope module, "signExtend16to32_tb" "signExtend16to32_tb" 2 11;
+ .timescale -9 -12;
+v0x559641e09f10_0 .var "inp", 15 0;
+v0x559641e0a000_0 .net "out", 31 0, L_0x559641e0a690;  1 drivers
+S_0x559641dc5050 .scope module, "UUT" "signExtend16to32" 2 15, 3 11 0, S_0x559641dfad00;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "inp"
+    .port_info 1 /OUTPUT 32 "out"
+v0x559641dc51d0_0 .net *"_s1", 0 0, L_0x559641e0a0d0;  1 drivers
+v0x559641e09c30_0 .net *"_s2", 15 0, L_0x559641e0a1f0;  1 drivers
+v0x559641e09d10_0 .net "inp", 15 0, v0x559641e09f10_0;  1 drivers
+v0x559641e09dd0_0 .net "out", 31 0, L_0x559641e0a690;  alias, 1 drivers
+L_0x559641e0a0d0 .part v0x559641e09f10_0, 15, 1;
+LS_0x559641e0a1f0_0_0 .concat [ 1 1 1 1], L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0;
+LS_0x559641e0a1f0_0_4 .concat [ 1 1 1 1], L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0;
+LS_0x559641e0a1f0_0_8 .concat [ 1 1 1 1], L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0;
+LS_0x559641e0a1f0_0_12 .concat [ 1 1 1 1], L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0, L_0x559641e0a0d0;
+L_0x559641e0a1f0 .concat [ 4 4 4 4], LS_0x559641e0a1f0_0_0, LS_0x559641e0a1f0_0_4, LS_0x559641e0a1f0_0_8, LS_0x559641e0a1f0_0_12;
+L_0x559641e0a690 .concat [ 16 16 0 0], v0x559641e09f10_0, L_0x559641e0a1f0;
+    .scope S_0x559641dfad00;
+T_0 ;
+    %pushi/vec4 34952, 0, 16;
+    %store/vec4 v0x559641e09f10_0, 0, 16;
+    %vpi_call 2 18 "$display", "inp:%b, out:%b", v0x559641e09f10_0, v0x559641e0a000_0 {0 0 0};
+>>>>>>> a20d8e42f886e199f8be6fc00b624ac5f1d774cd
     %end;
     .thread T_1;
     .scope S_0x5560e1ecf2f0;
@@ -95,5 +126,10 @@ T_2 ;
 :file_names 4;
     "N/A";
     "<interactive>";
+<<<<<<< HEAD
     "programCounter_tb.v";
     "programCounter.v";
+=======
+    "signExtend16to32_tb.v";
+    "signExtend16to32.v";
+>>>>>>> a20d8e42f886e199f8be6fc00b624ac5f1d774cd

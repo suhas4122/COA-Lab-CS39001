@@ -21,7 +21,6 @@ module programCounter(
     wire [31:0] PC_next;
     wire [31:0] jump;
 
-    // signExtend16to32 se(.inp(offset), .out(jump));
     assign jump = {{16{offset[15]}}, offset};
     assign PC_no_banch = PC + 32'd1;
     assign PC_branch = PC_no_banch + jump;

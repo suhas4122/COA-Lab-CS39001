@@ -9,11 +9,13 @@
 //////////////////////////////////////////////////////////////////////////
 
 module controller_tb;
+    // Inputs
     reg [5:0] op_code;
     reg [10:0] func_code;
     reg clk;
     reg reset;
 
+    // Outputs
     wire [3:0] alu_control;
     wire ab_set;
     wire reg_write;
@@ -25,6 +27,7 @@ module controller_tb;
     wire reg_write_select;
     wire mem_read;
 
+    // Instantiate the Unit Under Test (UUT)
     controller uut(.op_code(op_code),
                 .func_code(func_code),
                 .clk(clk),
