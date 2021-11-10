@@ -20,7 +20,7 @@ module topModule(
     wire [4:0] reg_2; 
     wire [4:0] shift_amount; 
     wire [10:0] func_code;
-    wire [20:0] imm_constant; 
+    wire [15:0] imm_constant; 
     wire [20:0] offset;
     wire [20:0] offset_out;
 

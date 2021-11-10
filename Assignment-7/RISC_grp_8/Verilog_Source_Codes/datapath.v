@@ -9,9 +9,9 @@
 //////////////////////////////////////////////////////////////////////////
 
 module dataPath(
-    input [5:0] reg_1,
-    input [5:0] reg_2,
-    input [5:0] shift_amount,
+    input [4:0] reg_1,
+    input [4:0] reg_2,
+    input [4:0] shift_amount,
     input [31:0] npc,
     input [15:0] imm_constant,
     input [3:0] alu_control,
@@ -52,8 +52,8 @@ module dataPath(
                     .select(reg_to_pc),
                     .out(reg_write_data));
 
-    MUX_32b_2_to_1 m3(.a({{11{imm_constant[20]}},imm_constant}),
-                    .b({27'b0,shift_amount}),
+    MUX_32b_2_to_1 m3(.a({{16{imm_constant[15]}},imm_constant}),
+                    .b({27'b0, shift_amount}),
                     .select(const_src),
                     .out(alu_const_input));
     

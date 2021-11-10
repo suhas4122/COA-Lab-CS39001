@@ -1,0 +1,67 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x562129da2990 .scope module, "instructionDecoder_testbench" "instructionDecoder_testbench" 2 11;
+ .timescale -9 -12;
+v0x562129dcaba0_0 .net "func_code", 10 0, L_0x562129dcb560;  1 drivers
+v0x562129dcac80_0 .net "imm_constant", 15 0, L_0x562129dcb650;  1 drivers
+v0x562129dcad20_0 .var "instruction", 31 0;
+v0x562129dcadc0_0 .net "offset", 20 0, L_0x562129dcb780;  1 drivers
+v0x562129dcae60_0 .net "op_code", 5 0, L_0x562129dcb170;  1 drivers
+v0x562129dcaf00_0 .net "reg_1", 4 0, L_0x562129dcb2b0;  1 drivers
+v0x562129dcafd0_0 .net "reg_2", 4 0, L_0x562129dcb3a0;  1 drivers
+v0x562129dcb0a0_0 .net "shift_amount", 4 0, L_0x562129dcb490;  1 drivers
+S_0x562129db3d40 .scope module, "uut" "instructionDecoder" 2 26, 3 11 0, S_0x562129da2990;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 32 "instruction";
+    .port_info 1 /OUTPUT 6 "op_code";
+    .port_info 2 /OUTPUT 5 "reg_1";
+    .port_info 3 /OUTPUT 5 "reg_2";
+    .port_info 4 /OUTPUT 5 "shift_amount";
+    .port_info 5 /OUTPUT 11 "func_code";
+    .port_info 6 /OUTPUT 16 "imm_constant";
+    .port_info 7 /OUTPUT 21 "offset";
+v0x562129da1070_0 .net "func_code", 10 0, L_0x562129dcb560;  alias, 1 drivers
+v0x562129da1110_0 .net "imm_constant", 15 0, L_0x562129dcb650;  alias, 1 drivers
+v0x562129dca4e0_0 .net "instruction", 31 0, v0x562129dcad20_0;  1 drivers
+v0x562129dca5a0_0 .net "offset", 20 0, L_0x562129dcb780;  alias, 1 drivers
+v0x562129dca680_0 .net "op_code", 5 0, L_0x562129dcb170;  alias, 1 drivers
+v0x562129dca7b0_0 .net "reg_1", 4 0, L_0x562129dcb2b0;  alias, 1 drivers
+v0x562129dca890_0 .net "reg_2", 4 0, L_0x562129dcb3a0;  alias, 1 drivers
+v0x562129dca970_0 .net "shift_amount", 4 0, L_0x562129dcb490;  alias, 1 drivers
+L_0x562129dcb170 .part v0x562129dcad20_0, 26, 6;
+L_0x562129dcb2b0 .part v0x562129dcad20_0, 21, 5;
+L_0x562129dcb3a0 .part v0x562129dcad20_0, 16, 5;
+L_0x562129dcb490 .part v0x562129dcad20_0, 11, 5;
+L_0x562129dcb560 .part v0x562129dcad20_0, 0, 11;
+L_0x562129dcb650 .part v0x562129dcad20_0, 0, 16;
+L_0x562129dcb780 .part v0x562129dcad20_0, 0, 21;
+    .scope S_0x562129da2990;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x562129dcad20_0, 0, 32;
+    %delay 100000, 0;
+    %vpi_call 2 45 "$monitor", "instruction = %b | op_code = %b | reg_1 = %b | reg_2 = %b | shift_amount = %b | func_code = %b | imm_constant = %b | offset = %b", v0x562129dcad20_0, v0x562129dcae60_0, v0x562129dcaf00_0, v0x562129dcafd0_0, v0x562129dcb0a0_0, v0x562129dcaba0_0, v0x562129dcac80_0, v0x562129dcadc0_0 {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 235143178, 0, 32;
+    %store/vec4 v0x562129dcad20_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 738525159, 0, 32;
+    %store/vec4 v0x562129dcad20_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 257949696, 0, 32;
+    %store/vec4 v0x562129dcad20_0, 0, 32;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "instructionDecoder_tb.v";
+    "instructionDecoder.v";

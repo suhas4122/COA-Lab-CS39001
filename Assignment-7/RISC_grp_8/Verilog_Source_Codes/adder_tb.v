@@ -15,7 +15,7 @@ module carry_look_ahead_16bit_tb;
     wire [31:0] S;
     wire Co;
 
-    carry_look_ahead_32bit carry_look_ahead(A, B, Ci, S, Co); 
+    carry_look_ahead_32bit uut(A, B, Ci, S, Co); 
 
     initial begin
         $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b", A, B, Ci, S, Co);

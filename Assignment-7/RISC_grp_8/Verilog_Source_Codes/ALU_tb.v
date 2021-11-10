@@ -23,7 +23,7 @@ module arithmeticLogicalUnit_testbench;
 	wire sign;
 
 	// Instantiate the Unit Under Test (UUT)
-	arithmeticLogicalUnit uut (
+	arithmeticLogicalUnit uut(
 		.A(A), 
 		.B(B), 
 		.alu_control(alu_control), 
@@ -45,7 +45,7 @@ module arithmeticLogicalUnit_testbench;
 		#1000;
         
 		// Add stimulus here
-		$monitor("alu_control=%b,A=%b,B=%b,out=%b,carry=%b,zero=%b,sign=%b",alu_control,A,B,alu_result,carry,zero,sign);
+		$monitor("alu_control=%b,A=%b,B=%b,out=%b,carry=%b,zero=%b,sign=%b, time=%d",alu_control,A,B,alu_result,carry,zero,sign, $time);
 
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; alu_control = 0;
 		#100; 

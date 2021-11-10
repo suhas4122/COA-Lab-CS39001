@@ -17,7 +17,7 @@ module registerfile(
     input clk, 
     input reset,
     output wire [31:0] reg_data_1,
-    output wire [31:0] reg_data_2,
+    output wire [31:0] reg_data_2
 );
 
     reg [31:0] bank [31:0];

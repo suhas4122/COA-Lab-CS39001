@@ -23,7 +23,7 @@ module arithmeticLogicalUnit(
     wire carry;
 
     MUX_32b_2_to_1 m1(.a(A), .b(~A), .select(ab_set), .out(A_out));
-    MUX_32b_2_to_1 m2(.a(B), .b(32'd1), .select(ab_set), .out(A_out));
+    MUX_32b_2_to_1 m2(.a(B), .b(32'd1), .select(ab_set), .out(B_out));
 
     carry_look_ahead_32bit cla1(.A(A_out), .B(B_out), .Ci(1'd0), .S(sum), .Co(carry));
 
@@ -37,43 +37,41 @@ module arithmeticLogicalUnit(
     assign sign_flag = alu_result[31];
     assign zero_flag = (alu_result == 32'd0) ? 1'd1 : 1'd0;
 
-    always @(A or B or alu_control) begin
+    always @(*) begin
         case(alu_control)
             4'd0: begin
-                {carry_flag, alu_result} <= A + B;
-                // alu_result <= sum;
-                // carry_flag <= carry;
+                alu_result = sum;
+                carry_flag = carry;
             end
             4'd1: begin
-                alu_control <= ~A + 32'd1;
-                // alu_result <= sum;
+                alu_result = sum;
             end
             4'd2: begin
-                alu_result <= A & B;
+                alu_result = A & B;
             end
             4'd3: begin
-                alu_result <= A ^ B;
+                alu_result = A ^ B;
             end
             4'd4: begin
-                alu_result <= A << B;
+                alu_result = A << B;
             end
             4'd5: begin
-                alu_result <= A >> B;
+                alu_result = A >> B;
             end
             4'd6: begin
-                alu_result <= A >>> B;
+                alu_result = A >>> B;
             end
             4'd7: begin
-                alu_result <= A;
+                alu_result = A;
             end
             4'd8: begin
-                alu_result <= B;
+                alu_result = B;
             end
             4'd9: begin
-                alu_result <= mem_offser_sum;
+                alu_result = mem_offser_sum;
             end
             default: begin
-                alu_result <= 32'd0;
+                alu_result = 32'd0;
             end
         endcase
     end
