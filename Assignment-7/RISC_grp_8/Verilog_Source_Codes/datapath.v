@@ -8,7 +8,7 @@
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////
 
-module dataPath(
+module datapath(
     input [4:0] reg_1,
     input [4:0] reg_2,
     input [4:0] shift_amount,
@@ -82,13 +82,14 @@ module dataPath(
                     .reg_data_1(reg_1_data),
                     .reg_data_2(reg_2_data));
 	
-	assign ram_control = (mem_write & (~mem_read));
-	dataMemory_v7_3 RAMemory(.clka(~clk), 
-                            .rsta(reset), 
-                            .wea(ram_control), 
-                            .addra(address), 
-                            .dina(reg_2_data), 
-                            .douta(mem_data_out));
+    assign ram_control = (mem_write & (~mem_read));
+
+    dataMemory dm(.clka(~clk), 
+                .rsta(reset), 
+                .wea(ram_control), 
+                .addra(address), 
+                .dina(reg_2_data), 
+                .douta(mem_data_out));
 
     arithmeticLogicalUnit alu(.A(reg_1_data),
                             .B(alu_input_2),

@@ -33,7 +33,7 @@ module datapath_tb;
     wire sign_flag;
     wire zero_flag;
 
-    dataPath uut(.reg_1(reg_1),
+    datapath uut(.reg_1(reg_1),
                 .reg_2(reg_2),
                 .shift_amount(shift_amount),
                 .npc(npc),

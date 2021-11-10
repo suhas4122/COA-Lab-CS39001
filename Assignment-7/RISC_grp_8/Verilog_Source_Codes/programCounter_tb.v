@@ -13,30 +13,35 @@ module programCounter_tb;
     reg branch;
     reg [15:0] offset;
     reg clk;
-    reg rst;
+    reg reset;
 
     // Output
     wire [31:0] out;
     
     // Instantiate the Unit Under Test (UUT)
-    programCounter UUT (.branch(branch),.offset(offset), .clk(clk),.reset(rst), .PC(out));
+    programCounter uut(.branch(branch),.offset(offset), .clk(clk),.reset(reset), .PC(out));
     
     initial begin
-         offset = 16'b1000100010001000;
-         clk = 0;
-         rst = 0;
+        reset = 1;
+        clk = 0;
 
-        #10
+        #10;
+        reset = 0;
         branch = 1;
-        #1
-        $display("branch:%d, offset:%b,clock:%d, reset:%d, out = %b", branch, offset, clk,rst, out);
+        offset = 16'b0000100010001000;
 
         #10
+        $display("branch:%d, offset:%b, clock:%d, reset:%d, out = %b", branch, offset, clk, reset, out);
         branch = 0;
-        #1
-        $display("branch:%d, offset:%b,clock:%d, reset:%d, out = %b", branch, offset, clk,rst, out);
 
+        #10
+        $display("branch:%d, offset:%b, clock:%d, reset:%d, out = %b", branch, offset, clk, reset, out);
+
+        $finish;
     end
     
+    always begin
+        #5 clk = ~clk;
+    end
 
 endmodule 

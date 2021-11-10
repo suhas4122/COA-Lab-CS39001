@@ -10,7 +10,7 @@
 
 module topModule(
     input clk, 
-    input reset,
+    input reset
 );
 
     wire [31:0] PC;
@@ -23,7 +23,6 @@ module topModule(
     wire [15:0] imm_constant; 
     wire [20:0] offset;
     wire [20:0] offset_out;
-
     wire [3:0] alu_control;
     wire ab_set;
     wire reg_write;
@@ -40,10 +39,9 @@ module topModule(
     wire carry_flag;
     wire sign_flag;
     wire zero_flag;
+    wire branch_success;
 
-    wire branch_success(branch_success),;
-
-    instructio.offset_out(nFetch if(.PC(PC),
+    instructionFetch if1(.PC(PC),
                         .clk(clk),
                         .reset(reset),
                         .instruction(instruction));
@@ -72,10 +70,10 @@ module topModule(
                 .reg_to_PC(reg_to_pc),
                 .reg_write_select(reg_write_select));
 
-    dataPath dp(.reg_1(reg_1),
+    datapath dp(.reg_1(reg_1),
                 .reg_2(reg_2),
                 .shift_amount(shift_amount),
-                .npc(pc),
+                .npc(PC),
                 .imm_constant(imm_constant),
                 .alu_control(alu_control),
                 .ab_set(ab_set),

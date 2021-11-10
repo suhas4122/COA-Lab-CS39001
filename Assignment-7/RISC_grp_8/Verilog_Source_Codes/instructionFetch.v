@@ -15,7 +15,7 @@ module instructionFetch(
     output wire [31:0] instuction
 );
 
-	instructionMemory_v7_3 im(.clka(~clk), .rsta(reset), .wea(1'b0), .addra(PC[9:0]), .dina(32'd0), .douta(instruction));
-
+	instructionMemory im(.clka(~clk), .rsta(reset), .wea(1'b0), .addra(PC[9:0]), .dina(32'd0), .douta(instruction));
+    
 endmodule 
 

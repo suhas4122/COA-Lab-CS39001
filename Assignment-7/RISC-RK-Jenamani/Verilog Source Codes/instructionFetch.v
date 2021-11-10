@@ -21,9 +21,9 @@
 module instructionFetch(
     input [31:0] PC,
     input clk,
-	 input reset,
+    input reset,
     output [31:0] instruction
-    );
+);
 
 	wire [9:0] rom_address;
 	assign rom_address = PC[9:0];
