@@ -12,10 +12,12 @@
 
 module mux_32b_tb;
 
-    // Declare inputs and outputs 
+    // Inputs
     reg [31:0] a;
     reg [31:0] b;
     reg s;
+
+    // Output
     wire [31:0] out;
 
     // Instantiate the Unit Under Test (UUT)
@@ -23,31 +25,32 @@ module mux_32b_tb;
     
 
     initial begin
-        // Check all possible combinations of s, a, b
+        // Add stimulus here
+        a = 51;
+        b = 122;
 
-            a = 51;
-            b = 122;
+        #10
+        s = 0;
+        #1
+        $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
 
-            #10
-            s = 0;
-            #1
-            $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
+        #10
+        s = 1;
+        #1
+        $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
 
-            #10
-            s = 1;
-            #1
-            $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
-        
     end 
 
 endmodule
 
 module mux_5b_tb;
 
-    // Declare inputs and outputs 
+    // Inputs
     reg [4:0] a;
     reg [4:0] b;
     reg s;
+
+    // Output
     wire [4:0] out;
 
     // Instantiate the Unit Under Test (UUT)
@@ -56,22 +59,20 @@ module mux_5b_tb;
 
 
     initial begin
-        // Check all possible combinations of s, a, b
-            
-            
-            a = 15;
-            b = 22;
+        // Add stimulus here
+        a = 15;
+        b = 22;
 
-            #10
-            s = 0;
-            #1
-            $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
+        #10
+        s = 0;
+        #1
+        $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
 
-            #10
-            s = 1;
-            #1
-            $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
-            
+        #10
+        s = 1;
+        #1
+        $display("s:%b, a:%b, b:%b, out:%b", s, a, b, out);
+        
         
     end 
 

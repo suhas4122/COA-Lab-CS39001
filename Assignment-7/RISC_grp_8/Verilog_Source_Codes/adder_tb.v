@@ -10,14 +10,19 @@
 
 module carry_look_ahead_16bit_tb;
     
+    // Inputs
     reg [31:0] A = 32'b0, B = 32'b0;
     reg Ci = 1'b0;
+
+    // Outputs
     wire [31:0] S;
     wire Co;
 
+    // Instantiate the Unit Under Test (UUT)
     carry_look_ahead_32bit uut(A, B, Ci, S, Co); 
 
     initial begin
+        // Add stimulus here
         $monitor("A = %b, B = %b, Ci = %b, S = %b, Co = %b", A, B, Ci, S, Co);
         #10
         A = 32'b01001010010010100100101001001010;
