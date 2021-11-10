@@ -45,7 +45,7 @@ module arithmeticLogicalUnit_testbench;
 		#1000;
         
 		// Add stimulus here
-		$monitor("alu_control=%b,A=%b,B=%b,out=%b,carry=%b,zero=%b,sign=%b, time=%d",alu_control,A,B,alu_result,carry,zero,sign, $time);
+		$monitor("alu_control=%b,ab_set = %b, A=%b, B=%b, out=%b, carry=%b,zero=%b,sign=%b, time=%d",alu_control,ab_set,A,B,alu_result,carry,zero,sign, $time);
 
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; alu_control = 0;
 		#100; 
@@ -68,6 +68,8 @@ module arithmeticLogicalUnit_testbench;
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; alu_control = 8; 
 		#100; 
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; alu_control = 9; 
+		#100;
+		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; alu_control = 10; 
 		#100;
 
 		$finish;
