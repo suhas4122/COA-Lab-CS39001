@@ -41,7 +41,7 @@ module arithmeticLogicalUnit_testbench;
         ab_set = 0;
 		alu_control = 0;
 
-		// Wait 100 ns for global reset to finish
+		// Wait 1000 ns for global reset to finish
 		#1000;
         
 		// Add stimulus here
@@ -49,10 +49,8 @@ module arithmeticLogicalUnit_testbench;
 
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; alu_control = 0;
 		#100; 
-        // $display("alu_control=%b,A=%b,B=%b,out=%b,carry=%b,zero=%b,sign=%b",alu_control,A,B,alu_result,carry,zero,sign);
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; ab_set = 1; alu_control = 1; 
 		#100; 
-        // $display("alu_control=%b,A=%b,B=%b,out=%b,carry=%b,zero=%b,sign=%b",alu_control,A,B,alu_result,carry,zero,sign);
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; ab_set = 0; alu_control = 2; 
 		#100; 
 		A = 32'b00000000000000000000000000000010; B = 32'b00000000000000000000000000000011; alu_control = 3; 
