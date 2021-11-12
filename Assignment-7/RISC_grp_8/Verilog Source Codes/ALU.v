@@ -19,6 +19,16 @@ module arithmeticLogicalUnit(
     output wire sign_flag
 );
 
+    /*
+        A:              32-bit signed input
+        B:              32-bit signed input 
+        alu_control:    4 bit input to determine the operation to be carried out
+        ab_set:         single bit input to determine the operands
+        alu_result:     32 bit Output  containing the result of ALU 
+        carry_flag:     stores resultant carry value (0/1)
+        zero_flag:      stores 1 if alu_result = 0
+        sign_flag:      stores the sign of the alu_result (0 for positive, 1 for negative)
+    */
     wire signed [31:0] A_out, B_out, sum;
     wire carry;
 
@@ -39,39 +49,39 @@ module arithmeticLogicalUnit(
 
     always @(*) begin
         case(alu_control)
-            4'd0: begin
+            4'd0: begin                     // Addition operation
                 alu_result = sum;
                 carry_flag = carry;
             end
-            4'd1: begin
-                alu_result = sum;
+            4'd1: begin                     // Complement operation
+                alu_result = sum;           
             end
-            4'd2: begin
+            4'd2: begin                     // AND operation
                 alu_result = A & B;
             end
-            4'd3: begin
+            4'd3: begin                     // XOR operation
                 alu_result = A ^ B;
             end
-            4'd4: begin
+            4'd4: begin                     // Logical Left shift
                 alu_result = A << B;
             end
-            4'd5: begin
+            4'd5: begin                     // Logical Right shift
                 alu_result = A >> B;
             end
             4'd6: begin
-                alu_result = A_out >>> B_out;
+                alu_result = A_out >>> B_out;   // Arithmetic Right shift
             end
             4'd7: begin
-                alu_result = A;
+                alu_result = A;             // return A
             end
             4'd8: begin
-                alu_result = B;
+                alu_result = B;             // return B
             end
             4'd9: begin
                 alu_result = mem_offser_sum;
             end
             default: begin
-                alu_result = 32'd0;
+                alu_result = 32'd0;         // Return 0
             end
         endcase
     end

@@ -66,8 +66,8 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd2:
-                    begin
+                11'd2:                          // AND operation       
+                    begin                          
                         alu_control <= 2;
                         ab_set <= 0;
                         reg_write <= 1;
@@ -79,7 +79,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd3:
+                11'd3:                          // XOR operation
                     begin
                         alu_control <= 3;
                         ab_set <= 0;
@@ -92,7 +92,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd4:
+                11'd4:                            // Shift left logical 
                     begin
                         alu_control <= 4;
                         ab_set <= 0;
@@ -105,7 +105,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd5:
+                11'd5:                              // Shift Right logical
                     begin
                         alu_control <= 5;
                         ab_set <= 0;
@@ -118,7 +118,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd6:
+                11'd6:                              // Shift left logical variable
                     begin
                         alu_control <= 4;
                         ab_set <= 0;
@@ -131,7 +131,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd7:
+                11'd7:                              // Shift right logical variable
                     begin
                         alu_control <= 5;
                         ab_set <= 0;
@@ -144,7 +144,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd8:
+                11'd8:                              // Shift right arithmetic
                     begin
                         alu_control <= 6;
                         ab_set <= 0;
@@ -157,7 +157,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd9:
+                11'd9:                              // Shift right arithmetic variable
                     begin
                         alu_control <= 6;
                         ab_set <= 0;
