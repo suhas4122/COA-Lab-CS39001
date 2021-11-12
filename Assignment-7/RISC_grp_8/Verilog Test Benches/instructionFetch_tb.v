@@ -38,16 +38,14 @@ module instructionFetch_tb;
 		#100;
         
 		// Add stimulus here
-		$monitor("clk = %b | reset = %b | PC = %b | instruction= %b ",clk,reset,PC,instruction);
+		$monitor("clk = %b | reset = %b | PC = %b | instruction= %b",clk,reset,PC,instruction);
 		
         for(i = 0; i <= 10; i = i+1) begin
 		    clk = 0; PC = i; #10;
 		    clk = 1; PC = i; #10;
 		end
 
-		$display("--------------------------------------------------------------------------");
 		$finish; 
-
 	end
       
 endmodule

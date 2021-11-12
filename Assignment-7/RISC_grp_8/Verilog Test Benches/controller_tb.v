@@ -57,7 +57,16 @@ module controller_tb;
 		$monitor("op_code=%d, alu_control=%d, ab_set=%d, reg_write=%d, mem_write=%d, ALU_src=%d, reg_data=%d, const_src=%d, reg_to_pc=%d, reg_write_select=%d, mem_read=%d",op_code,alu_control,ab_set,reg_write,mem_write,ALU_src,reg_data,const_src,reg_to_pc,reg_write_select,mem_read);
         
 		#10 op_code = 6'd0; clk = ~clk; clk = ~clk;
-		#10 op_code = 6'd1; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 1; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 2; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 3; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 4; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 5; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 6; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 7; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 8; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd0; func_code = 9; clk = ~clk; clk = ~clk;
+		#10 op_code = 6'd1; func_code = 0; clk = ~clk; clk = ~clk;
 		#10 op_code = 6'd2; clk = ~clk; clk = ~clk;
 		#10 op_code = 6'd3; clk = ~clk; clk = ~clk;
 		#10 op_code = 6'd4; clk = ~clk; clk = ~clk;
