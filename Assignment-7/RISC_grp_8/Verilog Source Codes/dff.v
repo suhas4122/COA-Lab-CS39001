@@ -14,6 +14,12 @@ module dff (
     input d,
     output reg q
 );
+    /*
+        clk: clock
+        reset: 1 bit reset signal
+        d: Input bit 
+        q: single bit output register
+    */
     // Sequential Control (FLIP FLOP CONTROL)
     // Asynchronous reset
     always @(posedge clk or posedge reset) begin
