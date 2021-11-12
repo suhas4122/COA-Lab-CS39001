@@ -84,7 +84,7 @@ module carry_look_ahead_16bit(A, B, Ci, S, Co);
     //calculates output  PG  and  GG  bits that can be further used in higher-level circuits
     assign PG_int = PG[3] & PG[2] & PG[1] & PG[0];
     assign GG_int = GG[3] | (PG[3] & GG[2]) | (PG[3] & PG[2] & GG[1]) | (PG[3] & PG[2] & PG[1] & GG[0]);
-    assign Co = GG_int | (PG_int & Ci);
+    assign Co = GG_int | (PG_int & Ci);     // Calculating output carry bit by taking OR
     assign PG1 = PG_int;
     assign GG1 = GG_int;
 
@@ -107,7 +107,7 @@ module carry_look_ahead_32bit(A, B, Ci, S, Co);
     output Co;
     wire w_temp;
     
-    //Calculating sums by 4 individual 4-bit carry look ahead adders and rippling in the carry via wire w_temp    
+    //Calculating sums by 2 individual 16-bit carry look ahead adders 
     carry_look_ahead_16bit carry_look_ahead1 (A[15:0], B[15:0], Ci, S[15:0], w_temp);
     carry_look_ahead_16bit carry_look_ahead2 (A[31:16], B[31:16], w_temp, S[31:16], Co);
 

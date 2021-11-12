@@ -66,8 +66,8 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd2:
-                    begin
+                11'd2:                          // AND operation       
+                    begin                          
                         alu_control <= 2;
                         ab_set <= 0;
                         reg_write <= 1;
@@ -79,7 +79,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd3:
+                11'd3:                          // XOR operation
                     begin
                         alu_control <= 3;
                         ab_set <= 0;
@@ -92,7 +92,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd4:
+                11'd4:                            // Shift left logical 
                     begin
                         alu_control <= 4;
                         ab_set <= 0;
@@ -105,7 +105,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd5:
+                11'd5:                              // Shift Right logical
                     begin
                         alu_control <= 5;
                         ab_set <= 0;
@@ -118,7 +118,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd6:
+                11'd6:                              // Shift left logical variable
                     begin
                         alu_control <= 4;
                         ab_set <= 0;
@@ -131,7 +131,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd7:
+                11'd7:                              // Shift right logical variable
                     begin
                         alu_control <= 5;
                         ab_set <= 0;
@@ -144,7 +144,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd8:
+                11'd8:                              // Shift right arithmetic
                     begin
                         alu_control <= 6;
                         ab_set <= 0;
@@ -157,7 +157,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                11'd9:
+                11'd9:                              // Shift right arithmetic variable
                     begin
                         alu_control <= 6;
                         ab_set <= 0;
@@ -170,7 +170,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                default:
+                default:                            // In case of undefined function code
                     begin
                         alu_control <= 0;
                         ab_set <= 0;
@@ -185,8 +185,9 @@ module controller(
                     end 
             endcase
         else begin
-            case(op_code)                         
-                6'd1:
+            case(op_code)   
+                // I type instructions                      
+                6'd1:                               // Load word
                     begin
                         alu_control <= 0;
                         ab_set <= 0;
@@ -200,7 +201,7 @@ module controller(
                         reg_write_select <= 0;
                     end 
                 6'd2:
-                    begin
+                    begin                           // Store word
                         alu_control <= 1;
                         ab_set <= 1;
                         reg_write <= 1;
@@ -212,7 +213,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                6'd3:
+                6'd3:                               // Add immediate
                     begin
                         alu_control <= 9;
                         ab_set <= 0;
@@ -225,7 +226,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 1;
                     end 
-                6'd4:
+                6'd4:                               // Comp immediate
                     begin
                         alu_control <= 9;
                         ab_set <= 0;
@@ -238,7 +239,8 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 1;
                     end 
-                6'd5:
+                    // Branch type instructions
+                6'd5:                               // Branch register
                     begin
                         alu_control <= 7;
                         ab_set <= 0;
@@ -251,7 +253,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                6'd6:
+                6'd6:                               // Branch on less than zero
                     begin
                         alu_control <= 7;
                         ab_set <= 0;
@@ -265,7 +267,7 @@ module controller(
                         reg_write_select <= 0;
                     end 
                 6'd7:
-                    begin
+                    begin                           // Branch on flag zero
                         alu_control <= 7;
                         ab_set <= 0;
                         reg_write <= 0;
@@ -277,7 +279,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                6'd8:
+                6'd8:                               // Branch on flag not zero
                     begin
                         alu_control <= 7;
                         ab_set <= 0;
@@ -290,7 +292,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                6'd9:
+                6'd9:                               // Unconditional Branch
                     begin
                         alu_control <= 8;
                         ab_set <= 0;
@@ -303,7 +305,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                6'd10:
+                6'd10:                              // Branch and link
                     begin
                         alu_control <= 0;
                         ab_set <= 0;
@@ -316,7 +318,7 @@ module controller(
                         reg_to_PC <= 1;
                         reg_write_select <= 0;
                     end 
-                6'd11:
+                6'd11:                              // Branch on carry
                     begin
                         alu_control <= 8;
                         ab_set <= 0;
@@ -329,7 +331,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end 
-                6'd12:
+                6'd12:                              // Branch on no carry
                     begin
                         alu_control <= 8;
                         ab_set <= 0;
@@ -342,7 +344,7 @@ module controller(
                         reg_to_PC <= 0;
                         reg_write_select <= 0;
                     end    
-                default:
+                default:                            // In case of undefined opcode
                     begin
                         alu_control <= 0;
                         ab_set <= 0;
