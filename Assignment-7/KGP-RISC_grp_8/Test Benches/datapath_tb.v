@@ -7,9 +7,11 @@
 //                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////
+// Module to implement a testbench for datapath module
 
 module datapath_tb;
 
+	// Inputs
     reg [4:0] reg_1;
     reg [4:0] reg_2;
     reg [4:0] shift_amount;
@@ -28,11 +30,13 @@ module datapath_tb;
     reg clk;
     reg reset;
 
+	// Outputs
     wire [31:0] alu_result;
     wire carry_flag;
     wire sign_flag;
     wire zero_flag;
 
+	// Instantiate the Unit Under Test (UUT)
     datapath uut(.reg_1(reg_1),
                 .reg_2(reg_2),
                 .shift_amount(shift_amount),
@@ -76,10 +80,12 @@ module datapath_tb;
 		clk = 0;
 		reset = 0;
 
+		// Wait 100 ns for global reset to finish
         #100;
       	#10 reset = 1;
 		#10 reset = 0;
 
+		// Add stimulus here
 		#10;
 		reg_1 = 12;
 		reg_2 = 14;

@@ -7,7 +7,7 @@
 //                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////
-
+// Module to implement a testbench for ALU
 module arithmeticLogicalUnit_testbench;
 
 	// Inputs

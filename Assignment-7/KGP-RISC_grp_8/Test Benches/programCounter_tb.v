@@ -7,7 +7,7 @@
 //                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////
-
+// Module to implement a testbench for programCOunter module
 module programCounter_tb;
     // Inputs
     reg branch;
@@ -22,14 +22,15 @@ module programCounter_tb;
     programCounter uut(.branch(branch),.offset(offset), .clk(clk),.reset(reset), .PC(out));
     
     initial begin
+        // Initialize Inputs
         reset = 1;
         clk = 0;
-
+        // Add stimulus here
         #10;
         reset = 0;
         branch = 1;
         offset = 21'd21;
-
+    
         #10
         $display("branch:%d, offset:%d, clock:%d, reset:%d, out = %d", branch, offset, clk, reset, out);
         branch = 0;

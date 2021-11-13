@@ -8,8 +8,7 @@
 //				  Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////////////
-
-
+// Module to implement a testbench for 32 bit 2:1 mux
 module mux_32b_tb;
 
     // Inputs
@@ -25,10 +24,11 @@ module mux_32b_tb;
     
 
     initial begin
-        // Add stimulus here
+        // Initialize Inputs
         a = 51;
         b = 122;
-
+        
+        // Add stimulus here
         #10
         s = 0;
         #1
@@ -43,6 +43,7 @@ module mux_32b_tb;
 
 endmodule
 
+// Module to implement a testbench for 5 bit 2:1 mux
 module mux_5b_tb;
 
     // Inputs
@@ -59,10 +60,10 @@ module mux_5b_tb;
 
 
     initial begin
-        // Add stimulus here
+        // Initialize Inputs
         a = 15;
         b = 22;
-
+        // Add stimulus here
         #10
         s = 0;
         #1

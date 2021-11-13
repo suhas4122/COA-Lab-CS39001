@@ -7,9 +7,10 @@
 //                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////
-
+// Module to implement a testbench for topmodule
 module KGPRISC_tb;
 
+    // Inputs
     reg clk;
     reg reset;
 
@@ -21,8 +22,7 @@ module KGPRISC_tb;
 		reset = 1;
 		#2;	
         reset = 0;	   
-        
-        //$finish;
+       
 	end
     
     always @(*) begin 

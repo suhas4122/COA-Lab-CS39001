@@ -7,7 +7,7 @@
 //                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////
-
+// Module to implement a testbench for controller module
 module controller_tb;
     // Inputs
     reg [5:0] op_code;
