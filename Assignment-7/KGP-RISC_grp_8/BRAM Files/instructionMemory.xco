@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Fri Nov 12 16:01:23 2021
+# Date: Sat Nov 13 17:05:22 2021
 #
 ##############################################################
 #
@@ -46,7 +46,7 @@ CSET axi_id_width=4
 CSET axi_slave_type=Memory_Slave
 CSET axi_type=AXI4_Full
 CSET byte_size=9
-CSET coe_file="/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-7/RISC_grp_8/COE Files/Bubble Sort/bubble_sort.coe"
+CSET coe_file="/home/suhas/Desktop/Semester-5/COA/COA-Lab/Assignment-7/KGP-RISC_grp_8/Testing Files/Bubble Sort/bubble_sort.coe"
 CSET collision_warnings=ALL
 CSET component_name=instructionMemory
 CSET disable_collision_warnings=false
@@ -105,4 +105,4 @@ CSET write_width_b=32
 MISC pkg_timestamp=2012-11-19T16:22:25Z
 # END Extra information
 GENERATE
-# CRC: 3981b891
+# CRC: cebe8e3f
