@@ -21,7 +21,7 @@ module instructionFetch(
         instruction: 32 bit output containing the instruction to be processed
     */
 
-	instructionMemory im(.clka(clk), .addra(PC[9:0] >> 2), .douta(instruction));
+	instructionMemory im(.clka(clk), .addra(PC[9:0] >> 2), .douta(instruction));    // instruction memory instantiation
 
 endmodule 
 

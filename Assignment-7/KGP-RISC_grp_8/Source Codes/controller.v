@@ -24,6 +24,22 @@ module controller(
     output reg reg_to_PC,
     output reg reg_write_select
 );
+    /*
+        op_code: operation code from the instruction
+        func_code: function code from the instruction
+        clk: clock signal
+        reset: reset signal
+        alu_control: ALU control signal 
+        ab_set: ALU set signal indicating carry operation 
+        reg_write: register write signal 
+        mem_write: memory write signal (for store operation)
+        mem_read: memory read signal (for load operation)
+        ALU_src: ALU source signal (0: register, 1: immediate)
+        reg_data: register data signal 
+        const_src: constant source signal (for immediate addressing)
+        reg_to_PC: register to PC signal indicating jump 
+        reg_write_select: register write select signal (for writing to register file)
+    */
 
     always @(*) begin
         if(reset == 1) begin        // Setting all flags to 0 on reset signal

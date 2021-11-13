@@ -38,7 +38,7 @@ module branchLogic(
 
     */
     wire c_flag;
-    dff d(.clk(clk), .reset(reset), .d(carry_flag), .q(c_flag));
+    dff d(.clk(clk), .reset(reset), .d(carry_flag), .q(c_flag)); // DFF to store carry flag from previous cycle
 
     always @(*) begin
         if(reset) begin

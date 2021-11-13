@@ -32,10 +32,12 @@ module carry_look_ahead_4bit_aug(A, B, Ci, S, Co, PG, GG);
     wire [3:0] P;
     wire [3:0] C;
 
+    // Addition logic 
     assign G = A & B;
     assign P = A ^ B;
     assign S = A ^ B ^ C;  //calculating the sum bit by taking the XOR
 
+    // Calculating the carry bit 
     assign C[0] = Ci;
     assign C[1] = G[0] | (P[0] & Ci);
     assign C[2] = G[1] | (P[1] & G[0])| (P[1] & P[0] & Ci);
@@ -71,17 +73,18 @@ module carry_look_ahead_16bit(A, B, Ci, S, Co);
     wire [3:1] C;
     wire Ci;
 
+    // Addition logic
     assign C[1] = GG[0] | (PG[0] & Ci);
     assign C[2] = GG[1] | (PG[1] & GG[0])| (PG[1] & PG[0] & Ci);
     assign C[3] = GG[2] | (PG[2] & GG[1]) | (PG[2] & PG[1] & GG[0])| (PG[2] & PG[1] & PG[0] & Ci);
     
-    //calculates sums by 4 individual carry look ahead adders that return PG and GG values 
+    // Calculates sums by 4 individual carry look ahead adders that return PG and GG values 
     carry_look_ahead_4bit_aug carry_look_ahead1 (A[3:0], B[3:0], Ci, S[3:0], Cdummy[0], PG[0], GG[0]);
     carry_look_ahead_4bit_aug carry_look_ahead2 (A[7:4], B[7:4], C[1],  S[7:4], Cdummy[1], PG[1], GG[1]);
     carry_look_ahead_4bit_aug carry_look_ahead3 (A[11:8], B[11:8], C[2], S[11:8], Cdummy[2], PG[2], GG[2]);
     carry_look_ahead_4bit_aug carry_look_ahead4 (A[15:12], B[15:12], C[3], S[15:12], Cdummy[3], PG[3], GG[3]);
     
-    //calculates output  PG  and  GG  bits that can be further used in higher-level circuits
+    // Calculates output  PG  and  GG  bits that can be further used in higher-level circuits
     assign PG_int = PG[3] & PG[2] & PG[1] & PG[0];
     assign GG_int = GG[3] | (PG[3] & GG[2]) | (PG[3] & PG[2] & GG[1]) | (PG[3] & PG[2] & PG[1] & GG[0]);
     assign Co = GG_int | (PG_int & Ci);     // Calculating output carry bit by taking OR
@@ -107,7 +110,7 @@ module carry_look_ahead_32bit(A, B, Ci, S, Co);
     output Co;
     wire w_temp;
     
-    //Calculating sums by 2 individual 16-bit carry look ahead adders 
+    // Calculating sums by 2 individual 16-bit carry look ahead adders 
     carry_look_ahead_16bit carry_look_ahead1 (A[15:0], B[15:0], Ci, S[15:0], w_temp);
     carry_look_ahead_16bit carry_look_ahead2 (A[31:16], B[31:16], w_temp, S[31:16], Co);
 

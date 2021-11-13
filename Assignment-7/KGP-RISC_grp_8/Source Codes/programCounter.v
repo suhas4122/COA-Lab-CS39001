@@ -7,7 +7,7 @@
 //                Monal Prasad  (19CS30030)
 // Semester No  : 5 (Autumn 2021-22)
 //////////////////////////////////////////////////////////////////////////
-// module to change the program counter
+
 module programCounter(
     input branch,
     input [20:0] offset,
@@ -24,7 +24,6 @@ module programCounter(
         PC: 32 bit output program counter 
         PC_next: 32 bit output going to the Data Path
     */
-    
 
     wire [31:0] PC_no_branch;       // PC in case of non-branching instructions
     wire [31:0] PC_branch;          // PC in case of branching instructions
@@ -32,12 +31,12 @@ module programCounter(
     wire carry_temp1;
     wire carry_temp2;
 
-    assign jump = {{11{offset[20]}}, offset} << 2;
+    assign jump = {{11{offset[20]}}, offset} << 2;      // Variable storing value to be added to PC + 4 if there is branch
 
     // Calculate PC for non-branching instructions and store in PC_no_branch
     carry_look_ahead_32bit cla1(.A(PC), .B(32'd4), .Ci(1'd0), .S(PC_no_branch), .Co(carry_temp1));
 
-    // Calculate PC or branching instructions and store in PC_branch
+    // Calculate PC for branching instructions and store in PC_branch
     carry_look_ahead_32bit cla2(.A(PC_no_branch), .B(jump), .Ci(1'd0), .S(PC_branch), .Co(carry_temp2));
     
     // Select next PC value

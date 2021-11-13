@@ -32,20 +32,20 @@ module arithmeticLogicalUnit(
     wire signed [31:0] A_out, B_out, sum;
     wire carry;
 
-    MUX_32b_2_to_1 m1(.a(A), .b(~B), .select(ab_set), .out(A_out));
-    MUX_32b_2_to_1 m2(.a(B), .b(32'd1), .select(ab_set), .out(B_out));
+    MUX_32b_2_to_1 m1(.a(A), .b(~B), .select(ab_set), .out(A_out));                                  // Setting input to cla in case of complement
+    MUX_32b_2_to_1 m2(.a(B), .b(32'd1), .select(ab_set), .out(B_out));                               // B is 32'b1 if there is a complement
 
-    carry_look_ahead_32bit cla1(.A(A_out), .B(B_out), .Ci(1'd0), .S(sum), .Co(carry));
+    carry_look_ahead_32bit cla1(.A(A_out), .B(B_out), .Ci(1'd0), .S(sum), .Co(carry));               // Carry look ahead adder for add and addi 
 
-    wire [31:0] mem_offser_sum;
-    wire temp_carry;
-    wire [31:0] temp_B;
-    assign temp_B = {16'd0, B[15:0]};
+    wire [31:0] mem_offser_sum;           // Memory offset in case of branch 
+    wire temp_carry;                      // temporary carry value
+    wire [31:0] temp_B;                   // temp_B is used to store the value of B in case of branch 
+    assign temp_B = {16'd0, B[15:0]};     // Taking first 16 bits of B as offset
 
-    carry_look_ahead_32bit cla2(.A(A), .B(temp_B), .Ci(1'd0), .S(mem_offser_sum), .Co(temp_carry));
+    carry_look_ahead_32bit cla2(.A(A), .B(temp_B), .Ci(1'd0), .S(mem_offser_sum), .Co(temp_carry));  // Carry look ahead adder for memory offset
 
-    assign sign_flag = alu_result[31];
-    assign zero_flag = (alu_result == 32'd0) ? 1'd1 : 1'd0;
+    assign sign_flag = alu_result[31];                              // Setting the value of sign_flag
+    assign zero_flag = (alu_result == 32'd0) ? 1'd1 : 1'd0;         // Setting the value of zero_flag 
 
     always @(*) begin
         case(alu_control)
