@@ -18,13 +18,14 @@ module instructionDecoder(
     output wire [15:0] imm_constant, 
     output wire [20:0] offset 
 );
+    // module to split 32 bit address into various parts as per ISA format
 
-    assign op_code = instruction[31:26];
-    assign reg_1 = instruction[25:21];
-    assign reg_2 = instruction[20:16];
-    assign shift_amount = instruction[15:11];
-    assign func_code = instruction[10:0];
-    assign imm_constant = instruction[15:0];
-    assign offset = instruction[20:0];
+    assign op_code = instruction[31:26];        // 6 bit opcode 
+    assign reg_1 = instruction[25:21];          // 5 bit destination register
+    assign reg_2 = instruction[20:16];          // 5 bit source register
+    assign shift_amount = instruction[15:11];   // 5 bit shift amount in case of shift instructions
+    assign func_code = instruction[10:0];       // 11 bit function code in case of R type instructions
+    assign imm_constant = instruction[15:0];    // 16 bit immediate integer constant for I type instructions
+    assign offset = instruction[20:0];          // 21 bit offset for branch instructions
 
 endmodule 

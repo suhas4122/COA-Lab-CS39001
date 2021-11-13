@@ -14,6 +14,12 @@ module instructionFetch(
     input reset, 
     output wire [31:0] instruction
 );
+    /*
+        PC: 32 bit program counter
+        clk:  clock signal
+        reset: reset signal
+        instruction: 32 bit output containing the instruction to be processed
+    */
 
 	instructionMemory im(.clka(clk), .addra(PC[9:0] >> 2), .douta(instruction));
 
